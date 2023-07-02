@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "JARVIS.html#overview",
+    "href": "JARVIS.html#overview",
+    "title": "JARVIS - Four Wheeled SumoBot",
+    "section": "Overview",
+    "text": "Overview\nFrom the original sumo bot tournament founded in 1987 by Hiroshi Nozawa, the robot sumo competition has not only resided in Japan but also expanded all over the world. The competition first moved to the United States for the first time in 1998 in the “Robogames” held in San Francisco, California. In 2019, more than 30 countries have participated in the tournament since 1987. All in all, the competition is well known around the world and is popular enough to be held in the Cooper Union “End of Year Show”.\nWith this said, Sumo-bots are high power and wheeled robots designed for competing in the robot-sumo contest. The goal of the competition is to push the opponent’s robot outside a 3ftby-3ft ring made of neoprene rubber. The team is tasked with designing and fabricating a 10 inch by 10 inch by 6-inch robot with a weight limit of no more than 5 lbs.\nThe team is also given a cost limit of $200, and the use of liquids, compressed gasses, gels, and hazardous substances is disallowed for design. Moreover, no electrical – lasers- or mechanical – sharp edges or rotating blades- weapons are permitted on the battlefield. To ensure the safety of electrical components powered by a battery, specifications are provided for the maximum amperage for motors – 4.5 amps - and maximum power supply of the battery – 14 V. Finally, the team is asked to design for a kill switch in times of emergency. To plan the design process, the team breaks down the timeline into sub parts including – brainstorming, preliminary sketches, final designs, finding mechanical parts, making computer-aided designs, fabricating, finding electrical components, and finalizing the assembly."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "CASPER.html",
+    "href": "CASPER.html",
+    "title": "CASPER: Cooper Automated Subterranean Probing & Excavating Robot​",
+    "section": "",
+    "text": "About this site\n\n\n Back to top"
+  },
+  {
+    "objectID": "experimentation.html",
+    "href": "experimentation.html",
+    "title": "Base Excitation Rig - Demonstration of Vibration Isolation",
+    "section": "",
+    "text": "Overview\nVibration suppression can be achieved at the source or the receiver; however, vibration isolation, which uses a combination of springs and dampers to isolate the mass from input vibration, is the preferred technique. The significance of vibration isolation lies in its ability to improve the performance, reliability, and safety of structural and mechanical systems, as well as to reduce the transmission of noise and vibrations. Experimental modeling is essential for the visualization and testing of principles used to analyze and model vibration and vibration isolation. An accessible and intuitive experimental apparatus will be able to convey relevant engineering principles. Testing a modular system with sinusoidal base excitation displays an experimental spring constant of 39.74 N/m, compared to the theorized 39.5 N/m. The amplitude attenuation plot closely maps against theoretical graphs, demonstrated this apparatus’ capabilities as a model tool for illustrating vibration isolation.\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "logo.html",
+    "href": "logo.html",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "RIFSK.html#overview",
+    "href": "RIFSK.html#overview",
+    "title": "RIFSK - Refugee in Flight Shelter Kit Frame",
+    "section": "Overview",
+    "text": "Overview\nAs conflict and adverse environmental changes uproot communities in Sub-Saharan Africa, RiFSK (Refugee in-Flight Shelter Kit) addresses the lack of shelter that these individuals face in transit. In our team’s venture to design a portable, effective, and biodegradable shelter, we adhered to the principles of simplicity, efficiency, and self-sufficiency to develop this year’s model. In spite of the Covid-19 pandemic and all of the changes and constraints that it came with, we understood that enough effort in working together could still produce a usable product. Our team was divided into seven smaller groups to better specialize on the numerous facets of RiFSK: four dedicated to the development and analysis of the design, two to its logistics, and one to the coordination of the different elements of the design process. Investigation into the context and scope of the ongoing refugee crises throughout Sub-Saharan Africa provided us with further limitations, but also a direction in which we could better attend to the needs of those affected. Comparing potential frame and skin materials, bamboo and jute, substituted by linen for prototype availability purposes, came as the most optimal options because they fare well under severe weather. Following other design iterations, our final design, characterized by its dome structure, is arguably the simplest RiFSK design to date. Ease of assembly, disassembly, and disposal all promote RiFSK 2020 as a product that requires little effort or knowledge to use. Whether or not our proposal is taken into consideration as a potential shelter, we hope that our insight and information can be used by groups that wish to pursue similar goals in the near future."
+  },
+  {
+    "objectID": "space.html",
+    "href": "space.html",
+    "title": "Modelling fish’s oscillatory motion through triple pendulum",
+    "section": "",
+    "text": "About this site\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "UAV.html#overview",
+    "href": "UAV.html#overview",
+    "title": "Unmanned Aerial Vehicle Digital Twin",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "Github\n  \n  \n    \n     Linkedin\n  \n  \n    \n     Email\n  \n\n  \n  \n\n\nMechanical engineering student with experience in computer aided design, extensive team projects and problem solving.\n\n\nCooper Union for the Advancement of Science and Art | Manhattan, New York\nBachelors in Engineering | August 2020 - June 2024\nQueens High School for the Sciences at York College | New York\nHigh School Diploma | Sept 2017 - June 2020\n\n\n\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "Cooper Union for the Advancement of Science and Art | Manhattan, New York\nBachelors in Engineering | August 2020 - June 2024\nQueens High School for the Sciences at York College | New York\nHigh School Diploma | Sept 2017 - June 2020"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "Wengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
+  }
+]
