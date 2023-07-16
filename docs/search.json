@@ -4,7 +4,7 @@
     "href": "JARVIS.html#overview",
     "title": "JARVIS - Four Wheeled SumoBot",
     "section": "Overview",
-    "text": "Overview\nFrom the original sumo bot tournament founded in 1987 by Hiroshi Nozawa, the robot sumo competition has not only resided in Japan but also expanded all over the world. The competition first moved to the United States for the first time in 1998 in the “Robogames” held in San Francisco, California. In 2019, more than 30 countries have participated in the tournament since 1987. All in all, the competition is well known around the world and is popular enough to be held in the Cooper Union “End of Year Show”.\nWith this said, Sumo-bots are high power and wheeled robots designed for competing in the robot-sumo contest. The goal of the competition is to push the opponent’s robot outside a 3ftby-3ft ring made of neoprene rubber. The team is tasked with designing and fabricating a 10 inch by 10 inch by 6-inch robot with a weight limit of no more than 5 lbs.\nThe team is also given a cost limit of $200, and the use of liquids, compressed gasses, gels, and hazardous substances is disallowed for design. Moreover, no electrical – lasers- or mechanical – sharp edges or rotating blades- weapons are permitted on the battlefield. To ensure the safety of electrical components powered by a battery, specifications are provided for the maximum amperage for motors – 4.5 amps - and maximum power supply of the battery – 14 V. Finally, the team is asked to design for a kill switch in times of emergency. To plan the design process, the team breaks down the timeline into sub parts including – brainstorming, preliminary sketches, final designs, finding mechanical parts, making computer-aided designs, fabricating, finding electrical components, and finalizing the assembly."
+    "text": "Overview\nSumo-bots are high power and wheeled robots designed for competing in the robot-sumo contest at the Cooper Union’s end of the year show. The goal of the competition is to push the opponent’s robot outside a 3ftby-3ft ring made of neoprene rubber. Comprising of 3 mechanical engineering students, our team was tasked with designing and fabricating a 10 inch by 10 inch by 6-inch robot with a weight limit of no more than 5 lbs.\nTo plan the design process, the team broke down the timeline into sub parts – brainstorming, preliminary sketches, final designs, finding mechanical parts, making computer-aided designs, fabricating, finding electrical components, and finalizing the assembly. The team named the robot JASPER which was successful in detecting the edges of the mat and re-directing its trajectory.\nA video showing JASPER in action and an academic paper on its complete design and fabrication can be found below."
   },
   {
     "objectID": "about.html",
@@ -18,14 +18,14 @@
     "href": "CASPER.html",
     "title": "CASPER: Cooper Automated Subterranean Probing & Excavating Robot​",
     "section": "",
-    "text": "About this site\n\n\n Back to top"
+    "text": "Overview\nhello\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "experimentation.html",
     "href": "experimentation.html",
     "title": "Base Excitation Rig - Demonstration of Vibration Isolation",
     "section": "",
-    "text": "Overview\nVibration suppression can be achieved at the source or the receiver; however, vibration isolation, which uses a combination of springs and dampers to isolate the mass from input vibration, is the preferred technique. The significance of vibration isolation lies in its ability to improve the performance, reliability, and safety of structural and mechanical systems, as well as to reduce the transmission of noise and vibrations. Experimental modeling is essential for the visualization and testing of principles used to analyze and model vibration and vibration isolation. An accessible and intuitive experimental apparatus will be able to convey relevant engineering principles. Testing a modular system with sinusoidal base excitation displays an experimental spring constant of 39.74 N/m, compared to the theorized 39.5 N/m. The amplitude attenuation plot closely maps against theoretical graphs, demonstrated this apparatus’ capabilities as a model tool for illustrating vibration isolation.\n\n\n\n\n\n Back to top"
+    "text": "Overview\nAs the end project of ME-360, Experimentation, each team was tasked to design and fabricate an apparatus exhibiting a scientific principle. Along with 2 mechanical engineering students, I desigined an expeirmental rig demonstrating the principle of vibration isolation during base excitation.\nVibration suppression for a mechanical system can be achieved at the source or the receiver; however, vibration isolation, which uses a combination of springs and dampers to isolate the mass from input vibration, is the preferred technique. The significance of vibration isolation lies in its ability to improve the performance, reliability, and safety of structural and mechanical systems, as well as to reduce the transmission of noise and vibrations.\nThe rig consisted of an arduino controlled stepper motor to incite excitation at the base which transmitted to a primary mass - lumped steel plates- on the other side of the spring. A working video of the apparatus and an academic papaer its design can be found below.\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "logo.html",
@@ -39,41 +39,62 @@
     "href": "RIFSK.html#overview",
     "title": "RIFSK - Refugee in Flight Shelter Kit Frame",
     "section": "Overview",
-    "text": "Overview\nAs conflict and adverse environmental changes uproot communities in Sub-Saharan Africa, RiFSK (Refugee in-Flight Shelter Kit) addresses the lack of shelter that these individuals face in transit. In our team’s venture to design a portable, effective, and biodegradable shelter, we adhered to the principles of simplicity, efficiency, and self-sufficiency to develop this year’s model. In spite of the Covid-19 pandemic and all of the changes and constraints that it came with, we understood that enough effort in working together could still produce a usable product. Our team was divided into seven smaller groups to better specialize on the numerous facets of RiFSK: four dedicated to the development and analysis of the design, two to its logistics, and one to the coordination of the different elements of the design process. Investigation into the context and scope of the ongoing refugee crises throughout Sub-Saharan Africa provided us with further limitations, but also a direction in which we could better attend to the needs of those affected. Comparing potential frame and skin materials, bamboo and jute, substituted by linen for prototype availability purposes, came as the most optimal options because they fare well under severe weather. Following other design iterations, our final design, characterized by its dome structure, is arguably the simplest RiFSK design to date. Ease of assembly, disassembly, and disposal all promote RiFSK 2020 as a product that requires little effort or knowledge to use. Whether or not our proposal is taken into consideration as a potential shelter, we hope that our insight and information can be used by groups that wish to pursue similar goals in the near future."
+    "text": "Overview\nRISFK - Refugee in Flight Shelter Kit was one of the 6 projects offered in EID-101 class, Engineering Design and Problem Solving. As conflict and adverse environmental changes uproot communities in Sub-Saharan Africa, RiFSK addressed the lack of shelter that these individuals face in transit. In our team’s venture to design a portable, effective, and biodegradable shelter, we adhered to the principles of simplicity, efficiency, and self-sufficiency to develop the model.\nThe team was divided into seven smaller groups to better specialize on the numerous facets of RiFSK: four dedicated to the development and analysis of the design, two to its logistics, and one to the coordination of the different elements of the design process.\nI was a part of the frame team, along with 3 more students, which was tasked with designing a frame design that could be built in less than a minute from local resources - bamboo and yarn. Following other design iterations, our final design characterized by its dome structure, is arguably the simplest RiFSK design to date. Ease of assembly, disassembly, and disposal all promote RiFSK 2020 as a product that requires little effort or knowledge to use. An academic paper on the design methodology can be found below."
   },
   {
     "objectID": "space.html",
     "href": "space.html",
-    "title": "Modelling fish’s oscillatory motion through triple pendulum",
+    "title": "Modelling fish’s oscillatory motion through dynamics of triple pendulum",
     "section": "",
-    "text": "About this site\n\n\n\n Back to top"
+    "text": "Overview\nAs an end of the semester project for ME-424 Advanced Dynamics, I modelled a fish’s oscillatory motion through the dynamics of a triple pendulum coupled with springs and dampers. By using the method of virtual work and projections, I computed the rotation matrices for each of the 3 pivots, angular velocities, and corresponding jacobians. This was followed by setting up the mass matrix, frame rotation matrix, and external forces/torques matrix. Different test cases were executed to ensure the validity of the model and improve its accuracy. A presentation explaining the the virtual work method, video of the model in action, and link to the github can be found below.\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "UAV.html#overview",
     "href": "UAV.html#overview",
     "title": "Unmanned Aerial Vehicle Digital Twin",
     "section": "Overview",
-    "text": "Overview"
+    "text": "Overview\nME-457, Drone Controls, teaches about autonomous navigation, guidance, and control of unmanned air vehicles (UAVs). As a semester long project, we were tasked to create a digital twin which models the rigid-body dynamics, aerodynamics, feedback control, and state estimation using sensors. The project was built on a pre-existing python framework designed by Randy Beard: “Small Unmanned Aircraft: Theory and Practice” which can be found online. The framework included a pre-built graphical interface using pyQt and pyQtgraph modules which allowed to visualize the UAV. A video on the simulation in action and link to the github can be found below."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Khushant Khurana",
     "section": "",
-    "text": "Github\n  \n  \n    \n     Linkedin\n  \n  \n    \n     Email\n  \n\n  \n  \n\n\nMechanical engineering student with experience in computer aided design, extensive team projects and problem solving.\n\n\nCooper Union for the Advancement of Science and Art | Manhattan, New York\nBachelors in Engineering | August 2020 - June 2024\nQueens High School for the Sciences at York College | New York\nHigh School Diploma | Sept 2017 - June 2020\n\n\n\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
+    "text": "Github\n  \n  \n    \n     Linkedin\n  \n  \n    \n     Email\n  \n\n  \n  \n\n\nMechanical engineering student with experience in computer aided design, extensive team projects and problem solving.\n\n\n\n\n\nCooper Union for the Advancement of Science and Art\n\n\n\nQueens High School for the Sciences at York College\n\n\n\n\n\n\nOshkosh Corporation\n\n\n\nNew York Hall of Science"
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Khushant Khurana",
     "section": "",
-    "text": "Cooper Union for the Advancement of Science and Art | Manhattan, New York\nBachelors in Engineering | August 2020 - June 2024\nQueens High School for the Sciences at York College | New York\nHigh School Diploma | Sept 2017 - June 2020"
+    "text": "Cooper Union for the Advancement of Science and Art\n\n\n\nQueens High School for the Sciences at York College"
   },
   {
     "objectID": "index.html#experience",
     "href": "index.html#experience",
     "title": "Khushant Khurana",
     "section": "",
-    "text": "Wengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
+    "text": "Oshkosh Corporation\n\n\n\nNew York Hall of Science"
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "Mechanical engineering student with experience in computer aided design, extensive team projects and problem solving."
+  },
+  {
+    "objectID": "JARVIS.html",
+    "href": "JARVIS.html",
+    "title": "JARVIS - Four Wheeled SumoBot",
+    "section": "",
+    "text": "Overview\nFrom the original sumo bot tournament founded in 1987 by Hiroshi Nozawa, the robot sumo competition has not only resided in Japan but also expanded all over the world. The competition first moved to the United States for the first time in 1998 in the “Robogames” held in San Francisco, California. In 2019, more than 30 countries have participated in the tournament since 1987. All in all, the competition is well known around the world and is popular enough to be held in the Cooper Union “End of Year Show”.\nWith this said, Sumo-bots are high power and wheeled robots designed for competing in the robot-sumo contest. The goal of the competition is to push the opponent’s robot outside a 3ftby-3ft ring made of neoprene rubber. The team is tasked with designing and fabricating a 10 inch by 10 inch by 6-inch robot with a weight limit of no more than 5 lbs.\nThe team is also given a cost limit of $200, and the use of liquids, compressed gasses, gels, and hazardous substances is disallowed for design. Moreover, no electrical – lasers- or mechanical – sharp edges or rotating blades- weapons are permitted on the battlefield. To ensure the safety of electrical components powered by a battery, specifications are provided for the maximum amperage for motors – 4.5 amps - and maximum power supply of the battery – 14 V. Finally, the team is asked to design for a kill switch in times of emergency. To plan the design process, the team breaks down the timeline into sub parts including – brainstorming, preliminary sketches, final designs, finding mechanical parts, making computer-aided designs, fabricating, finding electrical components, and finalizing the assembly.\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "skills.html",
+    "href": "skills.html",
+    "title": "A short list of my skills",
+    "section": "",
+    "text": "Back to top"
   }
 ]
