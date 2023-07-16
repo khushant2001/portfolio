@@ -25,7 +25,7 @@ website:
     alignment: center
     pinned: true
     border: true
-    collapse-level: 2 
+    collapse-level: 2
     
     contents:
       - section: "Home"
@@ -74,11 +74,11 @@ website:
                 href: CASPER.pdf
               - text: "Klann geometry in action"
                 href: Klann geometry in action.mp4
-              - text: "Hinged linkage in action"
-                href: Hinged linkage in action.mp4
           - section: "Using virtual work to model a fish"
             contents: 
-              - text: "Overview on modelling techniques"
+              - text: "A brief synopsis"
+                href: space.qmd
+              - text: "Modelling methods and results"
                 href: space.pdf
               - text: "Model in action"
                 href: space.mp4
@@ -88,6 +88,8 @@ website:
             contents: 
               - text: "A brief synopsis"
                 href: experimentation.qmd
+              - text: "Rig in action"
+                href: vibration_isolation.mp4
               - text: "Academic paper"
                 href: Vibration_Isolation_rig.pdf
 
@@ -98,7 +100,3 @@ format:
     toc: true
     page-layout: full
 editor: visual
-    
-
-
-
