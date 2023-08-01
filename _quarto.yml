@@ -55,7 +55,7 @@ website:
               - text: "A brief synopsis"
                 href: UAV.qmd
               - text: UAV in Action
-                href: uav_action.mkv
+                href: uav_action.mp4
               - text: "Link to github"
                 href: https://github.com/khushant2001/drones_digital_twin.git
           - section: "JARVIS"
@@ -92,6 +92,12 @@ website:
                 href: vibration_isolation.mp4
               - text: "Academic paper"
                 href: Vibration_Isolation_rig.pdf
+      - section: "Past internships"
+        contents:
+          - section: "Controls Intern"
+            contents:
+              - text: "Poster"
+                href: oshkosh_poster.pdf 
 
 format:
   html:
