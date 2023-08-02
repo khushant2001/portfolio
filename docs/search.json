@@ -18,7 +18,7 @@
     "href": "CASPER.html",
     "title": "CASPER: Cooper Automated Subterranean Probing & Excavating Robot​",
     "section": "",
-    "text": "Overview\nhello\n\n\n\n\n\n Back to top"
+    "text": "Overview\nAs a final project for ME-494 (Bio - Inspired Robotics), I along with a team of other 2 students designed and fabricated a self-burrowing robot called CASPER - Cooper Automated Subterranian Probing And Excavating Robot. The end goal of the project was to design and test two different leg geometries - Klann (designed and fabricated by myself) and double linkage - by performing kinematic simulations and getting actual data from tracker. While the Klann geometry was derived from the movement of a spider, the double linkage geometry was derived from the motion of a mole crab. Using dry rice as the medium to dig and stepper motor to actuate the robot, the team was able to collect data from both geometries and resulting conclusions were derived. The academic paper on the design and results, along with a working model of the Klann geometry, can be found below.\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "experimentation.html",
@@ -39,7 +39,7 @@
     "href": "RIFSK.html#overview",
     "title": "RIFSK - Refugee in Flight Shelter Kit Frame",
     "section": "Overview",
-    "text": "Overview\nRISFK - Refugee in Flight Shelter Kit was one of the 6 projects offered in EID-101 class, Engineering Design and Problem Solving. As conflict and adverse environmental changes uproot communities in Sub-Saharan Africa, RiFSK addressed the lack of shelter that these individuals face in transit. In our team’s venture to design a portable, effective, and biodegradable shelter, we adhered to the principles of simplicity, efficiency, and self-sufficiency to develop the model.\nThe team was divided into seven smaller groups to better specialize on the numerous facets of RiFSK: four dedicated to the development and analysis of the design, two to its logistics, and one to the coordination of the different elements of the design process.\nI was a part of the frame team, along with 3 more students, which was tasked with designing a frame design that could be built in less than a minute from local resources - bamboo and yarn. Following other design iterations, our final design characterized by its dome structure, is arguably the simplest RiFSK design to date. Ease of assembly, disassembly, and disposal all promote RiFSK 2020 as a product that requires little effort or knowledge to use. An academic paper on the design methodology can be found below."
+    "text": "Overview\nRISFK - Refugee in Flight Shelter Kit was one of the 6 projects offered in EID-101 class, Engineering Design and Problem Solving. As conflict and adverse environmental changes uproot communities in Sub-Saharan Africa, RiFSK addressed the lack of shelter that these individuals face in transit. In our team’s venture to design a portable, effective, and biodegradable shelter, we adhered to the principles of simplicity, efficiency, and self-sufficiency to develop the model.\nThe team was divided into seven smaller groups to better specialize on the numerous facets of RiFSK: four dedicated to the development and analysis of the design, two to its logistics, and one to the coordination of the different elements of the design process.\nI was a part of the frame team, along with 3 more students, which was tasked with designing a frame design that could be built in less than a minute from local resources - bamboo and yarn. Following other design iterations, our final design characterized by its dome structure, is arguably the simplest RiFSK design to date. I got this design from a bow and how it is bent in its curved shape using a string. Accordingly, I brought up the idea of having the bamboo go through the slits of the fabric and bend it using barn strings. Consequently, ease of assembly, disassembly, and disposal all promote RiFSK 2020 as a product that requires little effort or knowledge to use. An academic paper on the design methodology can be found below."
   },
   {
     "objectID": "space.html",
@@ -60,14 +60,14 @@
     "href": "index.html",
     "title": "Khushant Khurana",
     "section": "",
-    "text": "Github\n  \n  \n    \n     Linkedin\n  \n  \n    \n     Email\n  \n\n  \n  \n\n\nMechanical engineering student with experience in modelling and simulation, extensive team projects and problem solving.\n\n\n\n\n\nCooper Union for the Advancement of Science and Art\n\n\n\nQueens High School for the Sciences at York College\n\n\n\n\n\n\nOshkosh Corporation"
+    "text": "Github\n  \n  \n    \n     Linkedin\n  \n  \n    \n     Email\n  \n\n  \n  \n\n\nMechanical engineering student with experience in modelling and simulation, extensive team projects and problem solving.\n\n\n\n\n\nThe Cooper Union for the Advancement of Science and Art\n\n\n\nQueens High School for the Sciences at York College\n\n\n\n\n\n\nOshkosh Corporation"
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Khushant Khurana",
     "section": "",
-    "text": "Cooper Union for the Advancement of Science and Art\n\n\n\nQueens High School for the Sciences at York College"
+    "text": "The Cooper Union for the Advancement of Science and Art\n\n\n\nQueens High School for the Sciences at York College"
   },
   {
     "objectID": "index.html#experience",
