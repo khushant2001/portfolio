@@ -63,7 +63,7 @@ website:
             contents: 
               - text: "A brief synopsis"
                 href: JARVIS.qmd
-              - text: "JASPER in Action"
+              - text: "JARVIS in Action"
                 href: jarvis_final.mp4
               - text: "Academic paper"
                 href: JARVIS.pdf
