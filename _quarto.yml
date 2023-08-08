@@ -27,6 +27,7 @@ website:
     border: true
     collapse-level: 2
     
+    
     contents:
       - section: "Home"
         contents: 
@@ -34,23 +35,23 @@ website:
             href: index.qmd
       - section: "Courses taken"
         contents: 
-          - text: "1. Freshmen year"
-            href: freshmen.png
-          - text: "2. Sophomore year"
-            href: sophomore.png
-          - text: "3. Junior year"
-            href: junior.png
-          - text: "4. Senior year"
-            href: senior.png
+          - text: "- Freshmen year"
+            href: freshmen.qmd
+          - text: "- Sophomore year"
+            href: sophomore.qmd
+          - text: "- Junior year"
+            href: junior.qmd
+          - text: "- Senior year"
+            href: senior.qmd
       - section: "Projects"
         contents:
-          - section: "1. Refugee in Flight Shelter Kit" 
+          - section: "- Refugee in Flight Shelter Kit" 
             contents: 
               - text: "A brief synopsis"
                 href: RIFSK.qmd
               - text: "Proposed frame designs"
                 href: RIFSK_frame.pdf
-          - section: "2. UAV Digital Twin"
+          - section: "- UAV Digital Twin"
             contents: 
               - text: "A brief synopsis"
                 href: UAV.qmd
@@ -58,7 +59,7 @@ website:
                 href: uav_action.mp4
               - text: "Link to github"
                 href: https://github.com/khushant2001/drones_digital_twin.git
-          - section: "3. JARVIS"
+          - section: "- JARVIS"
             contents: 
               - text: "A brief synopsis"
                 href: JARVIS.qmd
@@ -66,7 +67,7 @@ website:
                 href: jarvis_final.mp4
               - text: "Academic paper"
                 href: JARVIS.pdf
-          - section: "4. CASPER"
+          - section: "- CASPER"
             contents:
               - text: "A brief synopsis"
                 href: CASPER.qmd
@@ -74,7 +75,7 @@ website:
                 href: CASPER Report.pdf
               - text: "Klann geometry in action"
                 href: Klann geometry in action.mp4
-          - section: "5. Using virtual work to model a fish"
+          - section: "- Using virtual work to model a fish"
             contents: 
               - text: "A brief synopsis"
                 href: space.qmd
@@ -84,7 +85,7 @@ website:
                 href: space.mp4
               - text: "Link to github"
                 href: https://github.com/khushant2001/Modelling-fish-as-triple-pendulum.git
-          - section: "6. Base excitation rig"
+          - section: "- Base excitation rig"
             contents: 
               - text: "A brief synopsis"
                 href: experimentation.qmd
@@ -94,7 +95,7 @@ website:
                 href: Vibration_Isolation_rig.pdf
       - section: "Past internships"
         contents:
-          - section: "1. Controls Intern"
+          - section: "Controls Intern"
             contents:
               - text: "Poster"
                 href: oshkosh_poster.pdf 
