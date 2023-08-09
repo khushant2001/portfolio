@@ -1,0 +1,109 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  back-to-top-navigation: true
+  page-footer: "Copyright 2023, Khushant Khurana"
+  title: "Khushant Khurana"
+  navbar:
+    search: true
+    background: dark
+    foreground: light
+    alignment: center
+    pinned: true
+    right:
+      - text: "Resume"
+        href: resume_khurana.pdf
+      - text: "Transcript"
+        href: transcript.pdf
+  sidebar:
+    style: docked
+    type: light
+    background: light
+    foreground: dark
+    alignment: center
+    pinned: true
+    border: true
+    collapse-level: 2
+    
+    
+    contents:
+      - section: "Home"
+        contents: 
+          - text: "Introduction"
+            href: index.qmd
+      - section: "Courses taken"
+        contents: 
+          - text: "- Freshmen year"
+            href: freshmen.qmd
+          - text: "- Sophomore year"
+            href: sophomore.qmd
+          - text: "- Junior year"
+            href: junior.qmd
+          - text: "- Senior year"
+            href: senior.qmd
+      - section: "Projects"
+        contents:
+          - section: "- Refugee in Flight Shelter Kit" 
+            contents: 
+              - text: "A brief synopsis"
+                href: RIFSK.qmd
+              - text: "Proposed frame designs"
+                href: RIFSK_frame.pdf
+          - section: "- UAV Digital Twin"
+            contents: 
+              - text: "A brief synopsis"
+                href: UAV.qmd
+              - text: UAV in Action
+                href: uav_action.mp4
+              - text: "Link to github"
+                href: https://github.com/khushant2001/drones_digital_twin.git
+          - section: "- JARVIS"
+            contents: 
+              - text: "A brief synopsis"
+                href: JARVIS.qmd
+              - text: "JARVIS in Action"
+                href: jarvis_final.mp4
+              - text: "Academic paper"
+                href: JARVIS.pdf
+          - section: "- CASPER"
+            contents:
+              - text: "A brief synopsis"
+                href: CASPER.qmd
+              - text: "Academic paper"
+                href: CASPER Report.pdf
+              - text: "Klann geometry in action"
+                href: Klann geometry in action.mp4
+          - section: "- Using virtual work to model a fish"
+            contents: 
+              - text: "A brief synopsis"
+                href: space.qmd
+              - text: "Modelling methods and results"
+                href: space.pdf
+              - text: "Model in action"
+                href: space.mp4
+              - text: "Link to github"
+                href: https://github.com/khushant2001/Modelling-fish-as-triple-pendulum.git
+          - section: "- Base excitation rig"
+            contents: 
+              - text: "A brief synopsis"
+                href: experimentation.qmd
+              - text: "Rig in action"
+                href: vibration_isolation_video.mp4
+              - text: "Academic paper"
+                href: Vibration_Isolation_rig.pdf
+      - section: "Past internships"
+        contents:
+          - section: "Controls Intern"
+            contents:
+              - text: "Poster"
+                href: oshkosh_poster.pdf 
+
+format:
+  html:
+    theme: minty
+    css: styles.css
+    toc: true
+    page-layout: full
+editor: visual
