@@ -1,0 +1,240 @@
+[
+  {
+    "objectID": "fabrication.html",
+    "href": "fabrication.html",
+    "title": "Mechanical Design And Fabrication Projects",
+    "section": "",
+    "text": "Base Excitation Rig - Demonstration of Vibration Isolation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJARVIS - Four Wheeled SumoBot\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nManufacturing parts for FSAE Team\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRIFSK - Refugee in Flight Shelter Kit Frame\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "CASPER.html#caspers-klann-geometry-in-action",
+    "href": "CASPER.html#caspers-klann-geometry-in-action",
+    "title": "CASPER: Cooper Automated Subterranean Probing & Excavating Robot​",
+    "section": "CASPER’s Klann Geometry In Action!",
+    "text": "CASPER’s Klann Geometry In Action!\nClick here to see CASPER digging into rice using its klann leg geometry."
+  },
+  {
+    "objectID": "CASPER.html#academic-paper-describing-caspers-design-fabrication-and-analysis.",
+    "href": "CASPER.html#academic-paper-describing-caspers-design-fabrication-and-analysis.",
+    "title": "CASPER: Cooper Automated Subterranean Probing & Excavating Robot​",
+    "section": "Academic Paper Describing CASPER’s Design, Fabrication, and Analysis.",
+    "text": "Academic Paper Describing CASPER’s Design, Fabrication, and Analysis.\nClick here to access the full document."
+  },
+  {
+    "objectID": "dynamics_control.html",
+    "href": "dynamics_control.html",
+    "title": "Dynamics And Control Projects",
+    "section": "",
+    "text": "CASPER: Cooper Automated Subterranean Probing & Excavating Robot​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelling fish’s oscillatory motion through dynamics of triple pendulum\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "experimentation.html#a-brief-synopsis",
+    "href": "experimentation.html#a-brief-synopsis",
+    "title": "Base Excitation Rig - Demonstration of Vibration Isolation",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nAs the end project of ME-360, Experimentation, each team was tasked to design and fabricate an apparatus exhibiting a scientific principle. Along with 2 mechanical engineering students, I desigined an expeirmental rig demonstrating the principle of vibration isolation during base excitation.\nVibration suppression for a mechanical system can be achieved at the source or the receiver; however, vibration isolation, which uses a combination of springs and dampers to isolate the mass from input vibration, is the preferred technique. The significance of vibration isolation lies in its ability to improve the performance, reliability, and safety of structural and mechanical systems, as well as to reduce the transmission of noise and vibrations.\nThe rig consisted of an arduino controlled stepper motor to incite excitation at the base which transmitted to a primary mass - lumped steel plates- on the other side of the spring. A working video of the apparatus and an academic papaer its design can be found below."
+  },
+  {
+    "objectID": "experimentation.html#rig-in-action",
+    "href": "experimentation.html#rig-in-action",
+    "title": "Base Excitation Rig - Demonstration of Vibration Isolation",
+    "section": "Rig In Action",
+    "text": "Rig In Action\nClick here to see the rig in action."
+  },
+  {
+    "objectID": "experimentation.html#academic-paper-for-design-fabrication-and-results-of-the-rig",
+    "href": "experimentation.html#academic-paper-for-design-fabrication-and-results-of-the-rig",
+    "title": "Base Excitation Rig - Demonstration of Vibration Isolation",
+    "section": "Academic Paper for Design, Fabrication, and Results of the Rig",
+    "text": "Academic Paper for Design, Fabrication, and Results of the Rig\nThe entire document can be found here"
+  },
+  {
+    "objectID": "freshmen.html",
+    "href": "freshmen.html",
+    "title": "Freshmen Year​",
+    "section": "",
+    "text": "Table 1: List of courses\n\n\n\n\n(a) Fall Semester\n\n\nCourse name\nCredits\n\n\n\n\nESC 000.1 Professional Development Seminar\n0\n\n\nMa 110 Introduction to Linear Algebra\n2\n\n\nMa 111 Calculus I\n4\n\n\nCh 110 General Chemistry\n3\n\n\nEID 101 Engineering Design and Problem Solving\n3\n\n\nEID 102 Engineering Graphics\n1\n\n\nCS 102 Computer Programming for Engineers\n2\n\n\nHSS 1 Literary Forms and Expressions\n3\n\n\n——\n——\n\n\nTotal Credits Fall Semester\n18\n\n\n\n\n\n\n\n\n(b) Spring Semsester\n\n\nCourse name\nCredits\n\n\n\n\nESC 000.2 Professional Development Seminar\n0\n\n\nMa 113 Calculus II\n4\n\n\nPh 112 Physics I: Mechanics\n4\n\n\nEID 103 Principles of Design\n3\n\n\nCh 111 General Chemistry Laboratory\n1.5\n\n\nME 103 Statics\n2\n\n\nME 104 Measurements Laboratory\n1\n\n\nHSS 2 Texts and Contexts: Old Worlds and New\n3\n\n\nECE 264 Data Structures and Algorithms I\n2\n\n\n——\n——\n\n\nTotal Credits Spring Semester\n18.5\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "gnc.html",
+    "href": "gnc.html",
+    "title": "Guidance, Navigation, and Control Projects",
+    "section": "",
+    "text": "Missile GNC To Intercept Trajectories\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnmanned Aerial Vehicle Digital Twin\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "JARVIS.html#a-brief-synopsis",
+    "href": "JARVIS.html#a-brief-synopsis",
+    "title": "JARVIS - Four Wheeled SumoBot",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nSumo-bots are high power and wheeled robots designed for competing in the robot-sumo contest at the Cooper Union’s end of the year show. The goal of the competition is to push the opponent’s robot outside a 3ftby-3ft ring made of neoprene rubber. Comprising of 3 mechanical engineering students, our team was tasked with designing and fabricating a 10 inch by 10 inch by 6-inch robot with a weight limit of no more than 5 lbs.\nTo plan the design process, the team broke down the timeline into sub parts – brainstorming, preliminary sketches, final designs, finding mechanical parts, making computer-aided designs, fabricating, finding electrical components, and finalizing the assembly. The team named the robot JASPER which was successful in detecting the edges of the mat and re-directing its trajectory."
+  },
+  {
+    "objectID": "JARVIS.html#jarvis-in-action",
+    "href": "JARVIS.html#jarvis-in-action",
+    "title": "JARVIS - Four Wheeled SumoBot",
+    "section": "JARVIS In Action",
+    "text": "JARVIS In Action\nClick here to see JARVIS in action."
+  },
+  {
+    "objectID": "JARVIS.html#academic-paper-detailing-jarvis-mechanical-and-electrical-design",
+    "href": "JARVIS.html#academic-paper-detailing-jarvis-mechanical-and-electrical-design",
+    "title": "JARVIS - Four Wheeled SumoBot",
+    "section": "Academic Paper Detailing JARVIS’ Mechanical And Electrical Design",
+    "text": "Academic Paper Detailing JARVIS’ Mechanical And Electrical Design\nClick here to access the document."
+  },
+  {
+    "objectID": "junior.html",
+    "href": "junior.html",
+    "title": "Junior Year​",
+    "section": "",
+    "text": "Table 1: List of Courses\n\n\n\n\n(a) Fall Semester\n\n\nCourse name\nCredits\n\n\n\n\nMa 224 Probability\n2\n\n\nESC 340 Fluid Mechanics & Flow Systems\n3\n\n\nME 300 Stress and Applied Elasticity\n3\n\n\nME 351 Feedback Control Systems\n3\n\n\nME 352 Process Control Laboratory\n1\n\n\nHUM 242 Greek Mythology\n3\n\n\nME 457 Drone Control\n3\n\n\n——\n——\n\n\nTotal Credits Fall Semester\n18\n\n\n\n\n\n\n\n\n(b) Spring Semester\n\n\nCourse name\nCredits\n\n\n\n\nME 301 Mechanical Vibrations\n3\n\n\nME 342 Heat Transfer\n3\n\n\nME 360 Engineering Experimentation\n3\n\n\nME 353 Mechatronics\n3\n\n\nME 424 Advanced Dynamics\n3\n\n\nME 494 Bio Inspired Robotics\n3\n\n\n——\n——\n\n\nTotal Credits Fall Semester\n18\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "manufacturing.html#a-brief-synopsis",
+    "href": "manufacturing.html#a-brief-synopsis",
+    "title": "Manufacturing parts for FSAE Team",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nAs part of the Motorsports Team, I spent a lot of time in the machine shop to machine parts for the car for example: clevises, brake bobbins, brake rotors, shock ends, and many more. Click on the hyperlinks before to see some of my work.\nControl Arm Mounts\nRocker mounts\nBrake rotors"
+  },
+  {
+    "objectID": "missile.html#a-brief-synopsis",
+    "href": "missile.html#a-brief-synopsis",
+    "title": "Missile GNC To Intercept Trajectories",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nThe repository contains simulink model for implementation of a GNC algorithms for Missile Guidance. The longitudnal dynamics of the missile were derived from a paper published by Raytheon, linked in the repository as well. The GNC model uses observer for navigation, standard trignometry for guidance, and PID control loop for controls. The controllers for both inner (observer) and outer (PID) loop are calculated using the code in the .py file. Control module is used for the same."
+  },
+  {
+    "objectID": "missile.html#link-to-github",
+    "href": "missile.html#link-to-github",
+    "title": "Missile GNC To Intercept Trajectories",
+    "section": "Link To Github",
+    "text": "Link To Github\nTo access the simulink model and python code for controller determination, click here"
+  },
+  {
+    "objectID": "RIFSK.html#a-brief-synopsis",
+    "href": "RIFSK.html#a-brief-synopsis",
+    "title": "RIFSK - Refugee in Flight Shelter Kit Frame",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nRISFK - Refugee in Flight Shelter Kit was one of the 6 projects offered in EID-101 class, Engineering Design and Problem Solving. As conflict and adverse environmental changes uproot communities in Sub-Saharan Africa, RiFSK addressed the lack of shelter that these individuals face in transit. In our team’s venture to design a portable, effective, and biodegradable shelter, we adhered to the principles of simplicity, efficiency, and self-sufficiency to develop the model.\nThe team was divided into seven smaller groups to better specialize on the numerous facets of RiFSK: four dedicated to the development and analysis of the design, two to its logistics, and one to the coordination of the different elements of the design process.\nI was a part of the frame team, along with 3 more students, which was tasked with designing a frame design that could be built in less than a minute from local resources - bamboo and yarn. Following other design iterations, our final design characterized by its dome structure, is arguably the simplest RiFSK design to date. I got this design from a bow and how it is bent in its curved shape using a string. Accordingly, I brought up the idea of having the bamboo go through the slits of the fabric and bend it using barn strings. Consequently, ease of assembly, disassembly, and disposal all promote RiFSK 2020 as a product that requires little effort or knowledge to use. An academic paper on the design methodology can be found below."
+  },
+  {
+    "objectID": "RIFSK.html#detailed-journal-of-the-proposed-designs-and-their-fabrication",
+    "href": "RIFSK.html#detailed-journal-of-the-proposed-designs-and-their-fabrication",
+    "title": "RIFSK - Refugee in Flight Shelter Kit Frame",
+    "section": "Detailed Journal of the Proposed Designs and Their Fabrication",
+    "text": "Detailed Journal of the Proposed Designs and Their Fabrication\nClick here to access the document."
+  },
+  {
+    "objectID": "senior.html",
+    "href": "senior.html",
+    "title": "Senior Year​",
+    "section": "",
+    "text": "Table 1: List of Courses\n\n\n\n\n(a) Fall Semester\n\n\nCourse name\nCredits\n\n\n\n\nME 312 Manufacturing Engineering\n3\n\n\nME 331 Advanced Thermodynamics\n3\n\n\nME 393 Mechanical Engineering Projects\n3\n\n\nME 371 Data Driven Problem Solving\n3\n\n\nME 451 Modern Control\n3\n\n\nME 408 Introduction to Computer Aided Engineering\n3\n\n\nVIP 381 Smart Cities\n1\n\n\n——\n——\n\n\nTotal Credits Fall Semester\n19\n\n\n\n\n\n\n\n\n(b) Spring Semsester\n\n\nCourse name\nCredits\n\n\n\n\nME 394 Mechanical Engineering Products\n3\n\n\nHUM 358 Studies in Cinema\n3\n\n\nME 363 Optimal Control and ROS\n3\n\n\nME 422 Fundamentals of Aerodynamics\n3\n\n\nME 433 Rocket Science\n3\n\n\nME 493 Methods of Data Driven Control\n3\n\n\n——\n——\n\n\nTotal Credits Spring Semester\n18\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "simulation.html",
+    "href": "simulation.html",
+    "title": "Simulation And Analysis Projects",
+    "section": "",
+    "text": "Modelling Base Plate of a Windmill and Performing Finite Element Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "sophomore.html",
+    "href": "sophomore.html",
+    "title": "Sophomore Year​",
+    "section": "",
+    "text": "Table 1: List of Courses\n\n\n\n\n(a) Fall Semester\n\n\nCourse name\nCredits\n\n\n\n\nESC 000.3 Professional Development Seminar\n0\n\n\nMa 223 Vector Calculus\n2\n\n\nMa 240 Ordinary and Partial Differential Equation\n3\n\n\nPh 213 Physics II: Electromagnetic Phenomena\n4\n\n\nPh 291 Introductory Physics Laboratory\n1.5\n\n\nME 200 Dynamics\n3\n\n\nESC 210 Materials Science\n3\n\n\nHSS 3 The Making of Modern Society\n3\n\n\n——\n——\n\n\nTotal Credits Fall Semester\n19.5\n\n\n\n\n\n\n\n\n(b) Spring Semester\n\n\nCourse name\nCredits\n\n\n\n\nESC 000.4 Professional Development Seminar\n0\n\n\nPh 214 Physics III: Optics and Modern Physics\n3\n\n\nESC 221 Basic Principles of Electrical Engineering\n2\n\n\nESC 201 Mechanics of Materials\n3\n\n\nESC 330 Engineering Thermodynamics\n3\n\n\nME 211 Design and Prototyping\n2\n\n\nESC 251 Systems Engineering\n3\n\n\nHSS 4 Sigmund Freud\n3\n\n\nECE 467 Natural Language Processing\n3\n\n\n——\n——\n\n\nTotal Credits Spring Semester\n22\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "space.html#a-brief-synopsis",
+    "href": "space.html#a-brief-synopsis",
+    "title": "Modelling fish’s oscillatory motion through dynamics of triple pendulum",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nAs an end of the semester project for ME-424 Advanced Dynamics, I modelled a fish’s oscillatory motion through the dynamics of a triple pendulum coupled with springs and dampers. By using the method of virtual work and projections, I computed the rotation matrices for each of the 3 pivots, angular velocities, and corresponding jacobians. This was followed by setting up the mass matrix, frame rotation matrix, and external forces/torques matrix. Different test cases were executed to ensure the validity of the model and improve its accuracy. A presentation explaining the the virtual work method, video of the model in action, and link to the github can be found below."
+  },
+  {
+    "objectID": "space.html#overview-on-dynamics-and-results",
+    "href": "space.html#overview-on-dynamics-and-results",
+    "title": "Modelling fish’s oscillatory motion through dynamics of triple pendulum",
+    "section": "Overview on Dynamics and Results",
+    "text": "Overview on Dynamics and Results\nThe derivation of the dynamics using virtual work, unit tests and results can be found here"
+  },
+  {
+    "objectID": "space.html#oscillatory-motion-in-action",
+    "href": "space.html#oscillatory-motion-in-action",
+    "title": "Modelling fish’s oscillatory motion through dynamics of triple pendulum",
+    "section": "Oscillatory Motion In Action",
+    "text": "Oscillatory Motion In Action\nClick here to see the motion in action."
+  },
+  {
+    "objectID": "space.html#link-to-github",
+    "href": "space.html#link-to-github",
+    "title": "Modelling fish’s oscillatory motion through dynamics of triple pendulum",
+    "section": "Link To Github",
+    "text": "Link To Github\nTo access the corresponding repository, click here"
+  },
+  {
+    "objectID": "tower_fea.html#a-brief-synopsis",
+    "href": "tower_fea.html#a-brief-synopsis",
+    "title": "Modelling Base Plate of a Windmill and Performing Finite Element Analysis",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nOur consultancy of mechanical engineering students has been tasked by Enercon to put forward the design of a new tower for their onshore 9.25 MW wind turbine. The goal is to design and optimize the tower for minimum weight using Fintie Element Analysis. While other team members worked on optimizing the tower, I worked on the base plate mounting for the tower. To model the structure, ANSYS Mechanical and Design Modeler are used. The criteria for the base is to have a factor of safety of 1.65 for the structure and 6 for the bolt connections and welds. After passing through 4 design iterations, the final design is selected and presented."
+  },
+  {
+    "objectID": "tower_fea.html#academic-paper-detailing-modelling-and-simulation-in-ansys",
+    "href": "tower_fea.html#academic-paper-detailing-modelling-and-simulation-in-ansys",
+    "title": "Modelling Base Plate of a Windmill and Performing Finite Element Analysis",
+    "section": "Academic Paper Detailing Modelling and Simulation in ANSYS",
+    "text": "Academic Paper Detailing Modelling and Simulation in ANSYS\nClick here to access the full document."
+  },
+  {
+    "objectID": "UAV.html#a-brief-synopsis",
+    "href": "UAV.html#a-brief-synopsis",
+    "title": "Unmanned Aerial Vehicle Digital Twin",
+    "section": "A brief synopsis",
+    "text": "A brief synopsis\nME-457, Drone Controls, teaches about autonomous navigation, guidance, and control of unmanned air vehicles (UAVs). As a semester long project, we were tasked to create a digital twin which models the rigid-body dynamics, aerodynamics, feedback control, and state estimation using sensors. The project was built on a pre-existing python framework designed by Randy Beard: “Small Unmanned Aircraft: Theory and Practice” which can be found online. The framework included a pre-built graphical interface using pyQt and pyQtgraph modules which allowed to visualize the UAV. A video on the simulation in action and link to the github can be found below."
+  },
+  {
+    "objectID": "UAV.html#uav-in-action",
+    "href": "UAV.html#uav-in-action",
+    "title": "Unmanned Aerial Vehicle Digital Twin",
+    "section": "UAV In Action",
+    "text": "UAV In Action\nClick here to see to the UAV in action here"
+  },
+  {
+    "objectID": "UAV.html#link-to-github",
+    "href": "UAV.html#link-to-github",
+    "title": "Unmanned Aerial Vehicle Digital Twin",
+    "section": "Link to Github",
+    "text": "Link to Github\nClick here to visit the corresponding repository here"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "Github\n  \n  \n    \n     Linkedin\n  \n  \n    \n     Email\n  \n\n  \n  \n\n\nMechanical engineering student with experience in dynamic system modelling, simulation, computer aided design, extensive team projects, and problem solving.\n\n\n\n\n\nThe Cooper Union for the Advancement of Science and Art\n\n\n\n\n\n\n\n\n\n\n\n\nOshkosh Corporation"
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "Mechanical engineering student with experience in dynamic system modelling, simulation, computer aided design, extensive team projects, and problem solving."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "The Cooper Union for the Advancement of Science and Art"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "Oshkosh Corporation"
+  }
+]
