@@ -1,0 +1,32 @@
+[
+  {
+    "listing": "/dynamics_control.html",
+    "items": [
+      "/CASPER.html",
+      "/space.html",
+      "/UAV.html"
+    ]
+  },
+  {
+    "listing": "/fabrication.html",
+    "items": [
+      "/experimentation.html",
+      "/JARVIS.html",
+      "/manufacturing.html",
+      "/RIFSK.html"
+    ]
+  },
+  {
+    "listing": "/gnc.html",
+    "items": [
+      "/cubesat.html",
+      "/missile.html"
+    ]
+  },
+  {
+    "listing": "/simulation.html",
+    "items": [
+      "/tower_fea.html"
+    ]
+  }
+]
