@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Khushant Khurana - Designing &amp; Simulating a Ramjet Engine Using First Principles of Compressible Flow​</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-R5DWCF4Z6W"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Khushant Khurana</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../resume_khurana.pdf" rel="" target="">
+ <span class="menu-text">Resume</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../transcript.pdf" rel="" target="">
+ <span class="menu-text">Transcript</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Designing &amp; Simulating a Ramjet Engine Using First Principles of Compressible Flow​</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text"><strong>Home</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text"><strong>Past internships</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">• Aviation Systems Engineer Intern @ Garmin</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../oshkosh_poster.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• Controls Intern @ Oshkosh Corporation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text"><strong>Projects</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gnc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• Guidance Navigation &amp; Control</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dynamics_control.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• Dynamics &amp; Control</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../simulation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• Simulation &amp; Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fabrication.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• Mechanical Design &amp; Fabrication</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-brief-synopsis" id="toc-a-brief-synopsis" class="nav-link active" data-scroll-target="#a-brief-synopsis">A Brief Synopsis</a></li>
+  <li><a href="#inlet-design" id="toc-inlet-design" class="nav-link" data-scroll-target="#inlet-design">1. Inlet Design</a></li>
+  <li><a href="#cowl-design" id="toc-cowl-design" class="nav-link" data-scroll-target="#cowl-design">2. Cowl Design</a></li>
+  <li><a href="#diffuser-design" id="toc-diffuser-design" class="nav-link" data-scroll-target="#diffuser-design">3. Diffuser Design</a></li>
+  <li><a href="#flemholder-design" id="toc-flemholder-design" class="nav-link" data-scroll-target="#flemholder-design">4. Flemholder Design</a></li>
+  <li><a href="#combustor-design" id="toc-combustor-design" class="nav-link" data-scroll-target="#combustor-design">5. Combustor Design</a></li>
+  <li><a href="#converging-nozzle-design" id="toc-converging-nozzle-design" class="nav-link" data-scroll-target="#converging-nozzle-design">6. Converging Nozzle Design</a></li>
+  <li><a href="#diverging-nozzle-design" id="toc-diverging-nozzle-design" class="nav-link" data-scroll-target="#diverging-nozzle-design">7. Diverging Nozzle Design</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">8. Analysis</a></li>
+  <li><a href="#supporting-files" id="toc-supporting-files" class="nav-link" data-scroll-target="#supporting-files">9. Supporting Files</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+
+
+<div class="quarto-about-jolla column-body">
+  <img src="ramjet.png" class="about-image
+  rectangle " style="width: 30em;">
+ <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Designing &amp; Simulating a Ramjet Engine Using First Principles of Compressible Flow​</h1>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header><div id="heading">
+</div>  
+</div>
+
+<section id="a-brief-synopsis" class="level2">
+<h2 data-anchor-id="a-brief-synopsis">A Brief Synopsis</h2>
+<p>Under this project, a ramjet engine is designed using first principles of compressible flow. Components simulated include: inlet, cowl, diffuser, flameholder, combustor, converging and diverging nozzle. The theoretical performance of the engine is analyzed for inlet mach numbers between 2.75 and 3.25. Analysis is performed for each section in regards to its effect on other components which will be shown later.</p>
+</section>
+<section id="inlet-design" class="level2">
+<h2 data-anchor-id="inlet-design">1. Inlet Design</h2>
+<p>A 2 step inlet is designed to turn the flow from outside of the engine to the diffuser. At every angle, an oblique shock is formed and finally there is a normal shock at the end of the inlet to turn the supersonic flow into subsonic before it enters the diffuser. Otherwise, the diffuser will increase the speed if the flow is supersonic. Normal shocks occur when they get detached from the body due to a very large turning angle. As the name suggests, the inlet and outlet flow velocities are normal to the shock wave. Across a normal shock, the supersonic flow changes to subsonic flow. Accordingly, <span class="math inline">\(P_2 &gt; P_1\)</span>, <span class="math inline">\(T_2 &gt; T_1\)</span>, and <span class="math inline">\(\rho_2 &gt; \rho_1\)</span>.</p>
+<p><span class="math display">\[\begin{equation}
+    \frac{P_2}{P_1} = 1 + \frac{2 \gamma}{\gamma - 1} (M_1^2 - 1)
+    \label{eq:normal_p}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \frac{\rho_2}{\rho_1} = \frac{(\gamma + 1) M_1^2}{2 + (\gamma -1) M_1^2}
+    \label{eq:normal_rho}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \frac{T_2}{T_1} = \frac{P_2}{P_1} \frac{\rho_1}{\rho_2}
+    \label{eq:normal_t}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    M_2 = \frac{1 + \frac{(\gamma - 1)}{2} M_1^2}{\gamma M_1^2  - \frac{(\gamma - 1)}{2}}
+    \label{eq:normal_M}
+\end{equation}\]</span></p>
+<p>Oblique shocks, on the other hand, occur when the supersonic flow is turned into itself. In other words, the flow experiences a re-direction by a giving turning angle <span class="math inline">\(\theta\)</span>. An illustration of oblique shock is shown in , taken from . As <span class="math inline">\(\theta\)</span> increases from 0 to 90 <span class="math inline">\(\degree\)</span>, the oblique shock becomes stronger and accordingly, adds more pressure drag into the system. The relation between <span class="math inline">\(\beta\)</span> (shock wave angle), <span class="math inline">\(\theta\)</span> (turning angle) and mach number of incoming flow is related using the <span class="math inline">\(\theta-\beta-M\)</span> relation.</p>
+<p><span class="math display">\[\begin{equation}
+    tan(\theta) = 2 cot(\beta) [\frac{M_1^2 (sin(\beta))^2 - 1}{M_1^2 (\gamma + cos(2 \beta)) + 2}]
+    \label{eq:oblique_prandel}
+\end{equation}\]</span></p>
+</section>
+<section id="cowl-design" class="level2">
+<h2 data-anchor-id="cowl-design">2. Cowl Design</h2>
+<p>The cowl is designed in a way that the oblique shock waves from the 2 step inlet intersect at the tip of the cowl. Accordingly, a rough diagram of an inlet along with a cowl is drawn below.</p>
+<center>
+<img src="cowl.png" class="img-fluid" width="450">
+</center>
+<p><span class="math display">\[\begin{equation}
+    \label{Eq:cowl_x}
+    X = \frac{sin(\beta_2 - \theta_1)L}{sin(180-\beta_2)}
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    \label{eq:cowl_y}
+    y = \frac{h}{tan(\beta_2)}
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+\label{eq:cowl_h}
+    tan(\beta_1) = \frac{h\tan(\beta_2)}{\alpha tan(\beta_2) + h}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\label{eq:cowl_l}
+    x + y = (\frac{L sin(\beta_2 - \theta_1)}{sin(180-\beta_2)}) + \frac{h}{tan(\beta_2)}
+\end{equation}\]</span></p>
+</section>
+<section id="diffuser-design" class="level2">
+<h2 data-anchor-id="diffuser-design">3. Diffuser Design</h2>
+<p>The flow in the diffuser is considered to be isentropic while satisfying the conservation of mass and momentum. To determine the properties across the diffuser, small perturbation theory is used to get the differential conservation of mass, momentum (with no body forces) and energy.</p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:mass}
+    \frac{d\rho}{\rho} + \frac{dA}{A} + \frac{du}{u} = 0
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:momentum}
+    \frac{d\rho}{\rho} + udu = 0
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    \label{eq:energy}
+    dh + udu = 0
+\end{equation}\]</span></p>
+</section>
+<section id="flemholder-design" class="level2">
+<h2 data-anchor-id="flemholder-design">4. Flemholder Design</h2>
+<p>The flameholder is modelled to provide an adiabatic pressure drop in the flow stream. The change in pressure is governed by the relation given in . It is also assumed that the area profile does not change across the flameholder. In order to determine the temperature and the mach number of the flow after flameholder, conservation of mass flow rate is used. The mass flow rate can be simplified to the basic characteristics of the flow.. Furthermore, the energy is also conserved.</p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:flameholder}
+    \frac{\Delta P}{P}=0.81\gamma M^2
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:mass flow}
+    \dot{m} = \frac{P}{RT}AM\sqrt{T\gamma R}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:h}
+    C_p T_1 + \frac{M_1^2 \gamma R T_1}{2} = C_p T_2 + \frac{M_2^2 \gamma R T_2}{2}
+\end{equation}\]</span></p>
+<p>Unknown variables are <span class="math inline">\(T_2\)</span> and <span class="math inline">\(M_2\)</span>. Accordingly, the linear system of equations and are solved using method of substitution to determine expressions for both variables.<br>
+<span class="math display">\[\begin{equation}
+    \label{eq:flame_t}
+    T_2 = (2 C_P T_1 + M_1^2 \gamma R T_1) (\frac{1}{2C_P + M_2^2 \gamma R})
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:flame_p}
+    \frac{P_1 M_1}{\sqrt{T_1}} = \frac{P_2 M_2 \sqrt{2C_P + M_2^2 \gamma R}}{\sqrt{2C_P T_1 + M_1^2 \gamma R T_1}}
+\end{equation}\]</span></p>
+</section>
+<section id="combustor-design" class="level2">
+<h2 data-anchor-id="combustor-design">5. Combustor Design</h2>
+<p>To model the combustor, 1D quasi flow with heat addition is used. While the conservation of mass and momentum are same as to regular 1D quasi flow, the conservation of energy now involves and additional term ‘q’ which refers to the heat addition as shown in . The term q refers to the rate of heat added to the incoming flow. It is described as the ratio of the rate of heat provided by the fuel to the mass flow rate of the incoming flow, shown in </p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:rayleigh}
+    h_1 + \frac{u_1^2}{2} + q = h_2 + \frac{u_2^2}{q_2}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:q}
+    q = \frac{\dot{q}}{\dot{m}}
+\end{equation}\]</span></p>
+<p>The flow properties across the combustor are determined iteratively by first calculating the the stagnation temperature by using and then finding the stagnation temperature at the M = 1 state. Once all these states are known the relative ratios of the pressure and temperature are determined using equations given in and </p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:t_02}
+    q = C_p ( T_\text{02} - T_\text{01})
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    \label{eq:r_t}
+    \frac{T}{T*} = M^2 (\frac{1+\gamma}{1+\gamma M^2})^2
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:r_p}
+    \frac{P}{P*} = \frac{1+\gamma}{1+\gamma M^2}
+\end{equation}\]</span></p>
+<p>For the base design, the combustor section only intakes the specified equivalence ratio. This is changed later when the engine’s performance is analyzed for various mach numbers. Accordingly, the equivalence ratio is made variable to provide a constant exit mach number for the combustor. The mass flow rate of the fuel is determined, <span class="math inline">\(\dot{q}\)</span> of fuel, and finally ‘q’. For the purposes of the fuel, hydrogen is used and has lower heating value (LHV) of 120 <span class="math inline">\(\frac{MJ}{kg}\)</span>. Moreover, the psychometric ratio for hydrogen is 0.0291 which is used to determine the mass flow rate.</p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:phi}
+    \dot{m}_\text{fuel} =   0.0291 \phi \dot{m}_\text{air}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:q_dot}
+    \dot{q} = LHV \dot{m}_\text{fuel}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:q_final}
+    q = \frac{\dot{q}}{\dot{m}_\text{air}}
+\end{equation}\]</span></p>
+<p>Although it is assumed that the flow burns instantaneously in the combustor, it is still important to determine the length of the combustor which is done by determining the time taken for the fuel to burn. The inlet conditions are used to determine the time constant. To get the length of the combustor, average of the inlet and exit velocities in the combustor is taken and multiplied with <span class="math inline">\(\tau\)</span>.</p>
+<p><span class="math display">\[\begin{equation}
+    \label{eq:tao}
+    \tau = 325 p^{-1.6} exp(-0.8 \frac{T_0}{1000})
+\end{equation}\]</span></p>
+</section>
+<section id="converging-nozzle-design" class="level2">
+<h2 data-anchor-id="converging-nozzle-design">6. Converging Nozzle Design</h2>
+<p>Similar to the diffuser, isentropic quasi 1D flow relations are used to determine the properties of the flow across the converging nozzle. As it can be seen from , if M is less than 1 and dA/A is less than 1, then du/u is greater than 1. This means that as the subsonic flow is constricted due to a negative area differential, the flow gets faster. However, the maximum speed the subsonic flow can attain by constricting the area is the local speed of sound. This is referred to as throat area where mach number is equal to 1. Like the isentropic flow in diffuser, the area ratio and mach number can be solved if one is known. Since the desired <span class="math inline">\(M_2\)</span> = 1, the corresponding area profile can be derived. The temperature and pressure can be derived from the stagnation parameters since they remain the same throughout the isentropic flow.</p>
+</section>
+<section id="diverging-nozzle-design" class="level2">
+<h2 data-anchor-id="diverging-nozzle-design">7. Diverging Nozzle Design</h2>
+The diverging nozzle for the ramjet engine is a 2D minimum length nozzle designed using method of characteristics (MOC). To determine the properties of a 2D flow, the flow is considered to be inviscid, compressible, and irrotational. Using the third property velocity potential functions are generated and solved to determine solutions for characteristic lines. These are special lines which can be used to calculate properties along the flow because they have a specific pattern in terms of how their properties evolve. The two lines are called left and right turning characteristic. A variable ‘K’ is a dummy parameter for both the characteristics.
+<p>The magnitude of the constant ‘K’ for both left and right turning characteristic. As seen, the properties of point 3 depends upon the properties of 1 and 2. The corresponding location of the third point in the global axes is given the linear system of equations. Once the properties of the third point are known, the process can be rolled further to generate more points and design the entire nozzle. <span class="math display">\[\begin{equation}
+    \label{eq:k2_plus}
+    \theta_3 - \nu_3 = \theta_2 - \nu_2 = K_\text{2,plus}
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    \label{eq:k_minus}
+    \theta_3 + \nu_3 = \theta_1 + \nu_1 = K_\text{1,minus}
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    \label{eq:moc_pos}
+    \frac{y_3 - y_2}{x_3 - x_2} = tan(\frac{(\theta_3 + \theta_2)+(\mu_3 + \mu_2)}{2})
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    \label{eq:moc_pos2}
+    \frac{y_3 - y_1}{x_3 - x_1} = tan(\frac{(\theta_3 + \theta_1) - (\mu_3 + \mu_1)}{2})
+\end{equation}\]</span></p>
+</section>
+<section id="analysis" class="level2">
+<h2 data-anchor-id="analysis">8. Analysis</h2>
+<p>The pressure and temperature, both stagnation and static, are shown below. As expected, the stagnation pressure and temperature remain constant through isentropic devices: diffuser, converging, and diverging nozzle.</p>
+<p><img src="temp.png" class="img-fluid" width="450"> <img src="tstag.png" class="img-fluid" width="450"> <img src="p.png" class="img-fluid" width="450"> <img src="pstag.png" class="img-fluid" width="450"></p>
+<p>The performance of the engine is shown below:</p>
+<p><img src="air flow.png" class="img-fluid" width="450"> <img src="fuel flow.png" class="img-fluid" width="450"> <img src="thrust.png" class="img-fluid" width="450"> <img src="spec thrust.png" class="img-fluid" width="450"></p>
+</section>
+<section id="supporting-files" class="level2">
+<h2 data-anchor-id="supporting-files">9. Supporting Files</h2>
+<p>The analysis and code used to design/simulate these components can be found <a href="https://github.com/khushant2001/Ramjet-Engine-Design">here</a></p>
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2023, Khushant Khurana</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

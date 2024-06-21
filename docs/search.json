@@ -1,0 +1,422 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "Github\n  \n  \n    \n     Linkedin\n  \n  \n    \n     Email\n  \n\n  \n  \n\n\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nConcentration: Mechanical engineering;\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering; Minor: Computer Science\n\n\n\n\n\n\n\nGarmin\n\n\n\nOshkosh Corporation"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "The Cooper Union for the Advancement of Science and Art\nConcentration: Mechanical engineering;\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering; Minor: Computer Science"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "Garmin\n\n\n\nOshkosh Corporation"
+  },
+  {
+    "objectID": "base_plate/tower_fea.html#a-brief-synopsis",
+    "href": "base_plate/tower_fea.html#a-brief-synopsis",
+    "title": "Modelling Base Plate of a Windmill and Performing Finite Element Analysis",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nOur consultancy of mechanical engineering students has been tasked by Enercon to put forward the design of a new tower for their onshore 9.25 MW wind turbine. The goal is to design and optimize the tower for minimum weight using Fintie Element Analysis. While other team members worked on optimizing the tower, I worked on the base plate mounting for the tower. To model the structure, ANSYS Mechanical and Design Modeler are used. The criteria for the base is to have a factor of safety of 1.65 for the structure and 6 for the bolt connections and welds. After passing through 4 design iterations, the final design is selected and presented."
+  },
+  {
+    "objectID": "base_plate/tower_fea.html#academic-paper-detailing-modelling-and-simulation-in-ansys",
+    "href": "base_plate/tower_fea.html#academic-paper-detailing-modelling-and-simulation-in-ansys",
+    "title": "Modelling Base Plate of a Windmill and Performing Finite Element Analysis",
+    "section": "Academic Paper Detailing Modelling and Simulation in ANSYS",
+    "text": "Academic Paper Detailing Modelling and Simulation in ANSYS\nClick here to access the full document."
+  },
+  {
+    "objectID": "boeing/boeing.html#a-brief-synopsis",
+    "href": "boeing/boeing.html#a-brief-synopsis",
+    "title": "Analysis of Boeing 747-800’s Aerodynamics Using First Principles​",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nUnder this project, the aerodynamic features such as lift and drag coefficients, downwash effects, and viscous models are determined using first principles. To begin, the coordinates of the BACXXX airfoil are derived from airfoil tools. Following this, 2D method of thin airfoil theory is used to get the section lift coefficient. Since the 2D models assume inviscid flow, no drag can be determined from them. Accordingly, the finite wing of the Boeing 747 is analysed using Finite Wing Theory and Prandtl Lifting Line Theory to understand the downwash effects and induced drag. Viscous models are added on top of this to improve the accuracy of the calculations and finally a study in XFLR5 is conducted. For the fundamental analysis, python code is written from scratch which can be found here."
+  },
+  {
+    "objectID": "boeing/boeing.html#thin-airfoil-theory",
+    "href": "boeing/boeing.html#thin-airfoil-theory",
+    "title": "Analysis of Boeing 747-800’s Aerodynamics Using First Principles​",
+    "section": "1. Thin Airfoil Theory",
+    "text": "1. Thin Airfoil Theory\nThin airfoil theory assumes that the airfoil has a small thickness compared to its chord length (&lt;12%). This allows the airflow over the airfoil to be treated as two-dimensional, simplifying the analysis. Since the theory utilizes potential flow theory, it assumes the flow to be irrotational and inviscid. Moreover, the theory assumes a vortex sheet on the camber line which creates circulation and consequently lift, as explained by the Kutta Joukowski theorem.\n\\[\\begin{equation}\n    L' = \\rho V_\\text{inf} \\Gamma\n    \\label{eq:kutta}\n\\end{equation}\\]\nAccording to thin airfoil theory, the lift force and moments applied to a 2D airfoil can be determined using the change in camber line where \\(\\sigma\\) is the vorticity strength over the camber line. In order to determine the camber line function of the BACXXX airfoil, 4 digit NACA convention is used where ‘m’ = maximum camber and ‘p’ = location of maximum camber.\n\\[\\begin{equation}\n    \\frac{1}{2\\pi}\\int_{0}^{c} \\frac{\\sigma(x_0)}{(x-x_0)} \\, dx_0 = V_\\text{inf} (\\sin(\\alpha) -\\frac{dz}{dx} \\cos(\\alpha)\n    \\label{eq:thin airfoil}\n\\end{equation}\\]\n\\[\\begin{align}\n    \\label{eq:camberline}\n    yc = \\frac{m}{p^2}(2px-x^2), 0 \\leq x \\leq p.\\\\\n    yc = \\frac{m}{(1-p)^2}((1+2p)+2px-x^2), p \\leq x \\leq 1\n\\end{align}\\]\nIn order to integrate the vorticity strength function around the chord, Fourier coefficients are used to express the vorticity strength function as a \\(f(\\theta)\\) as . The fourier coefficients are labelled as \\(A_n\\) and are determined using equations.\n\\[\\begin{equation}\n    \\sigma(\\theta) = 2V_\\text{inf}(A_0 \\frac{1+\\cos(\\theta)}{\\sin(\\theta)} + \\sum_{i=1}^{n}A_n \\sin(n\\theta))\n    \\label{eq:fourier thin}\n\\end{equation}\\]\n\\[\\begin{align}\n    \\label{eq:fourier}\n    A_0 = \\alpha - \\int_{0}^{\\pi} \\frac{dz}{dx}d\\phi\\\\\n    A_n = \\frac{2}{\\pi}\\int_{0}^{\\pi}\\frac{dz}{dx}(cos(n\\phi)d\\phi)\n\\end{align}\\]\nThe coefficients are solved for cruise speed and the coefficient of lift and moment at the tip are determined as shown in . The slope of the lift coefficient vs angle of attack is determined to be 6.28 which is approximately \\(2\\pi\\) and the angle of attack at \\(C_L\\) = 0 is -1.31 . At cruise speed, the angel of attack is determined to be 0.5 degrees to generate lift force equaling the maximum payload of the aircraft."
+  },
+  {
+    "objectID": "boeing/boeing.html#finite-wing-theory",
+    "href": "boeing/boeing.html#finite-wing-theory",
+    "title": "Analysis of Boeing 747-800’s Aerodynamics Using First Principles​",
+    "section": "2. Finite Wing Theory",
+    "text": "2. Finite Wing Theory\nSince thin airfoil theory assumes a 2D profile and an infinite wing, it neglects effect of downwash. Downwash is the movement of the air from high pressure region underneath the wing to low pressure region top. Accordingly, there is no lift produced at the edges which results in a non-uniform vorticity distribution unlike the thin airfoil theory. To solve this problem, a parabolic distribution of vortex strength is considered which is 0 at the ends and peaks in the middle. The effect of downwash reduces the angle of attack.\n\\[\\begin{equation}\n    \\label{eq:aoa effective}\n    \\alpha_\\text{effective} = \\alpha - \\alpha_\\text{induced}\n\\end{equation}\\]\nIt was determined that the lift coefficient varies with angle of attack using the factor \\(2\\pi\\). The magnitude of downwash. Putting this in context with the vorticity distrubtion function like before, the fundamental equation of finite wing theory is derived.\n\\[\\begin{equation}\n    \\label{Eq:downwash}\n    w(y_0) = \\int_{-winspan/2}^{wingspan/2}\\frac{\\frac{d\\Gamma}{dy}}{4\\pi(y-y_0)} dy\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\label{eq:finite main}\n    \\frac{\\Gamma(y_0)}{\\pi V_\\text{inf} c(y_0} = \\alpha(y_0) - \\alpha_\\text{L-0}(y_0) + \\frac{1}{4\\pi V_\\text{inf}}\\int_{-wingspan/2}^{wingspan/2}\\frac{\\frac{d\\Gamma}{dy}}{4\\pi(y-y_0)} dy\n\\end{equation}\\]\nTo solve the equation, the vorticity strength across the wing is assumed to be Fourier sum. The Fourier coefficients \\(A_n\\) are solved using linear system of equations: Ax = B. Using these coefficients, the lift and induced drag are determined.\n\\[\\begin{equation}\n    \\label{eq:finite fourier}\n    \\Gamma(\\theta) = 2bV_\\text{inf}\\sum_{i=1}^{n} A_n sin(n\\theta)\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\label{eq:finite fourier main}\n    \\frac{2b}{\\pi c(\\theta)}\\sum_{i=1}^{n} A_n sin(n\\theta) + \\sum_{i=1}^{n} nA_n \\frac{sin(n\\theta)}{sin(\\theta)} = \\alpha(\\theta) - \\alpha_\\text{L-0}(\\theta).\n\\end{equation}\\]\n\\[\\begin{align}\n    \\label{eq:finite lift}\n    C_L = A_1 \\pi (Aspect Ratio)\\\\\n    C_D = \\frac{C_L^2}{\\pi(Aspect Ratio)}(1+\\sigma)\n\\end{align}\\]\nThe linear system of equations is solved in Python using 100 coefficients to generate precise values. The corresponding Reynolds number for this analysis is 2.4e8. The lift coefficient, induced drag coefficient, and the relations of the two. The modified lift coefficient, accounting for induced drag, has less slope than the 2D model which makes sense because the lift force is not uniform anymore. In other words, the downwash results in loss of lift force at the edges which introduces an induced angle of attack."
+  },
+  {
+    "objectID": "boeing/boeing.html#viscous-modelling",
+    "href": "boeing/boeing.html#viscous-modelling",
+    "title": "Analysis of Boeing 747-800’s Aerodynamics Using First Principles​",
+    "section": "3. Viscous Modelling",
+    "text": "3. Viscous Modelling\nViscous effects in aerodynamics arise from skin friction due to boundary layers. Assuming no slip condition, the flow has 0 velocity at the contact surface which induces shear stress and gives rise to drag. Boundary layers can be classified as laminar and turbulent, based on the local Reynolds number. If the Reynolds number is greater than 3e5, critical Reynolds Number, the flow is considered to be turbulent.\nThe determination of skin drag on the wings of Boeing 747-800 is done using strip theory: the wing is split into multiple sections. Both laminar and turbulent effects are considered while analyzing individual strips and the shear force is determined. To make things easy, flat plate model is used to determine the drag force.\n\\[\\begin{align}\n    \\label{eq:drag}\n    Drag_\\text{Laminar} = 0.664 \\rho V_\\text{inf}^2 L (Re_L)^.5\\\\\n    Drag_\\text{Turbulent} = \\frac{0.036 \\rho V_\\text{inf}^2 L}{Re^.2}\n\\end{align}\\] Since the incoming flow transitions from laminar to turbulent, the total drag on the section is determined using Prandtl Relation. The Reynolds number used for the transition is 3e5\n\\[\\begin{equation}\n    \\label{eq:prandtl}\n    Drag_\\text{Total} = Drag_\\text{100\\% Turbulent} - Drag_\\text{Turbulent Where Laminar} + Drag_\\text{Laminar}\n\\end{equation}\\]\nTo calculate the total skin drag, 200000 sections are used and the final drag force is determined to be 605 kN and the coefficient of drag is 0.03 at steady state flight. The viscous drag is lies close to the induced drag for smaller angle of attacks (range of -10 to 10 degrees). However, with higher angle of attack, the induced drag coefficient increases.\nTo analyze the viscous drag on the body itself, coefficient of drag over fundamental shapes is taken from standard aero textbook. Accordingly, the fuselage is considered as a long cylinder and the nose is considered as a hollow hemisphere. The corresponding coefficients are shown in . The dimensions used for both shapes. Like the wing analysis, steady level flight is assumed with conditions . \\[\\begin{align}\n    \\label{eq:cd}\n    C\\_D_\\text{Fuselage} = 0.86 \\\\\n    C\\_D_\\text{Nose} = 0.38\n\\end{align}\\]\nUsing the basic drag calculation, the overall drag is determined to be 1620 kN which seems to be a lot. However, if the entire body is considered as 1 shape - a stretched streamlined body - the coefficient of drag decreases to 0.04. Doing the same calculations, the total drag over the body equals to 53 kN which does make more sense."
+  },
+  {
+    "objectID": "boeing/boeing.html#xflr5-analysis",
+    "href": "boeing/boeing.html#xflr5-analysis",
+    "title": "Analysis of Boeing 747-800’s Aerodynamics Using First Principles​",
+    "section": "4. XFLR5 Analysis",
+    "text": "4. XFLR5 Analysis\nThe data points from the Airfoil Tools for the BACXXX airfoil are entered into the XFLR5 software to validate the results found using fundamental methods and also determine stall characteristics. Reynolds number at cruise conditions (2.4e8) and angle of attack ranging from -25 to 25 degree are used for analysis."
+  },
+  {
+    "objectID": "boeing/boeing.html#supporting-files",
+    "href": "boeing/boeing.html#supporting-files",
+    "title": "Analysis of Boeing 747-800’s Aerodynamics Using First Principles​",
+    "section": "5. Supporting Files",
+    "text": "5. Supporting Files\nThe python code, XFLR 5 model, and the academic paper used can be found here"
+  },
+  {
+    "objectID": "casper/CASPER.html#caspers-klann-geometry-in-action",
+    "href": "casper/CASPER.html#caspers-klann-geometry-in-action",
+    "title": "CASPER: Cooper Automated Subterranean Probing & Excavating Robot​",
+    "section": "CASPER’s Klann Geometry In Action!",
+    "text": "CASPER’s Klann Geometry In Action!\nClick here to see CASPER digging into rice using its klann leg geometry."
+  },
+  {
+    "objectID": "casper/CASPER.html#academic-paper-describing-caspers-design-fabrication-and-analysis.",
+    "href": "casper/CASPER.html#academic-paper-describing-caspers-design-fabrication-and-analysis.",
+    "title": "CASPER: Cooper Automated Subterranean Probing & Excavating Robot​",
+    "section": "Academic Paper Describing CASPER’s Design, Fabrication, and Analysis.",
+    "text": "Academic Paper Describing CASPER’s Design, Fabrication, and Analysis.\nClick here to access the full document."
+  },
+  {
+    "objectID": "data_driven_ctrl/data_driven_control.html#a-brief-synopsis",
+    "href": "data_driven_ctrl/data_driven_control.html#a-brief-synopsis",
+    "title": "Controlling Data Driven Systems Using System Identification and Model Reduction​",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nUnder this project, data driven numerical methods are used to perform system identification and model reduction. The data sets used are subjected to basic linear algebra techniques such as Principle Component Analysis (PCA) and Singular Value Decomposition (SVD) for model reduction. This is followed by system id using methods such as Dynamic Mode Decomposition (DMD), Eigenanalysis Realization Algorithm (ERA), and Sparse Identification of Non Linear Dynamics (Sindy) to generate linear models for non-linear systems. Since the main goal is to design controllers for these systems, linear systems allow to construct controllers such as Linear Quadratic Controller (LQR) and Model Predictive Control (MPC). The datasets used consists of Flow over Airfoils, Flight Dynamics Datasets, and basic systems such as mass spring and inverted pendulum."
+  },
+  {
+    "objectID": "data_driven_ctrl/data_driven_control.html#using-singular-value-decomposition-to-recreate-the-fluid-flow-over-an-airfoil",
+    "href": "data_driven_ctrl/data_driven_control.html#using-singular-value-decomposition-to-recreate-the-fluid-flow-over-an-airfoil",
+    "title": "Controlling Data Driven Systems Using System Identification and Model Reduction​",
+    "section": "1. Using Singular Value Decomposition to recreate the fluid flow over an airfoil!",
+    "text": "1. Using Singular Value Decomposition to recreate the fluid flow over an airfoil!\nIn order to understand the significance of Singular Value Decomposition, especially in the field of compression, a big dataset of flow velocities found here is subjected to the algorithm. Specifically, the dataset for airfoil with angle of attack of 25 degrees and frequency of 0.05 hz is used. The dataset itself (for both X and Y velocity) comes in a 3-D matrix, where the first two dimensions represent the velocity for individual snapshots in time. Accordingly, the third dimension contains the number of snapshots, which are 400 in total. Before performing SVD on the dataset, pre-processing is done in the following format:\n\nThe 2-D grid of velocities is shaped into a single column vector.\nIndividual snapshots are then horizontally stacked as column vectors. Accordingly, the final product is a big 2-D matrix where columns are snapshots of velocities at consecutive times.\nThe 2-D grid of X and Y velocity is stacked vertically to make the analysis less repetetive.\nThe mean of every column is subtracted, serving the purpose of normalizing the data.\n\nFinally, the data is ready to be subjected to an economy SVD and the following matrices are derived: U, S, V. The matrix U contains information about the spatial modes while the product of S and V’ contains information about the temporal ampltiude of the corresponding modes in U. As expected, SVD figures out which pattern in the data summarizes it the best. A graphic of the eigenvalues (square of the singular values of the data) is show below.\n\nThe first 6 spatial modes which are basically the first 6 column vectors of U are shown below as well. Since the big data matrix contains both x and y velocities, it is important to remember that the top half of the matrix contains the x velocity and bottom half contains the y velocity.\n\n\nThe corresponding temporal amplitude for these modes is also shown below. As seen, the first 2 dominant modes follow a cyclic wave which are at an offset of a quarter wave.\n\nFinally, the construction of the flows is performed by choosing a certain number of columns (&lt;400). The mean subtracted from individual columns is added back to the columns selected for reconstruction and the columns are also shaped back to the grid format. By choosing which snapshot to view, a contour plot can be generated, as shown below for first snapshot or t = 1 sec. \n\nFollowing is the video of the reconstruction of the flows can be found in the files attached in the repository. Video"
+  },
+  {
+    "objectID": "data_driven_ctrl/data_driven_control.html#using-dynamic-mode-decomposition-to-recreate-the-fluid-flow-over-an-airfoil",
+    "href": "data_driven_ctrl/data_driven_control.html#using-dynamic-mode-decomposition-to-recreate-the-fluid-flow-over-an-airfoil",
+    "title": "Controlling Data Driven Systems Using System Identification and Model Reduction​",
+    "section": "2. Using Dynamic Mode Decomposition to recreate the fluid flow over an airfoil!",
+    "text": "2. Using Dynamic Mode Decomposition to recreate the fluid flow over an airfoil!\nDynamic mode decomposition tries to find the best fit “linear operator” which can predict the next state of the system. Consider ‘X’ to be the state of the system at time t=k and “X’” to be the state at k+1, then DMD finds the A that can satsify the equations listed below. By taking the inverse of X’, A can be determined.\n\\[\nX' = A * X\n\\]\n\\[\nA = X' * X^{-1}\n\\]\nSince the matrix X is not always square, Singular Value Decomposition from above is used to find the pseudo-inverse. Equations below show expansion of the matrix X based on SVD and its inverse in terms of the individual matrix. Another important characteristic about DMD is that it finds a matrix called A tilda which is much smaller in size as compared to the original A but has the same eigenvalues. This decreases the computation cost by a lot.\n\\[\nX = U * \\Sigma * V*\n\\]\n\\[\nX' = A * U * \\Sigma * V*\n\\]\n\\[\nA\\sim = U * X' * V * \\Sigma^{-1} = U* * A * U\n\\]\nOnce A tilda is know, its eigenvalues (W) can be calculated which are same as A and then the eigenvectors of A which are labelled as phi can be determined through back calculation using lambda.\n\\[\nA\\sim * \\lambda = \\lambda * W\n\\]\n\\[\n\\phi = X' * V * \\Sigma^{-1} * \\lambda\n\\]\nTo perform a DMD on the same flow field, the velocities are stacked in a similar format as before to make the X matrix and the first column is deleted to make X’. The airfoil data used for this has an angle of attack of 25 degrees with freq of 0.05 Hz. Subjecting to DMD analysis, the amplitudes of the modes are derived and the plot is listed below: \nAlso, the contour plot for the first 4 modes along with their frequency is given below: \nFinally, the reconstruction of the fluid flow is performed using the DMD Algorithm and the following the comparison: Following is the video of the fluid reconstruction using DMD and first 20 POD modes. Video"
+  },
+  {
+    "objectID": "data_driven_ctrl/data_driven_control.html#using-sparse-identification-of-non-linear-dynamics-sindy-to-reconstruct-mass-spring-damper-model.",
+    "href": "data_driven_ctrl/data_driven_control.html#using-sparse-identification-of-non-linear-dynamics-sindy-to-reconstruct-mass-spring-damper-model.",
+    "title": "Controlling Data Driven Systems Using System Identification and Model Reduction​",
+    "section": "3. Using Sparse Identification of Non-Linear Dynamics (Sindy) to reconstruct mass-spring-damper model.",
+    "text": "3. Using Sparse Identification of Non-Linear Dynamics (Sindy) to reconstruct mass-spring-damper model.\nSindy is a sparse identification technique to derive a linear combination of basis functions and reconstruct the data field. A simple mass-spring-damper system is subjected to Sindy and the spring and damper stiffness are back calculated from the coefficients given through Sindy. The parameters used are given below: k = 10 N/m, b = 20 N/(m^2 sec), and m = 1 kg. The original differential equation is stated as follows. Moreover, a sinusoidal force is applied to the system and the position and velocity are recorded.\n\\[\n\\ddot(x) = \\frac{F(t)}{m} - b\\dot(x) - kx\n\\]\nThe data collected is subjected to Sindy and the sparsification know is adjusted to get the correct sparse model. The basis functions used are: {1, x, x_dot, u, x^2, x_dot^2, u^2}. The results of this tuning are given below. Using lambda = 0.01, the following coefficients are determined."
+  },
+  {
+    "objectID": "data_driven_ctrl/data_driven_control.html#eigensystem-realization-algorithm-era",
+    "href": "data_driven_ctrl/data_driven_control.html#eigensystem-realization-algorithm-era",
+    "title": "Controlling Data Driven Systems Using System Identification and Model Reduction​",
+    "section": "4. Eigensystem Realization Algorithm (ERA)",
+    "text": "4. Eigensystem Realization Algorithm (ERA)\nERA is a data based analysis of a system which is capable of determining the discrete state space matrices: A, B, & C using the impulse response. Accordingly, the the system can be described as follows:\n\\[\nx_\\text{k+1} = A_d x_k + B_d u_k\n\\]\n\\[\ny_k = C_d x_k\n\\]\n\\[\nu_k = \\delta(t)\n\\]\nBy writing out the response of the system with initial conditions to be 0, the output can be characteristed by\n\\[\ny_k = C_d A_d ^ {k-1}B_d\n\\]\nFollowing this the Henkel matrices -H and H’ - are generated and the SVD is taken to convert the model from high to low dimensional model. A, B, and C matrices are generated using the following:\n\\[\nSVD(H) = U \\sigma V^{*}\n\\]\n\\[\nA = \\sigma^{-.5} U^{T} H' V \\sigma^{.5}\n\\]\n\\[\nB = \\sigma^{.5} U^{T} H\n\\]\n\\[\nC = H V \\sigma^{.5}\n\\]\nTo understand this approximation, ERA is tried on the transfer function decribing the Atomic Force Microscope. The corresponding transfer function is given below:\n\\[\nG = \\frac{kw_2^2w_3^2w_5^2(s^2+2\\zeta_1w_1s+w1^2)(s^2+2\\zeta_4w_4s+w_4^2)exp(-s\\tau)}{w_1^2w_4^2(s^2 + 2\\zeta_2w_2s + w_2^2)(s^2 + 2\\zeta_3w_3s + w_3^2)(s^2 + 2\\zeta_5w_5s + w_5^2)}\n\\]\nThe impulse response of the system is determined (also shown below) and hankel matrices are generated. \nAfter determining the discrete A,B,C matrices, the bode plots are generated from the ERA esimtation and actual transfer function. The results are shown below. \nTo see the effects of the addition of the white to the system, random normal gaussian noise is added to the impulse response and subjected to the ERA estimation. Surprisingly, the noise does not decrease the accuracy of the estimation; only does at high frequency. This makes sense because by taking SVD of the hankel matrix, the low energy pod modes are neglected which contain the noise. The results of the addition of white noise to the system are shown below:"
+  },
+  {
+    "objectID": "data_driven_ctrl/data_driven_control.html#supporting-files",
+    "href": "data_driven_ctrl/data_driven_control.html#supporting-files",
+    "title": "Controlling Data Driven Systems Using System Identification and Model Reduction​",
+    "section": "5. Supporting files",
+    "text": "5. Supporting files\nTo access the code, check out the github"
+  },
+  {
+    "objectID": "dynamics_control.html",
+    "href": "dynamics_control.html",
+    "title": "Dynamics And Control Projects",
+    "section": "",
+    "text": "Controlling Data Driven Systems Using System Identification and Model Reduction​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImplementing a PID controller on Irobot Create for wall following while mapping the space​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelling fish’s oscillatory motion through dynamics of triple pendulum\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMulti Modal Robotic Traversal of Remote and Rugged Terrain​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSimulating Dynamics and Controllers for Unmanned Aerial Vehicle\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Robotic Operating System to Develop Control Architectures.​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "experimentation/experimentation.html#a-brief-synopsis",
+    "href": "experimentation/experimentation.html#a-brief-synopsis",
+    "title": "Base Excitation Rig - Demonstration of Vibration Isolation",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nAs the end project of ME-360, Experimentation, each team was tasked to design and fabricate an apparatus exhibiting a scientific principle. Along with 2 mechanical engineering students, I desigined an expeirmental rig demonstrating the principle of vibration isolation during base excitation. Vibration suppression for a mechanical system can be achieved at the source or the receiver; however, vibration isolation, which uses a combination of springs and dampers to isolate the mass from input vibration, is the preferred technique. The significance of vibration isolation lies in its ability to improve the performance, reliability, and safety of structural and mechanical systems, as well as to reduce the transmission of noise and vibrations. The rig consisted of an arduino controlled stepper motor to incite excitation at the base which transmitted to a primary mass - lumped steel plates- on the other side of the spring."
+  },
+  {
+    "objectID": "experimentation/experimentation.html#rig-in-action",
+    "href": "experimentation/experimentation.html#rig-in-action",
+    "title": "Base Excitation Rig - Demonstration of Vibration Isolation",
+    "section": "Rig In Action",
+    "text": "Rig In Action\nClick here to see the rig in action."
+  },
+  {
+    "objectID": "experimentation/experimentation.html#academic-paper-for-design-fabrication-and-results-of-the-rig",
+    "href": "experimentation/experimentation.html#academic-paper-for-design-fabrication-and-results-of-the-rig",
+    "title": "Base Excitation Rig - Demonstration of Vibration Isolation",
+    "section": "Academic Paper for Design, Fabrication, and Results of the Rig",
+    "text": "Academic Paper for Design, Fabrication, and Results of the Rig\nThe entire document can be found here"
+  },
+  {
+    "objectID": "fabrication.html",
+    "href": "fabrication.html",
+    "title": "Mechanical Design And Fabrication Projects",
+    "section": "",
+    "text": "Base Excitation Rig - Demonstration of Vibration Isolation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCASPER: Cooper Automated Subterranean Probing & Excavating Robot​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJARVIS - Four Wheeled SumoBot\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nManufacturing parts for FSAE Team\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRIFSK - Refugee in Flight Shelter Kit Frame\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "flight/mpc.html",
+    "href": "flight/mpc.html",
+    "title": "Using Constrained SINDY and Model Predictive Controller for Trajectory Tracking​",
+    "section": "",
+    "text": "Brief Overview\nUnder this ongoing project, Sparse Identification of Non Linear Dynamics (SINDY) is used to generate simpler model flight dynamics. Test data for the model is generated from the fixed wing aircraft dynamics from the UAV project under “Dynamics and Control”. Series of linear regressions are performed to get the best fitting models. The generated coefficients are shown below.\n\nFor the next parts of the project, trajectory generation using cubic spline will be implemented and a MPC will be designed for the trajectory following."
+  },
+  {
+    "objectID": "gnc.html",
+    "href": "gnc.html",
+    "title": "Guidance, Navigation, and Control Projects",
+    "section": "",
+    "text": "Missile GNC To Intercept Trajectories\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Constrained SINDY and Model Predictive Controller for Trajectory Tracking​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "irobot/irobot.html#a-brief-synopsis",
+    "href": "irobot/irobot.html#a-brief-synopsis",
+    "title": "Implementing a PID controller on Irobot Create for wall following while mapping the space​",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nFor this project, Robotic Operating System (ROS 2, distro = ‘humble’) is used to implement room mapping through Irobot Create. The documentation for the Irobot Create ROS structure can be found here and the Ros2 documentation can be found here. A traditional pub sub method is used to communicate with the Irobot.\nVideo\nFollowing is the list of topics used to communicate with the robot:\n\nSubscribed\n\nDockStatus: irobot_create_msgs.msg // checking if the Irobot is docked\nHazardDetectionVector: irobot_create_msgs.msg // get a list of hazards\nIrIntensityVector: irobot_create_msgs.msg // get the reading from the 7 IR sensors\nImu: sensor_msgs.msg // get the X and Y coordinate of the Irobot\n\n\n\nPublished\n\nTwist: geometry_msgs.msg // send the velocity commands to the Irobot\n\nAll of these communications occur through the designed node. Rqt graph of the pub-sub structure used is shown below:"
+  },
+  {
+    "objectID": "irobot/irobot.html#designing-the-controller-for-wall-following",
+    "href": "irobot/irobot.html#designing-the-controller-for-wall-following",
+    "title": "Implementing a PID controller on Irobot Create for wall following while mapping the space​",
+    "section": "1. Designing the controller for wall following:",
+    "text": "1. Designing the controller for wall following:\n\nI. Bang - Bang controller\nFor the first try, a simple bang bang controller is designed which takes in the Ir sensor readings and descides the angular velocity based on hardcoded limits on the intensities. The implementation is done in the “test” node which can be run by doing “ros2 run controller new”. Following is the algorithm put to use:\n\nGet the IR sensor readings.\nMode 1: If the max intensity of 3 IR sensors from left is higher than 100, move closer to the wall with anglular velocity of 0.2.\nMode 2: If the max intensity of leftmost sensor is less than 10, move closer to the wall with angular velocity of 0.4.\nMode 3: If any IR reading is greater than 350, find the respective sensor. If the sensor if in the left [0:3] then move to the right with angular velocity of -0.6.\n\nDespite working properly, the controller isnt’t precise at all and is extremely slow. Increasing the linear speed would mess up the logic. Accordingly, its not adequate.\n\n\nII. PID controller\nFor the second try, a PID controller is implemented to keep the intensity of the leftmost IR sensor at 70 (setpoint). Accordingly, the error is determined and is processed as follows:\n\\[\nu = K_p * error + K_i * \\int error \\,dt + K_d * \\frac{d(error)}{dt}\n\\]\nThe gains are tuned manually using the Ziegler–Nichols method. While setting K_i, and K_d to 0, the proportional gain K_p is increased untill oscillation is observed. Following this, the K_I is increased to decrease the oscillation. Since the IR sensor is noisy, very small K_d is used to provide braking action on the controller. It is observed that without K_d, the Irobot has a little difficulty in manuvering tight corners. It is to be noted that the gains change according to the linear speed. Higher linear speed requires more agressive gains. To achieve the best performance, linear speed of 1.0 is set and the gains are tuned accordingly. The final gains are given below:\n\\[\nK_i = 0.05\n\\]\n\\[\nK_p = 0.027\n\\]\n\\[\nK_d = 0.001\n\\]\nSince the PID only sets the intensity of the left most IR sensor, the robot acts up at right angles: walls infront and ahead of the Irobot. Although this might be avoided by having filleted walls but it is unrealistic. Accordingly, an additional mode is added to the controller. If the front IR sensor value is higher than 10 then the pid controller is stopeed and a constant angular velocity of -0.4 is set for the rotation which turns the Irobot to the right. The magnitude 0.4 is chosen by trial and error. Using the combination of these 2 logics, the Irobot can easily follow the walls as shown in the video above."
+  },
+  {
+    "objectID": "irobot/irobot.html#mapping-algorithm",
+    "href": "irobot/irobot.html#mapping-algorithm",
+    "title": "Implementing a PID controller on Irobot Create for wall following while mapping the space​",
+    "section": "2. Mapping algorithm:",
+    "text": "2. Mapping algorithm:\nIn order for the Irobot to map the room, the following algorithm is put to use:\n\nAs the Irobot follows the wall, it needs to record its X and Y location. Since the location give through IMU is with respect to the base station, the starting position of the Irobot is saved and any following position is recorded as the difference of current position and starting position. Accordingly, the origin is changed.\nTo remember the location, a 2D numpy matrix “obstacles” is created. The current location received from IMU is rounded to the floor and multiplied by 5 to increase precision. Then the respective X and Y coordinate is used as index to traverse the obstacles matrix.\nIf the X index is bigger than the number of rows of obstacle matrix, a row of shape ( current X, number of columns in obstacle) is vertically stacked.\nIf the Y index is bigger than number of columns of obstacle matrix, a column of shape (number of rows in obstacle, 1) is horizontally stacked.\nOtherwise, the cell referring to current X and Y index is marked by 1.\n\nAccordingly, in the end, a fully populated matrix of 1 and 0 is displayed showing the path of the vehicle."
+  },
+  {
+    "objectID": "jarvis/JARVIS.html#a-brief-synopsis",
+    "href": "jarvis/JARVIS.html#a-brief-synopsis",
+    "title": "JARVIS - Four Wheeled SumoBot",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nSumo-bots are high power and wheeled robots designed for competing in the robot-sumo contest at the Cooper Union’s end of the year show. The goal of the competition is to push the opponent’s robot outside a 3ftby-3ft ring made of neoprene rubber. Comprising of 3 mechanical engineering students, our team was tasked with designing and fabricating a 10 inch by 10 inch by 6-inch robot with a weight limit of no more than 5 lbs. To plan the design process, the team broke down the timeline into sub parts – brainstorming, preliminary sketches, final designs, finding mechanical parts, making computer-aided designs, fabricating, finding electrical components, and finalizing the assembly. The team named the robot JASPER which was successful in detecting the edges of the mat and re-directing its trajectory."
+  },
+  {
+    "objectID": "jarvis/JARVIS.html#jarvis-in-action",
+    "href": "jarvis/JARVIS.html#jarvis-in-action",
+    "title": "JARVIS - Four Wheeled SumoBot",
+    "section": "JARVIS In Action",
+    "text": "JARVIS In Action\nClick here to see JARVIS in action."
+  },
+  {
+    "objectID": "jarvis/JARVIS.html#academic-paper-detailing-jarvis-mechanical-and-electrical-design",
+    "href": "jarvis/JARVIS.html#academic-paper-detailing-jarvis-mechanical-and-electrical-design",
+    "title": "JARVIS - Four Wheeled SumoBot",
+    "section": "Academic Paper Detailing JARVIS’ Mechanical And Electrical Design",
+    "text": "Academic Paper Detailing JARVIS’ Mechanical And Electrical Design\nClick here to access the document."
+  },
+  {
+    "objectID": "jet_engine/jet_engine.html#a-brief-synopsis",
+    "href": "jet_engine/jet_engine.html#a-brief-synopsis",
+    "title": "Designing & Simulating a Ramjet Engine Using First Principles of Compressible Flow​",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nUnder this project, a ramjet engine is designed using first principles of compressible flow. Components simulated include: inlet, cowl, diffuser, flameholder, combustor, converging and diverging nozzle. The theoretical performance of the engine is analyzed for inlet mach numbers between 2.75 and 3.25. Analysis is performed for each section in regards to its effect on other components which will be shown later."
+  },
+  {
+    "objectID": "jet_engine/jet_engine.html#inlet-design",
+    "href": "jet_engine/jet_engine.html#inlet-design",
+    "title": "Designing & Simulating a Ramjet Engine Using First Principles of Compressible Flow​",
+    "section": "1. Inlet Design",
+    "text": "1. Inlet Design\nA 2 step inlet is designed to turn the flow from outside of the engine to the diffuser. At every angle, an oblique shock is formed and finally there is a normal shock at the end of the inlet to turn the supersonic flow into subsonic before it enters the diffuser. Otherwise, the diffuser will increase the speed if the flow is supersonic. Normal shocks occur when they get detached from the body due to a very large turning angle. As the name suggests, the inlet and outlet flow velocities are normal to the shock wave. Across a normal shock, the supersonic flow changes to subsonic flow. Accordingly, \\(P_2 &gt; P_1\\), \\(T_2 &gt; T_1\\), and \\(\\rho_2 &gt; \\rho_1\\).\n\\[\\begin{equation}\n    \\frac{P_2}{P_1} = 1 + \\frac{2 \\gamma}{\\gamma - 1} (M_1^2 - 1)\n    \\label{eq:normal_p}\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\frac{\\rho_2}{\\rho_1} = \\frac{(\\gamma + 1) M_1^2}{2 + (\\gamma -1) M_1^2}\n    \\label{eq:normal_rho}\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\frac{T_2}{T_1} = \\frac{P_2}{P_1} \\frac{\\rho_1}{\\rho_2}\n    \\label{eq:normal_t}\n\\end{equation}\\]\n\\[\\begin{equation}\n    M_2 = \\frac{1 + \\frac{(\\gamma - 1)}{2} M_1^2}{\\gamma M_1^2  - \\frac{(\\gamma - 1)}{2}}\n    \\label{eq:normal_M}\n\\end{equation}\\]\nOblique shocks, on the other hand, occur when the supersonic flow is turned into itself. In other words, the flow experiences a re-direction by a giving turning angle \\(\\theta\\). An illustration of oblique shock is shown in , taken from . As \\(\\theta\\) increases from 0 to 90 \\(\\degree\\), the oblique shock becomes stronger and accordingly, adds more pressure drag into the system. The relation between \\(\\beta\\) (shock wave angle), \\(\\theta\\) (turning angle) and mach number of incoming flow is related using the \\(\\theta-\\beta-M\\) relation.\n\\[\\begin{equation}\n    tan(\\theta) = 2 cot(\\beta) [\\frac{M_1^2 (sin(\\beta))^2 - 1}{M_1^2 (\\gamma + cos(2 \\beta)) + 2}]\n    \\label{eq:oblique_prandel}\n\\end{equation}\\]"
+  },
+  {
+    "objectID": "jet_engine/jet_engine.html#cowl-design",
+    "href": "jet_engine/jet_engine.html#cowl-design",
+    "title": "Designing & Simulating a Ramjet Engine Using First Principles of Compressible Flow​",
+    "section": "2. Cowl Design",
+    "text": "2. Cowl Design\nThe cowl is designed in a way that the oblique shock waves from the 2 step inlet intersect at the tip of the cowl. Accordingly, a rough diagram of an inlet along with a cowl is drawn below.\n\n\n\n\\[\\begin{equation}\n    \\label{Eq:cowl_x}\n    X = \\frac{sin(\\beta_2 - \\theta_1)L}{sin(180-\\beta_2)}\n\\end{equation}\\] \\[\\begin{equation}\n    \\label{eq:cowl_y}\n    y = \\frac{h}{tan(\\beta_2)}\n\\end{equation}\\] \\[\\begin{equation}\n\\label{eq:cowl_h}\n    tan(\\beta_1) = \\frac{h\\tan(\\beta_2)}{\\alpha tan(\\beta_2) + h}\n\\end{equation}\\]\n\\[\\begin{equation}\n\\label{eq:cowl_l}\n    x + y = (\\frac{L sin(\\beta_2 - \\theta_1)}{sin(180-\\beta_2)}) + \\frac{h}{tan(\\beta_2)}\n\\end{equation}\\]"
+  },
+  {
+    "objectID": "jet_engine/jet_engine.html#diffuser-design",
+    "href": "jet_engine/jet_engine.html#diffuser-design",
+    "title": "Designing & Simulating a Ramjet Engine Using First Principles of Compressible Flow​",
+    "section": "3. Diffuser Design",
+    "text": "3. Diffuser Design\nThe flow in the diffuser is considered to be isentropic while satisfying the conservation of mass and momentum. To determine the properties across the diffuser, small perturbation theory is used to get the differential conservation of mass, momentum (with no body forces) and energy.\n\\[\\begin{equation}\n    \\label{eq:mass}\n    \\frac{d\\rho}{\\rho} + \\frac{dA}{A} + \\frac{du}{u} = 0\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\label{eq:momentum}\n    \\frac{d\\rho}{\\rho} + udu = 0\n\\end{equation}\\] \\[\\begin{equation}\n    \\label{eq:energy}\n    dh + udu = 0\n\\end{equation}\\]"
+  },
+  {
+    "objectID": "jet_engine/jet_engine.html#flemholder-design",
+    "href": "jet_engine/jet_engine.html#flemholder-design",
+    "title": "Designing & Simulating a Ramjet Engine Using First Principles of Compressible Flow​",
+    "section": "4. Flemholder Design",
+    "text": "4. Flemholder Design\nThe flameholder is modelled to provide an adiabatic pressure drop in the flow stream. The change in pressure is governed by the relation given in . It is also assumed that the area profile does not change across the flameholder. In order to determine the temperature and the mach number of the flow after flameholder, conservation of mass flow rate is used. The mass flow rate can be simplified to the basic characteristics of the flow.. Furthermore, the energy is also conserved.\n\\[\\begin{equation}\n    \\label{eq:flameholder}\n    \\frac{\\Delta P}{P}=0.81\\gamma M^2\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\label{eq:mass flow}\n    \\dot{m} = \\frac{P}{RT}AM\\sqrt{T\\gamma R}\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\label{eq:h}\n    C_p T_1 + \\frac{M_1^2 \\gamma R T_1}{2} = C_p T_2 + \\frac{M_2^2 \\gamma R T_2}{2}\n\\end{equation}\\]\nUnknown variables are \\(T_2\\) and \\(M_2\\). Accordingly, the linear system of equations and are solved using method of substitution to determine expressions for both variables.\n\\[\\begin{equation}\n    \\label{eq:flame_t}\n    T_2 = (2 C_P T_1 + M_1^2 \\gamma R T_1) (\\frac{1}{2C_P + M_2^2 \\gamma R})\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\label{eq:flame_p}\n    \\frac{P_1 M_1}{\\sqrt{T_1}} = \\frac{P_2 M_2 \\sqrt{2C_P + M_2^2 \\gamma R}}{\\sqrt{2C_P T_1 + M_1^2 \\gamma R T_1}}\n\\end{equation}\\]"
+  },
+  {
+    "objectID": "jet_engine/jet_engine.html#combustor-design",
+    "href": "jet_engine/jet_engine.html#combustor-design",
+    "title": "Designing & Simulating a Ramjet Engine Using First Principles of Compressible Flow​",
+    "section": "5. Combustor Design",
+    "text": "5. Combustor Design\nTo model the combustor, 1D quasi flow with heat addition is used. While the conservation of mass and momentum are same as to regular 1D quasi flow, the conservation of energy now involves and additional term ‘q’ which refers to the heat addition as shown in . The term q refers to the rate of heat added to the incoming flow. It is described as the ratio of the rate of heat provided by the fuel to the mass flow rate of the incoming flow, shown in \n\\[\\begin{equation}\n    \\label{eq:rayleigh}\n    h_1 + \\frac{u_1^2}{2} + q = h_2 + \\frac{u_2^2}{q_2}\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\label{eq:q}\n    q = \\frac{\\dot{q}}{\\dot{m}}\n\\end{equation}\\]\nThe flow properties across the combustor are determined iteratively by first calculating the the stagnation temperature by using and then finding the stagnation temperature at the M = 1 state. Once all these states are known the relative ratios of the pressure and temperature are determined using equations given in and \n\\[\\begin{equation}\n    \\label{eq:t_02}\n    q = C_p ( T_\\text{02} - T_\\text{01})\n\\end{equation}\\] \\[\\begin{equation}\n    \\label{eq:r_t}\n    \\frac{T}{T*} = M^2 (\\frac{1+\\gamma}{1+\\gamma M^2})^2\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\label{eq:r_p}\n    \\frac{P}{P*} = \\frac{1+\\gamma}{1+\\gamma M^2}\n\\end{equation}\\]\nFor the base design, the combustor section only intakes the specified equivalence ratio. This is changed later when the engine’s performance is analyzed for various mach numbers. Accordingly, the equivalence ratio is made variable to provide a constant exit mach number for the combustor. The mass flow rate of the fuel is determined, \\(\\dot{q}\\) of fuel, and finally ‘q’. For the purposes of the fuel, hydrogen is used and has lower heating value (LHV) of 120 \\(\\frac{MJ}{kg}\\). Moreover, the psychometric ratio for hydrogen is 0.0291 which is used to determine the mass flow rate.\n\\[\\begin{equation}\n    \\label{eq:phi}\n    \\dot{m}_\\text{fuel} =   0.0291 \\phi \\dot{m}_\\text{air}\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\label{eq:q_dot}\n    \\dot{q} = LHV \\dot{m}_\\text{fuel}\n\\end{equation}\\]\n\\[\\begin{equation}\n    \\label{eq:q_final}\n    q = \\frac{\\dot{q}}{\\dot{m}_\\text{air}}\n\\end{equation}\\]\nAlthough it is assumed that the flow burns instantaneously in the combustor, it is still important to determine the length of the combustor which is done by determining the time taken for the fuel to burn. The inlet conditions are used to determine the time constant. To get the length of the combustor, average of the inlet and exit velocities in the combustor is taken and multiplied with \\(\\tau\\).\n\\[\\begin{equation}\n    \\label{eq:tao}\n    \\tau = 325 p^{-1.6} exp(-0.8 \\frac{T_0}{1000})\n\\end{equation}\\]"
+  },
+  {
+    "objectID": "jet_engine/jet_engine.html#converging-nozzle-design",
+    "href": "jet_engine/jet_engine.html#converging-nozzle-design",
+    "title": "Designing & Simulating a Ramjet Engine Using First Principles of Compressible Flow​",
+    "section": "6. Converging Nozzle Design",
+    "text": "6. Converging Nozzle Design\nSimilar to the diffuser, isentropic quasi 1D flow relations are used to determine the properties of the flow across the converging nozzle. As it can be seen from , if M is less than 1 and dA/A is less than 1, then du/u is greater than 1. This means that as the subsonic flow is constricted due to a negative area differential, the flow gets faster. However, the maximum speed the subsonic flow can attain by constricting the area is the local speed of sound. This is referred to as throat area where mach number is equal to 1. Like the isentropic flow in diffuser, the area ratio and mach number can be solved if one is known. Since the desired \\(M_2\\) = 1, the corresponding area profile can be derived. The temperature and pressure can be derived from the stagnation parameters since they remain the same throughout the isentropic flow."
+  },
+  {
+    "objectID": "jet_engine/jet_engine.html#diverging-nozzle-design",
+    "href": "jet_engine/jet_engine.html#diverging-nozzle-design",
+    "title": "Designing & Simulating a Ramjet Engine Using First Principles of Compressible Flow​",
+    "section": "7. Diverging Nozzle Design",
+    "text": "7. Diverging Nozzle Design\nThe diverging nozzle for the ramjet engine is a 2D minimum length nozzle designed using method of characteristics (MOC). To determine the properties of a 2D flow, the flow is considered to be inviscid, compressible, and irrotational. Using the third property velocity potential functions are generated and solved to determine solutions for characteristic lines. These are special lines which can be used to calculate properties along the flow because they have a specific pattern in terms of how their properties evolve. The two lines are called left and right turning characteristic. A variable ‘K’ is a dummy parameter for both the characteristics.\nThe magnitude of the constant ‘K’ for both left and right turning characteristic. As seen, the properties of point 3 depends upon the properties of 1 and 2. The corresponding location of the third point in the global axes is given the linear system of equations. Once the properties of the third point are known, the process can be rolled further to generate more points and design the entire nozzle. \\[\\begin{equation}\n    \\label{eq:k2_plus}\n    \\theta_3 - \\nu_3 = \\theta_2 - \\nu_2 = K_\\text{2,plus}\n\\end{equation}\\] \\[\\begin{equation}\n    \\label{eq:k_minus}\n    \\theta_3 + \\nu_3 = \\theta_1 + \\nu_1 = K_\\text{1,minus}\n\\end{equation}\\] \\[\\begin{equation}\n    \\label{eq:moc_pos}\n    \\frac{y_3 - y_2}{x_3 - x_2} = tan(\\frac{(\\theta_3 + \\theta_2)+(\\mu_3 + \\mu_2)}{2})\n\\end{equation}\\] \\[\\begin{equation}\n    \\label{eq:moc_pos2}\n    \\frac{y_3 - y_1}{x_3 - x_1} = tan(\\frac{(\\theta_3 + \\theta_1) - (\\mu_3 + \\mu_1)}{2})\n\\end{equation}\\]"
+  },
+  {
+    "objectID": "jet_engine/jet_engine.html#analysis",
+    "href": "jet_engine/jet_engine.html#analysis",
+    "title": "Designing & Simulating a Ramjet Engine Using First Principles of Compressible Flow​",
+    "section": "8. Analysis",
+    "text": "8. Analysis\nThe pressure and temperature, both stagnation and static, are shown below. As expected, the stagnation pressure and temperature remain constant through isentropic devices: diffuser, converging, and diverging nozzle.\n   \nThe performance of the engine is shown below:"
+  },
+  {
+    "objectID": "jet_engine/jet_engine.html#supporting-files",
+    "href": "jet_engine/jet_engine.html#supporting-files",
+    "title": "Designing & Simulating a Ramjet Engine Using First Principles of Compressible Flow​",
+    "section": "9. Supporting Files",
+    "text": "9. Supporting Files\nThe analysis and code used to design/simulate these components can be found here"
+  },
+  {
+    "objectID": "missile/missile.html#a-brief-synopsis",
+    "href": "missile/missile.html#a-brief-synopsis",
+    "title": "Missile GNC To Intercept Trajectories",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nGuidance, Navigation, and Control (GNC) System allows a complicated system to estimate its state, determine its next trajectory, and steps to achieve that determined trajectory. In this project, a GNC model is implemented for a missile to successfully intercept a target projectile. To simplify the model, only longitudinal dynamics of the missile are analyzed. Accordingly, the height of the missile and distance along the ground are the only elements of interest. This is referred to as ”short period approximation”, through which the longitudinal dynamics are determined at the equilibrium where thrust effects are considered to be zero and only the torque generated from elevators is considered. For state estimation, an observer is designed and simple trigonometry is used as the mathematical framework for the guidance model. The entire control architecture along with the system dynamics is implemented in Simulink."
+  },
+  {
+    "objectID": "missile/missile.html#gnc-model-in-action",
+    "href": "missile/missile.html#gnc-model-in-action",
+    "title": "Missile GNC To Intercept Trajectories",
+    "section": "GNC Model In Action",
+    "text": "GNC Model In Action\nVideo"
+  },
+  {
+    "objectID": "missile/missile.html#academic-paper-on-implementing-the-gnc-model",
+    "href": "missile/missile.html#academic-paper-on-implementing-the-gnc-model",
+    "title": "Missile GNC To Intercept Trajectories",
+    "section": "Academic Paper On Implementing The GNC model",
+    "text": "Academic Paper On Implementing The GNC model\nHere is a link to the academic paper detailing how the control parameters are chosen for the GNC model."
+  },
+  {
+    "objectID": "missile/missile.html#link-to-github",
+    "href": "missile/missile.html#link-to-github",
+    "title": "Missile GNC To Intercept Trajectories",
+    "section": "Link To Github",
+    "text": "Link To Github\nTo access the simulink model and python code for controller determination, click here"
+  },
+  {
+    "objectID": "motorsports/manufacturing.html#a-brief-synopsis",
+    "href": "motorsports/manufacturing.html#a-brief-synopsis",
+    "title": "Manufacturing parts for FSAE Team",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nAs part of the Motorsports Team, I spent a lot of time in the machine shop to machine parts for the car for example: clevises, brake bobbins, brake rotors, shock ends, and many more. Take a look at the videos below to see some of my craftsmanship.\nVideo\n\nVideo\n\nVideo"
+  },
+  {
+    "objectID": "rifsk/RIFSK.html#a-brief-synopsis",
+    "href": "rifsk/RIFSK.html#a-brief-synopsis",
+    "title": "RIFSK - Refugee in Flight Shelter Kit Frame",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nRISFK - Refugee in Flight Shelter Kit was one of the 6 projects offered in EID-101 class, Engineering Design and Problem Solving. As conflict and adverse environmental changes uproot communities in Sub-Saharan Africa, RiFSK addressed the lack of shelter that these individuals face in transit. In our team’s venture to design a portable, effective, and biodegradable shelter, we adhered to the principles of simplicity, efficiency, and self-sufficiency to develop the model.\nThe team was divided into seven smaller groups to better specialize on the numerous facets of RiFSK: four dedicated to the development and analysis of the design, two to its logistics, and one to the coordination of the different elements of the design process.\nI was a part of the frame team, along with 3 more students, which was tasked with designing a frame design that could be built in less than a minute from local resources - bamboo and yarn. Following other design iterations, our final design characterized by its dome structure, is arguably the simplest RiFSK design to date. I got this design from a bow and how it is bent in its curved shape using a string. Accordingly, I brought up the idea of having the bamboo go through the slits of the fabric and bend it using barn strings. Consequently, ease of assembly, disassembly, and disposal all promote RiFSK 2020 as a product that requires little effort or knowledge to use. An academic paper on the design methodology can be found below."
+  },
+  {
+    "objectID": "rifsk/RIFSK.html#detailed-journal-of-the-proposed-designs-and-their-fabrication",
+    "href": "rifsk/RIFSK.html#detailed-journal-of-the-proposed-designs-and-their-fabrication",
+    "title": "RIFSK - Refugee in Flight Shelter Kit Frame",
+    "section": "Detailed Journal of the Proposed Designs and Their Fabrication",
+    "text": "Detailed Journal of the Proposed Designs and Their Fabrication\nClick here to access the document."
+  },
+  {
+    "objectID": "ros/ros.html#a-brief-synopsis",
+    "href": "ros/ros.html#a-brief-synopsis",
+    "title": "Using Robotic Operating System to Develop Control Architectures.​",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nUnder this ongoing project, a discrete PID controller along with a Kalman Filter is developed to control the position of a traditional mass spring damper system. The entire architecture is laid out using ROS 2 (distro = “Iron”). Accordingly, there are 5 nodes: “system” (which includes the state space equations), “noise” (to model the random normal external disturbance), “pid” (control law), “ref” (setpoint for the position), and “kalman” (which provides statistical estimation for the position). The nodes use pub-sub method for communication and do so through custom topics and messages. The rqt_graph of the overall architecture is shown in the figure above."
+  },
+  {
+    "objectID": "ros/ros.html#supporting-files",
+    "href": "ros/ros.html#supporting-files",
+    "title": "Using Robotic Operating System to Develop Control Architectures.​",
+    "section": "Supporting files",
+    "text": "Supporting files\nTo access the code, check out the github"
+  },
+  {
+    "objectID": "simulation.html",
+    "href": "simulation.html",
+    "title": "Simulation And Analysis Projects",
+    "section": "",
+    "text": "Analysis of Boeing 747-800’s Aerodynamics Using First Principles​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDesigning & Simulating a Ramjet Engine Using First Principles of Compressible Flow​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelling Base Plate of a Windmill and Performing Finite Element Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "Tipsy/tipsy.html",
+    "href": "Tipsy/tipsy.html",
+    "title": "Multi Modal Robotic Traversal of Remote and Rugged Terrain​",
+    "section": "",
+    "text": "Brief Overview\nAn Interdisciplinary team of 2 ME’s and 1 EE developed a multi-modal, remote-controlled surveillance drone named Tipsy to traverse chaotic and rugged environments. While being capable of both flying and driving, Tipsy can also combine the two by using its reversible propellers to provide downward force and increase stability while driving on steep inclines . Since driving is more cost and energy efficient than a sustained flight, a multimodal traversal allows the robot to extend its battery life while being robust.\n\n\n1. Mechanical Assembly\nTipsy’s final design is an RC crawler with FPV quadcopter components mounted on top. These sub-assemblies are operated independently with an RC car transmitter and an FPV joystick controller respectively. The driving control scheme (Turtle mode) automatically spins the propellers to create traction against the floor such that only the crawler is operated. This is discussed in later sections.\nThe suspensions on each wheel provide stability as Tipsy drives over rubble as the main body is isolated from the wheels. The stiffness of the suspensions is important to consider as the generated downforce can cause the suspensions to bottom out if it exceeds the maximum spring force of the suspensions at full compression. Stiffer springs were added to the RC crawler such that this didn’t occur during the ramp climbing test.\n\nVideo\n\n\n\n2. Firmware Implementation and Integration\nArduPilot is a trusted, versatile, and open source autopilot system supporting many vehicle types: multi-copters, traditional helicopters, fixed wing aircraft, boats, submarines, rovers and more. For Tipsy, ArduCopter, quad subbranch of ArduPilot is used, Written in C++, the flight software provides a base architecture to control regular drones and also allows integration of custom firmware such as: custom controllers, custom sensors, and custom flight mode operations.\nince Tipsy is not designed to be a conventional drone, custom firmware is written and integrated to allow it to fly and drive. The two flight modes developed are “Stabilize” and “Turtle” for flying and driving respectively. The control architecture of both modes is shown below. When in Stabilize mode, Tipsy works like a regular quadcopter by having the motors spin in the conventional orientation to provide upwards thrust. In this flight mode, Tipsy’s altitude is manually controlled while the attitude control is done by the Autopilot. The attitude is first transformed into target angles or angular velocity. More specifically, the pitch and roll sticks on the transmitter sets the target angles respectively, so that if those sticks are set to center the vehicle automatically levels itself. The yaw stick sets the target angular velocity instead, such that if the stick is set to center, target angular velocity becomes zero and the vehicle maintains its heading. Then, these target measures are fed into the PID rate controller, which calculates the angular rates for attitude control. Accordingly, the thrust requested by the user is added with that from the Autopilot and the motor mixer sends the corresponding commands to individual motors.\nTurtle mode, on the other hand, allows the propellers to be controlled autonomously and the user controls the car as shown in . Opposite to stabilize, this mode reverses the direction of every motor to provide downwards thrust. DShot communication protocol is used for the Electronic Speed Controller because of its ability to reverse the direction of motors. Moreover, the autopilot from stabilize mode is replaced by a custom controller which determines the motor output based on the given pitch angle using a proportional controller.\n\n\nVideo\n\n\n\n3. Ramp Test\nAfter the integration of the drive and fly assemblies, Tipsy’s attitude control done by the autopilot is tested in the gimbal. Since the goal of the test is not lifting the robot off the gimbal, minimal throttle is given to allow the robot to perform roll and pitch as per the command. The test is conducted for about 3 minutes and the power draw and attitude data is collected. Tipsy consumed about 100 Watts, as shown below just to provide enough thrust for tracking the roll and input commands. Accordingly, enough throttle is given for the robot to lift off if not connected to the gimbal. Towards the end of the test, more throttle is given to see the effects of throttle provided to the tracking of roll and pitch commands.\n\n\n\nThe final tracking results of the robot for input roll and pitch commands are shown below. From first glance, the results show a lot of error between the input-output mapping. This is determined to be the result of the self-stabilizing nature of the gimbal’s roll axis. Since the robot’s center of mass is lower than the rod - axis of rotation- it is connected to, the robot has a tendency to bring the roll angle to 0. Accordingly, as the attitude controller tries to increase the roll, it is met with a restraining force of the gimbal. This can be seen in the graph where the robot tries to match the peak of the input command but is not able to maintain the commanded roll angle. This also makes the tracking slower as seen in the last couple of seconds where the robot is tested for its agility by giving quick roll and pitch commands.\n\n\n\nAnother reason for the error in the input-output mapping is the added inertia of the gimbal. The bearings, 3D printed pieces and doubly stacked woods add a lot more resistance to the rotation than the assembly by itself. Accordingly, the gains are not that aggressive in providing the required thrust as they should be for the assembly by itself. Since the effect of these effects is not quantifiable, the tuned gains are not changed.\n\n\n\nAs said, the custom controller used for providing downwards force increases the motor output as the pitch angle increases to ensure traction control. To determine the actual downwards force generated by Tipsy, the ramp test is conducted and the results are shown below. The required downwards force is determined using the point particle dynamics and imposing the condition of 0 acceleration down the ramp. The friction of coefficient is chosen to be 0.7 which is for hard rubber on dry wood and the mass of the vehicle is 1.045 kg. Since the normal force provided by the perpendicular (to the plank) component of the weight is enough for smaller angles, the theoretical downwards force requirement for the same angles is 0. As seen, the downwards force provided by the robot is enough for slopes up to 40 \\(/deg\\).\n\n\n\nTo conclude testing, the final ramp test is conducted where the robot is driven up the ramp with and without propellers. Due to the limited torque capability of the drive motors, tests up to 10 degree incline angles are conducted. Regardless, the wheels often spin when propellers are turned off. However, after turning on turtle mode, the robot is able to drive up the incline while only consuming a total of 14 W (from both systems: drive and fly). The actual data collected is shown below. This proves the power efficiency of the multi-modality.\n\n\n\nLater test are conducted where high torque motors are used and Tipsy is able to replicate similar results for an incline of 30 degrees as shown below. At the first peak (t = 10 sec), propellers are turned off and the robot’s front wheels keep slipping and it fail to maintain the 30-degree incline. However with propellers turned on, at later peaks, the robot has no difficulty in climbing the incline.\n\n\n\nTipsy demonstrates many benefits over prior literature on UGAV’s as it is more versatile, cost-effective, and power-efficient. The simple ramp climbing test demonstrates the benefits of re-purposing flight actuators for additional stability during terrestrial locomotion. Further explorations may use the propellers to perform more sophisticated maneuvers such as a controlled wheelie (inverted pendulum type control), climbing up vertical structures by adding wall-climbing like Vertigo, or ensuring Tipsy doesn’t tip over as it drives over rubbly terrain. Tipsy currently relies on a pre-computed P-controller to map pitch angle to downforce. In future, adding linear potentiometers to the suspensions to measure the spring force could allow Tipsy to detect the reaction force against each wheel, giving Tipsy a sense of touch. The acceleration and reaction force data could be used in conjunction to design a traction control scheme that increases the downforce against the wheels if Tipsy detects it is slipping. Additional sensors for life-detection such as temperature sensors, microphones, and carbon dioxide monitors, etc can be added to the I2C channels of the FCU to make it more useful in search-and-rescue scenarios. Another developmental route can be to allow full operator control over Tipsys roll, pitch, and yaw using Ardupilots acro-mode and foot pedals for driving thrust, and steering. Highly trained operators could take advantage of Tipsy’s multi-modal capabilities to traverse extremely challenging environments. Overall, Tipsy shows great promise for a multitude of applications and only further research will unearth its full potential."
+  },
+  {
+    "objectID": "triple_pendulum/space.html#a-brief-synopsis",
+    "href": "triple_pendulum/space.html#a-brief-synopsis",
+    "title": "Modelling fish’s oscillatory motion through dynamics of triple pendulum",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nAs an end of the semester project for ME-424 Advanced Dynamics, I modelled a fish’s oscillatory motion through the dynamics of a triple pendulum coupled with springs and dampers. By using the method of virtual work and projections, I computed the rotation matrices for each of the 3 pivots, angular velocities, and corresponding Jacobians. This was followed by setting up the mass matrix, frame rotation matrix, and external forces/torques matrix. After deriving the entire dynamics, different test cases are executed to ensure the validity of the model and the spring/damping constants are tuned to achieve a system which resonates with fish’s oscillatory motion."
+  },
+  {
+    "objectID": "triple_pendulum/space.html#oscillatory-motion-in-action",
+    "href": "triple_pendulum/space.html#oscillatory-motion-in-action",
+    "title": "Modelling fish’s oscillatory motion through dynamics of triple pendulum",
+    "section": "Oscillatory Motion In Action",
+    "text": "Oscillatory Motion In Action\nVideo"
+  },
+  {
+    "objectID": "triple_pendulum/space.html#overview-on-dynamics-and-results",
+    "href": "triple_pendulum/space.html#overview-on-dynamics-and-results",
+    "title": "Modelling fish’s oscillatory motion through dynamics of triple pendulum",
+    "section": "Overview on Dynamics and Results",
+    "text": "Overview on Dynamics and Results\nThe derivation of the dynamics using virtual work, unit tests and results can be found here"
+  },
+  {
+    "objectID": "triple_pendulum/space.html#link-to-github",
+    "href": "triple_pendulum/space.html#link-to-github",
+    "title": "Modelling fish’s oscillatory motion through dynamics of triple pendulum",
+    "section": "Link To Github",
+    "text": "Link To Github\nTo access the corresponding repository, click here"
+  },
+  {
+    "objectID": "UAV/UAV.html#a-brief-synopsis",
+    "href": "UAV/UAV.html#a-brief-synopsis",
+    "title": "Simulating Dynamics and Controllers for Unmanned Aerial Vehicle",
+    "section": "A brief synopsis",
+    "text": "A brief synopsis\nDrone control development encompasses fields like autonomous navigation, guidance, and control of unmanned air vehicles (UAVs) through flight surfaces. As a semester long project, I was tasked with creating a digital twin which model the UAV’s rigid-body dynamics, aerodynamics, feedback control, and state estimation using sensors. Accordingly, I implemented the rigid body dynamics using Euler laws of motion for 12 DOF; aerodynamics with linear approximations of the lift (C_L) and drag (C_D) coefficients given by Beard; feedback control using standard PID, and state estimation using Kalman Filters. The project is built on a pre-existing python framework designed by Randy Beard: “Small Unmanned Aircraft: Theory and Practice” which can be found online. While the framework included a pre-built graphical interface using pyQt and pyQtgraph modules to visualize the UAV, all the flight control implementation is done from scratch."
+  },
+  {
+    "objectID": "UAV/UAV.html#uav-in-action",
+    "href": "UAV/UAV.html#uav-in-action",
+    "title": "Simulating Dynamics and Controllers for Unmanned Aerial Vehicle",
+    "section": "UAV In Action",
+    "text": "UAV In Action\nVideo"
+  },
+  {
+    "objectID": "UAV/UAV.html#link-to-github",
+    "href": "UAV/UAV.html#link-to-github",
+    "title": "Simulating Dynamics and Controllers for Unmanned Aerial Vehicle",
+    "section": "Link to Github",
+    "text": "Link to Github\nClick here to visit the corresponding repository here"
+  }
+]

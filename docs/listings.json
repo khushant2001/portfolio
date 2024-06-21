@@ -1,0 +1,38 @@
+[
+  {
+    "listing": "/dynamics_control.html",
+    "items": [
+      "/data_driven_ctrl/data_driven_control.html",
+      "/irobot/irobot.html",
+      "/triple_pendulum/space.html",
+      "/Tipsy/tipsy.html",
+      "/UAV/UAV.html",
+      "/ros/ros.html"
+    ]
+  },
+  {
+    "listing": "/fabrication.html",
+    "items": [
+      "/experimentation/experimentation.html",
+      "/casper/CASPER.html",
+      "/jarvis/JARVIS.html",
+      "/motorsports/manufacturing.html",
+      "/rifsk/RIFSK.html"
+    ]
+  },
+  {
+    "listing": "/gnc.html",
+    "items": [
+      "/missile/missile.html",
+      "/flight/mpc.html"
+    ]
+  },
+  {
+    "listing": "/simulation.html",
+    "items": [
+      "/boeing/boeing.html",
+      "/jet_engine/jet_engine.html",
+      "/base_plate/tower_fea.html"
+    ]
+  }
+]
