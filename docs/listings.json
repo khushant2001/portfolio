@@ -7,6 +7,7 @@
       "/triple_pendulum/space.html",
       "/Tipsy/tipsy.html",
       "/UAV/UAV.html",
+      "/inv_pendulum/inv_pend.html",
       "/ros/ros.html"
     ]
   },
@@ -24,6 +25,7 @@
     "listing": "/gnc.html",
     "items": [
       "/missile/missile.html",
+      "/traj_opt/traj_opt.html",
       "/flight/mpc.html"
     ]
   },
