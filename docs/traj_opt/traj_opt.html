@@ -67,6 +67,8 @@ gtag('js', new Date());
 gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -146,7 +148,7 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">• Aviation Systems Engineering Intern @ Garmin</span>
+ <span class="menu-text">• Aviation Systems Engineer Intern @ Garmin</span>
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -202,13 +204,29 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
    
   <ul>
   <li><a href="#brief-overview" id="toc-brief-overview" class="nav-link active" data-scroll-target="#brief-overview">Brief Overview</a></li>
-  <li><a href="#simulation-example-toy-car-trajectory-optimization" id="toc-simulation-example-toy-car-trajectory-optimization" class="nav-link" data-scroll-target="#simulation-example-toy-car-trajectory-optimization">1. Simulation Example: Toy Car Trajectory Optimization</a></li>
-  <li><a href="#simulation-example-toy-car-trajectory-optimization-while-avoiding-obstacles" id="toc-simulation-example-toy-car-trajectory-optimization-while-avoiding-obstacles" class="nav-link" data-scroll-target="#simulation-example-toy-car-trajectory-optimization-while-avoiding-obstacles">2. Simulation Example: Toy Car Trajectory Optimization While Avoiding Obstacles</a></li>
-  <li><a href="#simulation-example-crazyflie-trajectory-optimization-while-avoiding-obstacles" id="toc-simulation-example-crazyflie-trajectory-optimization-while-avoiding-obstacles" class="nav-link" data-scroll-target="#simulation-example-crazyflie-trajectory-optimization-while-avoiding-obstacles">3. Simulation Example: Crazyflie Trajectory Optimization While Avoiding Obstacles</a></li>
-  <li><a href="#vicon-setup" id="toc-vicon-setup" class="nav-link" data-scroll-target="#vicon-setup">4. Vicon Setup</a></li>
-  <li><a href="#robotic-operating-system-architecture" id="toc-robotic-operating-system-architecture" class="nav-link" data-scroll-target="#robotic-operating-system-architecture">5. Robotic Operating System Architecture</a></li>
-  <li><a href="#initial-hardware-testing" id="toc-initial-hardware-testing" class="nav-link" data-scroll-target="#initial-hardware-testing">6. Initial Hardware Testing</a></li>
-  <li><a href="#supporting-files" id="toc-supporting-files" class="nav-link" data-scroll-target="#supporting-files">7. Supporting Files</a></li>
+  <li><a href="#model-predictive-problem-formulation-as-a-non-linear-problem-nlp" id="toc-model-predictive-problem-formulation-as-a-non-linear-problem-nlp" class="nav-link" data-scroll-target="#model-predictive-problem-formulation-as-a-non-linear-problem-nlp">1. Model predictive problem formulation as a non-linear problem (NLP)</a>
+  <ul class="collapse">
+  <li><a href="#a-formulating-mpc-problem-as-an-optimization-problem" id="toc-a-formulating-mpc-problem-as-an-optimization-problem" class="nav-link" data-scroll-target="#a-formulating-mpc-problem-as-an-optimization-problem">1a) Formulating MPC problem as an optimization problem</a></li>
+  <li><a href="#b-structure-of-the-non-linear-problem" id="toc-b-structure-of-the-non-linear-problem" class="nav-link" data-scroll-target="#b-structure-of-the-non-linear-problem">1b) Structure of the Non-linear problem</a></li>
+  <li><a href="#c-transcription-methods" id="toc-c-transcription-methods" class="nav-link" data-scroll-target="#c-transcription-methods">1c) Transcription methods</a></li>
+  <li><a href="#d-constraint-definition" id="toc-d-constraint-definition" class="nav-link" data-scroll-target="#d-constraint-definition">1d) Constraint definition</a></li>
+  </ul></li>
+  <li><a href="#simulation-example-toy-car-trajectory-optimization" id="toc-simulation-example-toy-car-trajectory-optimization" class="nav-link" data-scroll-target="#simulation-example-toy-car-trajectory-optimization">2. Simulation Example: Toy Car Trajectory Optimization</a></li>
+  <li><a href="#simulation-example-toy-car-trajectory-optimization-while-avoiding-obstacles" id="toc-simulation-example-toy-car-trajectory-optimization-while-avoiding-obstacles" class="nav-link" data-scroll-target="#simulation-example-toy-car-trajectory-optimization-while-avoiding-obstacles">3. Simulation Example: Toy Car Trajectory Optimization While Avoiding Obstacles</a></li>
+  <li><a href="#simulation-example-crazyflie-trajectory-optimization-while-avoiding-obstacles" id="toc-simulation-example-crazyflie-trajectory-optimization-while-avoiding-obstacles" class="nav-link" data-scroll-target="#simulation-example-crazyflie-trajectory-optimization-while-avoiding-obstacles">4. Simulation Example: Crazyflie Trajectory Optimization While Avoiding Obstacles</a>
+  <ul class="collapse">
+  <li><a href="#a-setting-up-the-model" id="toc-a-setting-up-the-model" class="nav-link" data-scroll-target="#a-setting-up-the-model">4a) Setting up the model!</a></li>
+  <li><a href="#b-model-parameters-for-the-mpc-optimization-problem-initialization." id="toc-b-model-parameters-for-the-mpc-optimization-problem-initialization." class="nav-link" data-scroll-target="#b-model-parameters-for-the-mpc-optimization-problem-initialization.">4b) Model Parameters for the MPC optimization problem initialization.</a></li>
+  <li><a href="#c-runge-kutta-4-integration-scheme" id="toc-c-runge-kutta-4-integration-scheme" class="nav-link" data-scroll-target="#c-runge-kutta-4-integration-scheme">4c) Runge Kutta 4 Integration Scheme</a></li>
+  </ul></li>
+  <li><a href="#vicon-setup" id="toc-vicon-setup" class="nav-link" data-scroll-target="#vicon-setup">5. Vicon Setup</a></li>
+  <li><a href="#robotic-operating-system-architecture" id="toc-robotic-operating-system-architecture" class="nav-link" data-scroll-target="#robotic-operating-system-architecture">6. Robotic Operating System Architecture</a></li>
+  <li><a href="#initial-hardware-testing" id="toc-initial-hardware-testing" class="nav-link" data-scroll-target="#initial-hardware-testing">7. Initial Hardware Testing</a>
+  <ul class="collapse">
+  <li><a href="#test---1" id="toc-test---1" class="nav-link" data-scroll-target="#test---1">Test - 1</a></li>
+  <li><a href="#test---2" id="toc-test---2" class="nav-link" data-scroll-target="#test---2">Test - 2</a></li>
+  </ul></li>
+  <li><a href="#supporting-files" id="toc-supporting-files" class="nav-link" data-scroll-target="#supporting-files">8. Supporting Files</a></li>
   </ul>
 </nav>
     </div>
@@ -232,22 +250,254 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 
 <section id="brief-overview" class="level1">
 <h1>Brief Overview</h1>
-<p>As my Masters project, I aim to perform real-time trajectory optimization for obstacle avoidance on Crazyflie - a mini quadcopter. This experimental project seeks to integrate Crazyflie’s existing attitude control with a high-level model predictive controller for online optimization. CasADi is used to formulate the MPC as a non-linear programming problem. Both simulation and hardware testing are performed. For the latter, Robotic Operating System (Ros 2) is used to integrate Crazyflie’s firmwae, motion capture system (Vicon), and the high-level controller. For the model itself, the full state 12 DOF model is used to increase the accuracy of the program. To transform the problem from an optimization problem to a non-linear programming problem, multiple shooting is used to discretize the dynamics. Doing so also allows to use both the state and control elements as optimization variables. Other methods like single shooting and direct collocation are tested in simulation.</p>
+<p>As my Masters project, I aim to perform real-time trajectory optimization for obstacle avoidance on Crazyflie - a mini quadcopter. This experimental project seeks to integrate Crazyflie’s existing attitude control with a high-level model predictive controller for online optimization. CasADi is used to formulate the MPC as a non-linear programming problem. Both simulation and hardware testing are performed. For the latter, Robotic Operating System (Ros 2) is used to integrate Crazyflie’s firmware, motion capture system (Vicon), and the high-level controller. For the model itself, the full state 12 DOF model is used to increase the accuracy of the program. The mass, intertias, and the experimental limits to velocities and thrust are determined from the bitcraze documentation. While the updates to the crazyflie’s position and orientation are derived from the motion capture system, the velocities are calculated using dirty differentiation. To transform the problem from an optimization problem to a non-linear programming problem, multiple shooting is used to discretize the dynamics. Doing so also allows to use both the state and control elements as optimization variables (also allowing to give a better approximation for the starting solution). Other methods like single shooting and direct collocation are tested in simulation. Hardware testing is still in progress; initial results can be seen below.</p>
+</section>
+<section id="model-predictive-problem-formulation-as-a-non-linear-problem-nlp" class="level1">
+<h1>1. Model predictive problem formulation as a non-linear problem (NLP)</h1>
+<section id="a-formulating-mpc-problem-as-an-optimization-problem" class="level2">
+<h2 data-anchor-id="a-formulating-mpc-problem-as-an-optimization-problem">1a) Formulating MPC problem as an optimization problem</h2>
+<p><span class="math display">\[
+\ell(\mathbf{x}, \mathbf{u}) = \left\|\mathbf{x}_u - \mathbf{x}^r\right\|_Q^2 + \left\|\mathbf{u} - \mathbf{u}^r\right\|_R^2
+\]</span></p>
+<p><span class="math display">\[
+\min_{\mathbf{u}} J_N(\mathbf{x}_0, \mathbf{u}) = \sum _{k=0}^{N-1} \ell(\mathbf{x}(k), \mathbf{u}(k))
+\]</span></p>
+<p><strong>subject to:</strong></p>
+<p><span class="math display">\[
+\mathbf{x}_u(k+1) = \mathbf{f}(\mathbf{x}_u(k), \mathbf{u}(k)), (dynamics)
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{x}_u(0) = \mathbf{x}_0,
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{u}(k) \in U, \quad \forall k \in [0, N-1],
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{x}_u(k) \in X, \quad \forall k \in [0, N].
+\]</span></p>
+</section>
+<section id="b-structure-of-the-non-linear-problem" class="level2">
+<h2 data-anchor-id="b-structure-of-the-non-linear-problem">1b) Structure of the Non-linear problem</h2>
+<p>A standard formulation of the non-linear problem is given below. <span class="math inline">\(\Phi\)</span> is the cost function which the optimization routine tries to minimize. <span class="math inline">\(g_1\)</span> and <span class="math inline">\(g_2\)</span> are the constraints provided to the problem. NlP can be described as linear or quadratic based on the degree of the cost function or the constraints. NLP with quadratic cost or constraints is referred to as a quadratic problem. A NLP is also said to be linear if the cost function and the constraints are affine, meaning that these functions can be expressed as linear combinations of the optimization variables (‘w’ in this case).</p>
+<p><span class="math display">\[
+\min_{\mathbf{w}} \Phi(\mathbf{w})
+\]</span></p>
+<p><strong>Subject to:</strong></p>
+<p><span class="math display">\[
+g_1(\mathbf{w}) \leq 0, (inequality-constraints)
+\]</span></p>
+<p><span class="math display">\[
+g_2(\mathbf{w}) = 0. (equality-constraints)
+\]</span></p>
+</section>
+<section id="c-transcription-methods" class="level2">
+<h2 data-anchor-id="c-transcription-methods">1c) Transcription methods</h2>
+<p>In order to convert the MPC optimization problem into a non-linear problem for CasaDy to solve (this process if referred to as transcription), we need to discretize the dynamic constraints and also introduce the constraints. Some common methods that are used for transcription are: single shooting, multiple shooting, direct collocation etc. For this project, single and multiple shooting methods are used and the results are compared (only for simulation examples). For single shooting, only the control inputs are optimized. Accordingly, the state elements are calculated based on the optimized control inputs. However, with multiple shooting, the states corresponding to the future horizon steps are also treated as constraints (at every step) which allows for the state variables to be optimization variables. This transforms the optimization problem as follows:</p>
+<p><strong>Cost function for multiple shooting:</strong></p>
+<p><span class="math display">\[
+\min_{\mathbf{u,x}} J_N(\mathbf{x}_0, \mathbf{u}) = \sum _{k=0}^{N-1} \ell(\mathbf{x}(k), \mathbf{u}(k))
+\]</span></p>
+<p>Doing so does make the problem bigger (because now you have more optimization variables) but it lifts the problem to a higher dimension making the convergence much easier. Besides, multiple shooting also allows for initialization of the state variables. This allows for providing a better starting guess for the solver, which makes life easier in the long run.</p>
+</section>
+<section id="d-constraint-definition" class="level2">
+<h2 data-anchor-id="d-constraint-definition">1d) Constraint definition</h2>
+</section>
 </section>
 <section id="simulation-example-toy-car-trajectory-optimization" class="level1">
-<h1>1. Simulation Example: Toy Car Trajectory Optimization</h1>
+<h1>2. Simulation Example: Toy Car Trajectory Optimization</h1>
+<p>Dynamics</p>
+<p><span class="math display">\[
+\dot{x} = v \cdot \cos(\theta)
+\]</span></p>
+<p><span class="math display">\[
+\dot{y} = v \cdot \sin(\theta)
+\]</span></p>
+<p><span class="math display">\[
+\dot{\theta} = w
+\]</span></p>
+<p>Control Vector</p>
+<p><span class="math display">\[
+\mathbf{u} = \begin{bmatrix}
+\text{velocity} \\
+\text{angular velocity}
+\end{bmatrix}
+\]</span></p>
 <p><video src="toy_car.mp4" class="img-fluid" controls=""><a href="toy_car.mp4">Video</a></video></p>
 </section>
 <section id="simulation-example-toy-car-trajectory-optimization-while-avoiding-obstacles" class="level1">
-<h1>2. Simulation Example: Toy Car Trajectory Optimization While Avoiding Obstacles</h1>
+<h1>3. Simulation Example: Toy Car Trajectory Optimization While Avoiding Obstacles</h1>
+<p>In order to make sure that the car goes around the obstacles as it finds the new trajectory, the optimization problem is constrained to keep the signed distance between the obstacle and the car greater than some minimum. It needs to be understood that formulating this constraint like follows will make the optimization problem difficult to solve (because its not convex).</p>
+<p><span class="math display">\[
+d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}
+\]</span></p>
+<p>Accordingly, the constraint needs to formulated as follows which retains the convex properties and makes the problem easier to converge.</p>
+<p><span class="math display">\[
+d^2 - \left( (x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2 \right) \leq 0
+\]</span></p>
 <p><video src="toy_car_obstacle_avoidance.mp4" class="img-fluid" controls=""><a href="toy_car_obstacle_avoidance.mp4">Video</a></video></p>
 </section>
 <section id="simulation-example-crazyflie-trajectory-optimization-while-avoiding-obstacles" class="level1">
-<h1>3. Simulation Example: Crazyflie Trajectory Optimization While Avoiding Obstacles</h1>
+<h1>4. Simulation Example: Crazyflie Trajectory Optimization While Avoiding Obstacles</h1>
+<section id="a-setting-up-the-model" class="level2">
+<h2 data-anchor-id="a-setting-up-the-model">4a) Setting up the model!</h2>
+<p>State vector</p>
+<p><span class="math display">\[
+\mathbf{x} = \begin{bmatrix}
+x &amp; y &amp; z &amp; \dot{x} &amp; \dot{y} &amp; \dot{z} &amp; \phi &amp; \theta &amp; \psi &amp; p &amp; q &amp; r
+\end{bmatrix}
+\]</span></p>
+<p>Control Vector</p>
+<p><span class="math display">\[
+\mathbf{u} = \begin{bmatrix}
+T &amp; \tau_\phi &amp; \tau_\theta &amp; \tau_\psi
+\end{bmatrix}
+\]</span></p>
+<p>Translation velocities</p>
+<p><span class="math display">\[
+\dot{x} = (\cos\theta \cos\psi) \dot{x} - \sin\psi \dot{y} + (\sin\theta \cos\psi) \dot{z}
+\]</span></p>
+<p><span class="math display">\[
+\dot{y} = (\cos\theta \sin\psi) \dot{x} + \cos\psi \dot{y} + (\sin\theta \sin\psi) \dot{z}
+\]</span></p>
+<p><span class="math display">\[
+\dot{z} = -\sin\theta \dot{x} + \cos\theta \dot{z}
+\]</span></p>
+<p>Rotational velocities</p>
+<p><span class="math display">\[
+\dot{\phi} = p + q \sin\phi \tan\theta + r \cos\phi \tan\theta
+\]</span></p>
+<p><span class="math display">\[
+\dot{\theta} = q \cos\phi - r \sin\phi
+\]</span></p>
+<p><span class="math display">\[
+\dot{\psi} = \frac{q \sin\phi + r \cos\phi}{\cos\theta}
+\]</span></p>
+<p>Translational Accelerations</p>
+<p><span class="math display">\[
+a_x = \frac{\text{thrust}}{m} \left( \cos\phi \sin\theta \cos\psi + \sin\phi \sin\psi \right) - (q z - r y)
+\]</span></p>
+<p><span class="math display">\[
+a_y = \frac{\text{thrust}}{m} \left( \cos\phi \sin\theta \sin\psi - \sin\phi \cos\psi \right) + (q x - r z)
+\]</span></p>
+<p><span class="math display">\[
+a_z = \frac{\text{thrust}}{m} \left( \cos\phi \cos\theta \right) - g + (p y - q x)
+\]</span></p>
+<p>Rotational Accelerations</p>
+<p><span class="math display">\[
+\dot{p} = \frac{I_y - I_z}{I_x} q r + \frac{\tau_\phi}{I_x}
+\]</span></p>
+<p><span class="math display">\[
+\dot{q} = \frac{I_z - I_x}{I_y} p r + \frac{\tau_\theta}{I_y}
+\]</span></p>
+<p><span class="math display">\[
+\dot{r} = \frac{I_x - I_y}{I_z} p q + \frac{\tau_\psi}{I_z}
+\]</span></p>
+</section>
+<section id="b-model-parameters-for-the-mpc-optimization-problem-initialization." class="level2">
+<h2 data-anchor-id="b-model-parameters-for-the-mpc-optimization-problem-initialization.">4b) Model Parameters for the MPC optimization problem initialization.</h2>
+<p>All the following parameters are SI units. For finding the thrust_max, the thrust to weight ratio (1.9) is determined from the Bitcraze documentation. Similarly, w_max (maximum angular velocity), a_max (maximum translational acceleration), inertias (I_x, I_y, I_z) are all determined from the documentation as well. The following constraints are specified for the control inputs and state variables.</p>
+<table class="table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 26%">
+<col style="width: 23%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Parameter</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Parameter</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>gravity</td>
+<td>9.81</td>
+<td>v_max</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>drone_radius</td>
+<td>0.1</td>
+<td>v_min</td>
+<td>-v_max</td>
+</tr>
+<tr class="odd">
+<td>I_x</td>
+<td>2.4*10^{-5}</td>
+<td>w_max</td>
+<td>10.47</td>
+</tr>
+<tr class="even">
+<td>I_y</td>
+<td>I_x</td>
+<td>w_min</td>
+<td>-w_max</td>
+</tr>
+<tr class="odd">
+<td>I_z</td>
+<td>3.2*10^{-5}</td>
+<td>a_max</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>mass</td>
+<td>0.027</td>
+<td>a_min</td>
+<td>-4</td>
+</tr>
+<tr class="odd">
+<td>bounds</td>
+<td>inf</td>
+<td>w_dot_max</td>
+<td>17.45</td>
+</tr>
+<tr class="even">
+<td>v_max</td>
+<td>1</td>
+<td>w_dot_min</td>
+<td>-w_dot_max</td>
+</tr>
+<tr class="odd">
+<td>thrust_max</td>
+<td>1.9 x m x gravity</td>
+<td>thrust_min</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>tau_max</td>
+<td>0.0097</td>
+<td>tau_min</td>
+<td>-tau_max</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="c-runge-kutta-4-integration-scheme" class="level2">
+<h2 data-anchor-id="c-runge-kutta-4-integration-scheme">4c) Runge Kutta 4 Integration Scheme</h2>
+<p>After failing to get the integration converged through Euler integration, RK4 is used. The equations for the same are given below:</p>
+<p><span class="math display">\[
+k_1 = \Delta t \cdot \mathbf{f}(\mathbf{y}_n, t_n)
+\]</span></p>
+<p><span class="math display">\[
+k_2 = \Delta t \cdot \mathbf{f}\left(\mathbf{y}_n + \frac{1}{2} k_1, t_n + \frac{1}{2} \Delta t\right)
+\]</span></p>
+<p><span class="math display">\[
+k_3 = \Delta t \cdot \mathbf{f}\left(\mathbf{y}_n + \frac{1}{2} k_2, t_n + \frac{1}{2} \Delta t\right)
+\]</span></p>
+<p><span class="math display">\[
+k_4 = \Delta t \cdot \mathbf{f}(\mathbf{y}_n + k_3, t_n + \Delta t)
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{y}_{n+1} = \mathbf{y}_n + \frac{1}{6} \left(k_1 + 2k_2 + 2k_3 + k_4\right)
+\]</span></p>
 <p><video src="crazyflie_mpc_sim.mp4" class="img-fluid" controls=""><a href="crazyflie_mpc_sim.mp4">Video</a></video></p>
 </section>
+</section>
 <section id="vicon-setup" class="level1">
-<h1>4. Vicon Setup</h1>
+<h1>5. Vicon Setup</h1>
 <p>Crazyflie:</p>
 <p><img src="crazyflie.jpg" class="img-fluid" width="350"> <img src="vicon_cf.png" class="img-fluid" width="300"></p>
 <p>Target:</p>
@@ -255,16 +505,25 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 <p>Vicon View: <img src="vicon.png" class="img-fluid"></p>
 </section>
 <section id="robotic-operating-system-architecture" class="level1">
-<h1>5. Robotic Operating System Architecture</h1>
-<p>For Ros2 architecture, 4 packages are created: vicon (to convert the vicon radio messages to Ros2 topics), traj_opt (which contains the 2 nodes: mpc_solver and cf_publisher), custom_msgs (custom topic and message to have the 2 nodes interacting), launcher (to create the launch file). The cf_publisher node takes care of connecting with the Crayzflie over the radio and providing a constant heartbeat (command) after every 10 msec. The mpc_solver node takes care of getting measurments from the vicon, computing the state of the crazyflie, and solving the mpc to generate the next solution. This solution - roll, pitch, yaw_rate, and thrust - are then transmitted to the crazyflie node through the custom topic - mpc_solution. The actual source files can be found in the documentation.</p>
+<h1>6. Robotic Operating System Architecture</h1>
+<p>For Ros2 architecture, 4 packages are created: vicon_receiver (to convert the vicon radio messages to Ros2 topics), traj_opt (which contains the 2 nodes: mpc_solver and cf_publisher), custom_msgs (custom topic and message to have the 2 nodes interacting), launcher (to create the launch file). The cf_publisher node takes care of connecting with the Crayzflie over the radio and providing a constant heartbeat (command) after every 10 msec. The mpc_solver node takes care of getting measurments from the vicon, computing the state of the crazyflie, and solving the mpc to generate the next solution. This solution - roll, pitch, yaw_rate, and thrust - are then transmitted to the crazyflie node through the custom topic - mpc_solution. The actual source files can be found in the documentation.</p>
 <p><img src="rqt_graph.png" class="img-fluid"></p>
 </section>
 <section id="initial-hardware-testing" class="level1">
-<h1>6. Initial Hardware Testing</h1>
+<h1>7. Initial Hardware Testing</h1>
+<section id="test---1" class="level2">
+<h2 data-anchor-id="test---1">Test - 1</h2>
+<p>Through initial tests, it can be seen that MPC sort of finds the way to reach the target but it is constantly hopping. After printing the output of the MPC, it was seen that the thrust value jumps from one extreme to the other as if the MPC keeps interupting the crazyflie publisher or its model integration is going for the wrong time step.</p>
 <p><video src="crazyflie_hardware_1.mp4" class="img-fluid" controls=""><a href="crazyflie_hardware_1.mp4">Video</a></video></p>
 </section>
+<section id="test---2" class="level2">
+<h2 data-anchor-id="test---2">Test - 2</h2>
+<p>Fixed the hopping problem by debugging the discrepancy between the solving time of the non-linear problem and the horizon step calculation. Also re-wrote the ROS architecture to separate the MPC solver and crazyflie publisher into 2 different nodes (processes). Both nodes communicate through a custom topic which stores the MPC solution. Doing so allowed the crazyflie to have a constant heartbeat as the crazyflie publisher keeps sending commands and the MPC solves in the background.</p>
+<p><video src="crazyflie_hardware_2.mp4" class="img-fluid" controls=""><a href="crazyflie_hardware_2.mp4">Video</a></video></p>
+</section>
+</section>
 <section id="supporting-files" class="level1">
-<h1>7. Supporting Files</h1>
+<h1>8. Supporting Files</h1>
 <p>The supporting files for the project can be found <a href="https://github.com/khushant2001/Trajectory-optimization">here</a></p>
 
 
