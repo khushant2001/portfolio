@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Khushant Khurana - Using Gazebo and ROS to Simulate And Control an Inverted Pendulum​</title>
+<title>Khushant Khurana - Using Gazebo and Ros2 to Simulate And Control an Inverted Pendulum​</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,7 +107,7 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Using Gazebo and ROS to Simulate And Control an Inverted Pendulum​</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Using Gazebo and Ros2 to Simulate And Control an Inverted Pendulum​</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -202,6 +202,7 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
    
   <ul>
   <li><a href="#brief-overview" id="toc-brief-overview" class="nav-link active" data-scroll-target="#brief-overview">Brief Overview</a></li>
+  <li><a href="#supporting-files" id="toc-supporting-files" class="nav-link" data-scroll-target="#supporting-files">Supporting Files</a></li>
   </ul>
 </nav>
     </div>
@@ -215,7 +216,7 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
   rectangle " style="width: 40em;">
  <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Using Gazebo and ROS to Simulate And Control an Inverted Pendulum​</h1>
+<h1 class="title">Using Gazebo and Ros2 to Simulate And Control an Inverted Pendulum​</h1>
 </div>
 <div class="quarto-title-meta">
   </div>
@@ -225,9 +226,14 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 
 <section id="brief-overview" class="level1">
 <h1>Brief Overview</h1>
-<p>Under this ongoing project, I am learning to use Robotic Operating System and Gazebo for controlling physical systems.</p>
-<p><img src="tf.png" class="img-fluid"></p>
-<p><img src="gazebo.png" class="img-fluid"></p>
+<p>As an introduction to using Gazebo for simulating physics and controllers, I implemented a PI controller for inverted pendulum. I designed the Gazebo model using .sdf format which consisted of base frame, a slider with prismatic joint, and the pendulum with revolute joint constrained to the slider. To get the orientation of the pendulum, I used an IMU. On the Ros2 side, I created a node that imported the IMU data from Gazebo and actuated the prismatic joint velocity using a PI controller. The briding between Ros2 and Gazebo is done using a .yaml file. A launch file is also created to launch the controller, bridge, and gazebo model. The rqt_graph of the Ros2 is provided below.</p>
+<p><img src="rqt_graph.png" class="img-fluid"></p>
+<p>A working example of the Pendulum is given below as well.</p>
+<p><video src="working_example.mp4" class="img-fluid" controls=""><a href="working_example.mp4">Video</a></video></p>
+</section>
+<section id="supporting-files" class="level1">
+<h1>Supporting Files</h1>
+<p>The corresponding code can be found <a href="https://github.com/khushant2001/Inverted_pendulum">here</a></p>
 
 
 

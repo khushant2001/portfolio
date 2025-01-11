@@ -1,10 +1,17 @@
 [
   {
+    "objectID": "inv_pendulum/inv_pend.html",
+    "href": "inv_pendulum/inv_pend.html",
+    "title": "Using Gazebo and Ros2 to Simulate And Control an Inverted Pendulum​",
+    "section": "",
+    "text": "Brief Overview\nAs an introduction to using Gazebo for simulating physics and controllers, I implemented a PI controller for inverted pendulum. I designed the Gazebo model using .sdf format which consisted of base frame, a slider with prismatic joint, and the pendulum with revolute joint constrained to the slider. To get the orientation of the pendulum, I used an IMU. On the Ros2 side, I created a node that imported the IMU data from Gazebo and actuated the prismatic joint velocity using a PI controller. The briding between Ros2 and Gazebo is done using a .yaml file. A launch file is also created to launch the controller, bridge, and gazebo model. The rqt_graph of the Ros2 is provided below.\n\nA working example of the Pendulum is given below as well.\nVideo\n\n\nSupporting Files\nThe corresponding code can be found here"
+  },
+  {
     "objectID": "dynamics_control.html",
     "href": "dynamics_control.html",
     "title": "Dynamics And Control Projects",
     "section": "",
-    "text": "Controlling Data Driven Systems Using System Identification and Model Reduction​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImplementing a PID controller on Irobot Create for wall following while mapping the space​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelling fish’s oscillatory motion through dynamics of triple pendulum\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMulti Modal Robotic Traversal of Remote and Rugged Terrain​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSimulating Dynamics and Controllers for Unmanned Aerial Vehicle\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Gazebo and ROS to Simulate And Control an Inverted Pendulum​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Robotic Operating System to Develop Control Architectures.​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Controlling Data Driven Systems Using System Identification and Model Reduction​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImplementing a PID controller on Irobot Create for wall following while mapping the space​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelling fish’s oscillatory motion through dynamics of triple pendulum\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMulti Modal Robotic Traversal of Remote and Rugged Terrain​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSimulating Dynamics and Controllers for Unmanned Aerial Vehicle\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Gazebo and Ros2 to Simulate And Control an Inverted Pendulum​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Robotic Operating System to Develop Control Architectures.​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "base_plate/tower_fea.html#a-brief-synopsis",
@@ -159,13 +166,6 @@
     "title": "Guidance, Navigation, and Control Projects",
     "section": "",
     "text": "Missile GNC To Intercept Trajectories\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReal-time Trajectory Optimization for Obstacle Avoidance​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Constrained SINDY and Model Predictive Controller for Trajectory Tracking​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "inv_pendulum/inv_pend.html",
-    "href": "inv_pendulum/inv_pend.html",
-    "title": "Using Gazebo and ROS to Simulate And Control an Inverted Pendulum​",
-    "section": "",
-    "text": "Brief Overview\nUnder this ongoing project, I am learning to use Robotic Operating System and Gazebo for controlling physical systems."
   },
   {
     "objectID": "irobot/irobot.html#a-brief-synopsis",
