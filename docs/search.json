@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "inv_pendulum/inv_pend.html",
-    "href": "inv_pendulum/inv_pend.html",
-    "title": "Using Gazebo and Ros2 to Simulate And Control an Inverted Pendulum​",
-    "section": "",
-    "text": "Brief Overview\nAs an introduction to using Gazebo for simulating physics and controllers, I implemented a PI controller for inverted pendulum. I designed the Gazebo model using .sdf format which consisted of base frame, a slider with prismatic joint, and the pendulum with revolute joint constrained to the slider. To get the orientation of the pendulum, I used an IMU. On the Ros2 side, I created a node that imported the IMU data from Gazebo and actuated the prismatic joint velocity using a PI controller. The briding between Ros2 and Gazebo is done using a .yaml file. A launch file is also created to launch the controller, bridge, and gazebo model. The rqt_graph of the Ros2 is provided below.\n\nA working example of the Pendulum is given below as well.\nVideo\n\n\nSupporting Files\nThe corresponding code can be found here"
-  },
-  {
     "objectID": "dynamics_control.html",
     "href": "dynamics_control.html",
     "title": "Dynamics And Control Projects",
@@ -166,6 +159,13 @@
     "title": "Guidance, Navigation, and Control Projects",
     "section": "",
     "text": "Missile GNC To Intercept Trajectories\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReal-time Trajectory Optimization for Obstacle Avoidance​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Constrained SINDY and Model Predictive Controller for Trajectory Tracking​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "inv_pendulum/inv_pend.html",
+    "href": "inv_pendulum/inv_pend.html",
+    "title": "Using Gazebo and Ros2 to Simulate And Control an Inverted Pendulum​",
+    "section": "",
+    "text": "Brief Overview\nAs an introduction to using Gazebo for simulating physics and controllers, I implemented a PI controller for inverted pendulum. I designed the Gazebo model using .sdf format which consisted of base frame, a slider with prismatic joint, and the pendulum with revolute joint constrained to the slider. To get the orientation of the pendulum, I used an IMU. On the Ros2 side, I created a node that imported the IMU data from Gazebo and actuated the prismatic joint velocity using a PI controller. The briding between Ros2 and Gazebo is done using a .yaml file. A launch file is also created to launch the controller, bridge, and gazebo model. The rqt_graph of the Ros2 is provided below.\n\nA working example of the Pendulum is given below as well.\nVideo\n\n\nSupporting Files\nThe corresponding code can be found here"
   },
   {
     "objectID": "irobot/irobot.html#a-brief-synopsis",
@@ -396,7 +396,7 @@
     "href": "traj_opt/traj_opt.html#b-model-parameters-for-the-mpc-optimization-problem-initialization.",
     "title": "Real-time Trajectory Optimization for Obstacle Avoidance​",
     "section": "4b) Model Parameters for the MPC optimization problem initialization.",
-    "text": "4b) Model Parameters for the MPC optimization problem initialization.\nAll the following parameters are SI units. For finding the thrust_max, the thrust to weight ratio (1.9) is determined from the Bitcraze documentation. Similarly, w_max (maximum angular velocity), a_max (maximum translational acceleration), inertias (I_x, I_y, I_z) are all determined from the documentation as well. The following constraints are specified for the control inputs and state variables.\n\n\n\n\n\n\n\n\n\nParameter\nValue\nParameter\nValue\n\n\n\n\ngravity\n9.81\nv_max\n1\n\n\ndrone_radius\n0.1\nv_min\n-v_max\n\n\nI_x\n2.4*10^{-5}\nw_max\n10.47\n\n\nI_y\nI_x\nw_min\n-w_max\n\n\nI_z\n3.2*10^{-5}\na_max\n4\n\n\nmass\n0.027\na_min\n-4\n\n\nbounds\ninf\nw_dot_max\n17.45\n\n\nv_max\n1\nw_dot_min\n-w_dot_max\n\n\nthrust_max\n1.9 x m x gravity\nthrust_min\n0\n\n\ntau_max\n0.0097\ntau_min\n-tau_max"
+    "text": "4b) Model Parameters for the MPC optimization problem initialization.\nAll the following parameters are SI units. For finding the thrust_max, the thrust to weight ratio (1.9) is determined from the Bitcraze documentation. Similarly, w_max (maximum angular velocity), a_max (maximum translational acceleration), inertias (I_x, I_y, I_z) are all determined from the documentation as well. The following constraints are specified for the control inputs and state variables.\n\n\n\nParameter\nValue\nParameter\nValue\n\n\n\n\ngravity\n9.81\nv_max\n1\n\n\ndrone_radius\n0.1\nv_min\n-v_max\n\n\nI_x\n2.4*10^{-5}\nw_max\n10.47\n\n\nI_y\nI_x\nw_min\n-w_max\n\n\nI_z\n3.2*10^{-5}\na_max\n4\n\n\nmass\n0.027\na_min\n-4\n\n\nbounds\ninf\nw_dot_max\n17.45\n\n\nv_max\n1\nw_dot_min\n-w_dot_max\n\n\nthrust_max\n1.9 x m x gravity\nthrust_min\n0\n\n\ntau_max\n0.0097\ntau_min\n-tau_max"
   },
   {
     "objectID": "traj_opt/traj_opt.html#c-runge-kutta-4-integration-scheme",
@@ -417,7 +417,14 @@
     "href": "traj_opt/traj_opt.html#test---2",
     "title": "Real-time Trajectory Optimization for Obstacle Avoidance​",
     "section": "Test - 2",
-    "text": "Test - 2\nFixed the hopping problem by debugging the discrepancy between the solving time of the non-linear problem and the horizon step calculation. Also re-wrote the ROS architecture to separate the MPC solver and crazyflie publisher into 2 different nodes (processes). Both nodes communicate through a custom topic which stores the MPC solution. Doing so allowed the crazyflie to have a constant heartbeat as the crazyflie publisher keeps sending commands and the MPC solves in the background.\nVideo"
+    "text": "Test - 2\nFixed the hopping problem by debugging the discrepancy between the solving time of the non-linear problem and the horizon step calculation. Also re-wrote the ROS architecture to separate the MPC solver and crazyflie publisher into 2 different nodes (processes). Both nodes communicate through a custom topic which stores the MPC solution. Doing so allowed the crazyflie to have a constant heartbeat as the crazyflie publisher keeps sending commands and the MPC solves in the background.\nVideo\nFollowing is the XY trajectory graph of the crazyflie during the test run. The red point signifies the target, rc car here. The true state of the crazyflie along with the estimated state of the 5 horizon steps is also shown. As expected, the trajectory labeled /model_state_calcs5/state[0:1] is closest to the target because it is the trajectory of the 5th horizon step.\n\nA comparison graph of the true_state vs MPC state in terms of the XY position is also shown below to prove the validity of the MPC model.\n\nA comparison of the estimated linear x velocity of the MPC model vs the true state is shown below. The estimated velocity calculation is done using dirty differentiation (finite step differentiation + discrete low pass filter). Couple of things to note. Firstly, the MPC is solved at slower rate than the commands sent to the crazyflie and the data received from the vicon. So the data looks much more smoother."
+  },
+  {
+    "objectID": "traj_opt/traj_opt.html#test---3",
+    "href": "traj_opt/traj_opt.html#test---3",
+    "title": "Real-time Trajectory Optimization for Obstacle Avoidance​",
+    "section": "Test - 3",
+    "text": "Test - 3\nUsing lumped models for rotational dyanamics to account for the lag between sending setpoints and the controller on board to follow that setpoint. Accoridngly, a first order transfer function is used to simulate the lag between the crazyflie’s response and input torques. This tf lumps up the dynamics, while disregarding the coupling between the three orientation axes. To determine the time constant for this first order lag transfer function, a test script is written which makes the drone for 2 seconds and then gives a step command of 5 degrees in pitch. The corresponding response is shown below and the time constant is determined to be 300 msec for the roll axis (which should match the pitch axis as well). The filtered version (moving average filter, samples = 10) of the crazyflie’s pitch is also shown below to provide more clarity."
   },
   {
     "objectID": "triple_pendulum/space.html#a-brief-synopsis",
@@ -473,14 +480,14 @@
     "href": "index.html",
     "title": "Khushant Khurana",
     "section": "",
-    "text": "Github\n  \n  \n    \n     Linkedin\n  \n  \n    \n     Email\n  \n\n  \n  \n\n\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering;\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering; Minor: Computer Science\n\n\n\n\n\n\n\nGarmin International\n\n\n\nOshkosh Corporation"
+    "text": "Github\n  \n  \n    \n     Linkedin\n  \n  \n    \n     Email\n  \n\n  \n  \n\n\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering;\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering Minor: Computer Science\n\n\n\n\n\n\n\nGarmin International\n\n\n\nOshkosh Corporation"
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Khushant Khurana",
     "section": "",
-    "text": "The Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering;\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering; Minor: Computer Science"
+    "text": "The Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering;\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering Minor: Computer Science"
   },
   {
     "objectID": "index.html#experience",
