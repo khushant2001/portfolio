@@ -38,9 +38,15 @@ website:
       - section: "**Past internships**"
         class: "section-heading"
         contents:
+            - text: "\u2022 Defense Science and Technology Graduate Intern @ Lawrence National Lab"
             - text: "\u2022 Aviation Systems Engineer Intern @ Garmin"
             - text: "\u2022 Controls Intern @ Oshkosh Corporation"
               href: oshkosh_poster.pdf 
+      - section: "**Past research**"
+        class: "section-heading"
+        contents:
+            - text: "\u2022 Graduate Student Researcher @ Dynamics & Control Lab"
+              href: traj_opt/traj_opt.qmd
       - section: "**Projects**"
         class: "section-heading"
         contents:
@@ -53,9 +59,6 @@ website:
           - text: "\u2022 Mechanical Design & Fabrication"
             href: fabrication.qmd
       
-            
-            
-
 format:
   html:
     theme: minty

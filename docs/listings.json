@@ -2,11 +2,13 @@
   {
     "listing": "/dynamics_control.html",
     "items": [
+      "/tuning_fork/fork.html",
       "/data_driven_ctrl/data_driven_control.html",
       "/irobot/irobot.html",
+      "/convex/sys_id.html",
+      "/chassis/chassis.html",
       "/triple_pendulum/space.html",
       "/Tipsy/tipsy.html",
-      "/UAV/UAV.html",
       "/inv_pendulum/inv_pend.html",
       "/ros/ros.html"
     ]
@@ -26,6 +28,7 @@
     "items": [
       "/missile/missile.html",
       "/traj_opt/traj_opt.html",
+      "/UAV/UAV.html",
       "/flight/mpc.html"
     ]
   },

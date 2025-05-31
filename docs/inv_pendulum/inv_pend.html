@@ -146,6 +146,9 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
+ <span class="menu-text">• Defense Science and Technology Graduate Intern @ Lawrence National Lab</span>
+  </li>
+          <li class="sidebar-item">
  <span class="menu-text">• Aviation Systems Engineer Intern @ Garmin</span>
   </li>
           <li class="sidebar-item">
@@ -219,6 +222,11 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
    
   <ul>
   <li><a href="#brief-overview" id="toc-brief-overview" class="nav-link active" data-scroll-target="#brief-overview">Brief Overview</a></li>
+  <li><a href="#controller-implementation" id="toc-controller-implementation" class="nav-link" data-scroll-target="#controller-implementation">Controller Implementation:</a>
+  <ul class="collapse">
+  <li><a href="#pi-proportional--integral" id="toc-pi-proportional--integral" class="nav-link" data-scroll-target="#pi-proportional--integral">1. PI (Proportional- Integral)</a></li>
+  <li><a href="#lqr-linear-quadratic-regulator" id="toc-lqr-linear-quadratic-regulator" class="nav-link" data-scroll-target="#lqr-linear-quadratic-regulator">2. LQR (Linear Quadratic Regulator)</a></li>
+  </ul></li>
   <li><a href="#supporting-files" id="toc-supporting-files" class="nav-link" data-scroll-target="#supporting-files">Supporting Files</a></li>
   </ul>
 </nav>
@@ -245,8 +253,19 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 <h1>Brief Overview</h1>
 <p>As an introduction to using Gazebo for simulating physics and controllers, I implemented a PI controller for inverted pendulum. I designed the Gazebo model using .sdf format which consisted of base frame, a slider with prismatic joint, and the pendulum with revolute joint constrained to the slider. To get the orientation of the pendulum, I used an IMU. On the Ros2 side, I created a node that imported the IMU data from Gazebo and actuated the prismatic joint velocity using a PI controller. The briding between Ros2 and Gazebo is done using a .yaml file. A launch file is also created to launch the controller, bridge, and gazebo model. The rqt_graph of the Ros2 is provided below.</p>
 <p><img src="rqt_graph.png" class="img-fluid"></p>
-<p>A working example of the Pendulum is given below as well.</p>
+</section>
+<section id="controller-implementation" class="level1">
+<h1>Controller Implementation:</h1>
+<section id="pi-proportional--integral" class="level2">
+<h2 data-anchor-id="pi-proportional--integral">1. PI (Proportional- Integral)</h2>
+<p>K_p = 0.27, K_I = 0.26</p>
 <p><video src="working_example.mp4" class="img-fluid" controls=""><a href="working_example.mp4">Video</a></video></p>
+</section>
+<section id="lqr-linear-quadratic-regulator" class="level2">
+<h2 data-anchor-id="lqr-linear-quadratic-regulator">2. LQR (Linear Quadratic Regulator)</h2>
+<p>K = [0, 1.5, 0, 0.4] for state vector = [cart_position, roll angle, cart_velocity, roll_velocity]</p>
+<p><video src="inverted_pendulum_lqr.mp4" class="img-fluid" controls=""><a href="inverted_pendulum_lqr.mp4">Video</a></video></p>
+</section>
 </section>
 <section id="supporting-files" class="level1">
 <h1>Supporting Files</h1>

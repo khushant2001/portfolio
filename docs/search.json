@@ -1,10 +1,24 @@
 [
   {
-    "objectID": "dynamics_control.html",
-    "href": "dynamics_control.html",
-    "title": "Dynamics And Control Projects",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Khushant Khurana",
     "section": "",
-    "text": "Controlling Data Driven Systems Using System Identification and Model Reduction​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImplementing a PID controller on Irobot Create for wall following while mapping the space​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelling fish’s oscillatory motion through dynamics of triple pendulum\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMulti Modal Robotic Traversal of Remote and Rugged Terrain​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSimulating Dynamics and Controllers for Unmanned Aerial Vehicle\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Gazebo and Ros2 to Simulate And Control an Inverted Pendulum​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Robotic Operating System to Develop Control Architectures.​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Github\n  \n  \n    \n     Linkedin\n  \n  \n    \n     Email\n  \n\n  \n  \n\n\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering;\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering Minor: Computer Science\n\n\n\n\n\n\n\nLawrence Livermore National Laboratory\n\n\n\nGarmin International\n\n\n\nOshkosh Corporation"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "The Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering;\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering Minor: Computer Science"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Khushant Khurana",
+    "section": "",
+    "text": "Lawrence Livermore National Laboratory\n\n\n\nGarmin International\n\n\n\nOshkosh Corporation"
   },
   {
     "objectID": "base_plate/tower_fea.html#a-brief-synopsis",
@@ -77,6 +91,20 @@
     "text": "Academic Paper Describing CASPER’s Design, Fabrication, and Analysis.\nClick here to access the full document."
   },
   {
+    "objectID": "chassis/chassis.html",
+    "href": "chassis/chassis.html",
+    "title": "Modal Testing of an FSAE Chassis for Mode Shape and Rigid Body Mode Identification",
+    "section": "",
+    "text": "A Brief Synopsis\nIn this project, impact hammer testing is performed in a FSAE chassis to find the rigid body modes and structural mode shapes. Roving hammer testing is performed on the points shown in the figure while the accelerometer is placed on point 1. The mode shapes are determined by using the imaginary parts of the impulse responses.\n\n\nAnimated Mode Shapes"
+  },
+  {
+    "objectID": "convex/sys_id.html",
+    "href": "convex/sys_id.html",
+    "title": "Linear System Identification for Inverted Pendulum Using Convex Optimization​",
+    "section": "",
+    "text": "A Brief Synopsis\nThe inverted pendulum system possesses two equilibrium points: a stable equilibrium when the pendulum is vertically downward, and an unstable equilibrium when it is vertically upward. In this study, system identification is carried out for both configurations. The unstable equilibrium, in particular, necessitates continuous control input to maintain balance, which introduces additional complexity to the optimization problem. Accordingly, a Linear Quadratic Controller is designed to control the pendulum and results for both cases are shown below. The true states of the non-linear inverted pendulum system are derived from Gazebo. Python’s casADi package is used to solve the optimization problem.\n\n\n1. State space representation\nThe state vector consisting of theta (pendulum’s angle from the vertical), theta_dot, cart position, and cart velocity is shown below. \\[\n\\begin{equation}\n\\label{eq:state_vector}\n\\vec{x} =\n\\begin{bmatrix}\n\\text{cart position } (x) \\\\\n\\text{pendulum angle } (\\theta) \\\\\n\\text{cart velocity } (\\dot{x}) \\\\\n\\text{pendulum angular velocity } (\\dot{\\theta})\n\\end{bmatrix}\n\\end{equation}\n\\]\nThe corresponding state space system consisting of the A, B, C, D matrices is shown below.\n\\[\n\\begin{equation}\n\\label{eq:inverted_pendulum_ss}\n\\begin{aligned}\n    \\dot{\\vec{x}} &=\n    \\begin{bmatrix}\n        \\dot{x} \\\\\n        \\dot{\\theta} \\\\\n        \\ddot{x} \\\\\n        \\ddot{\\theta}\n    \\end{bmatrix}\n    =\n    \\begin{bmatrix}\n        a_{11} & a_{12} & a_{13} & a_{14} \\\\\n        a_{21} & a_{22} & a_{23} & a_{24} \\\\\n        a_{31} & a_{32} & a_{33} & a_{34} \\\\\n        a_{41} & a_{42} & a_{43} & a_{44}\n    \\end{bmatrix}\n    \\vec{x}\n    +\n    \\begin{bmatrix}\n        b_{11} \\\\\n        b_{21} \\\\\n        b_{31} \\\\\n        b_{41}\n    \\end{bmatrix} F \\\\[1.5ex]\n    y &=\n    \\begin{bmatrix}\n        c_{11} & c_{12} & c_{13} & c_{14} \\\\\n        c_{21} & c_{22} & c_{23} & c_{24} \\\\\n        c_{31} & c_{32} & c_{33} & c_{34} \\\\\n        c_{41} & c_{42} & c_{43} & c_{44}\n    \\end{bmatrix}\n    \\vec{x}\n    +\n    \\begin{bmatrix}\n        d_{11} \\\\\n        d_{21} \\\\\n        d_{31} \\\\\n        d_{41}\n    \\end{bmatrix}\n    F\n\\end{aligned}\n\\end{equation}\n\\]\n\n\n2. Stable Equilibrium\nThe optimization problem solved to determine the state space system for stable equilibrium is shown below.\n\\[\n\\begin{equation}\n\\begin{aligned}\n    \\min_{A \\in \\mathbb{R}^{4 \\times 4}, \\; B \\in \\mathbb{R}^{4 \\times 1}} \\quad\n    & \\sum_{i=1}^{N-1} e_i^T Q e_i \\\\\n    \\textbf{subject to:} \\quad\n    & e_i = x_{i+1}^{\\text{true}} - \\left( x_i + \\Delta t_i (A x_i + B u_i) \\right) \\\\\n    & -40 \\leq a_{ij} \\leq 40, \\quad \\forall i,j \\in \\{1,2,3,4\\} \\\\\n    & -40 \\leq b_{j} \\leq 40, \\quad \\forall j \\in \\{1,2,3,4\\}\n\\end{aligned}\n\\end{equation}\n\\]\nThe results are shown below.\n\\[\n\\text{Estimated } A =\n\\begin{bmatrix}\n0.028 & 0.018 & 0.029 & -0.14 \\\\\n0.069 & -0.15 & 4.10 & -40.0 \\\\\n0.42 & -0.015 & -0.92 & 3.85 \\\\\n-0.020 & 0.48 & 0.019 & -0.84\n\\end{bmatrix}\n\\]\n\\[\n\\text{Estimated } B =\n\\begin{bmatrix}\n0.019 \\\\\n-0.011 \\\\\n0.86 \\\\\n-3.70\n\\end{bmatrix}\n\\]\n\\[\n\\text{Cost: } 0.0817\\%\n\\]\n\\[\n\\text{Solver status: Solve\\_Succeeded}\n\\]\n\\[\n\\text{Iteration count: } 9\n\\]\n\\[\n\\text{Time: } 0.1 \\text{ sec}\n\\]\nIn order to validate the determined system, the free swinging motion of the pendulum at stable equilibrium is analyzed. A pertubation of -0.14 rad is applied to both the linear system and the non linear system in Gazebo and results are shown below.\n\n\n\n3. Unstable Equilibrium\nThe optimization problem for the unstable equilibrium is shown below. Additional constraints are added to ensure the stability of the closed loop matrix. This is done using Lyapunov’s stability criteria and enforcing this through Sylvester’s criterion.\n\\[\\begin{align}\n    \\min_{A \\in \\mathbb{R}^{4 \\times 4},\\; B \\in \\mathbb{R}^{4 \\times 1}} \\quad\n    & \\sum_{i=1}^{N-1}  e_i^TQe_i\n\\end{align}\\]\n\\[\n\\textbf{subject to:}\n\\] \\[\\begin{align}\ne_i = \\left( x_{i+1}^{\\mathrm{true}} - \\left(x_i + \\Delta t_i (A x_i + B u_i)\\right) \\right)^\\top \\nonumber \\\\\n\\det\n\\begin{bmatrix}\na_{11}\n\\end{bmatrix} &\\leq \\epsilon  \\\\[1ex]\n%\n\\det\n\\begin{bmatrix}\na_{11} & \\frac{a_{12} + a_{21}}{2} \\\\\n\\frac{a_{12} + a_{21}}{2} & a_{22}\n\\end{bmatrix} &\\geq \\epsilon  \\\\[1ex]\n%\n\\det\n\\begin{bmatrix}\na_{11} & \\frac{a_{12} + a_{21}}{2} & \\frac{a_{13} + a_{31}}{2} \\\\\n\\frac{a_{12} + a_{21}}{2} & a_{22} & \\frac{a_{23} + a_{32}}{2} \\\\\n\\frac{a_{13} + a_{31}}{2} & \\frac{a_{23} + a_{32}}{2} & a_{33}\n\\end{bmatrix} &\\leq \\epsilon  \\\\[1ex]\n%\n\\det\n\\begin{bmatrix}\na_{11} & \\frac{a_{12} + a_{21}}{2} & \\frac{a_{13} + a_{31}}{2} & \\frac{a_{14} + a_{41}}{2} \\\\\n\\frac{a_{12} + a_{21}}{2} & a_{22} & \\frac{a_{23} + a_{32}}{2} & \\frac{a_{24} + a_{42}}{2} \\\\\n\\frac{a_{13} + a_{31}}{2} & \\frac{a_{23} + a_{32}}{2} & a_{33} & \\frac{a_{34} + a_{43}}{2} \\\\\n\\frac{a_{14} + a_{41}}{2} & \\frac{a_{24} + a_{42}}{2} & \\frac{a_{34} + a_{43}}{2} & a_{44}\n\\end{bmatrix} &\\geq \\epsilon  \\\\[2ex]\n%\n\\quad -100 \\leq a_{ij} \\leq 100, \\quad & \\forall i,j \\in \\{1,2,3,4\\} \\\\[1ex]\n-100 \\leq b_{j} \\leq 100, \\quad & \\forall j \\in \\{1,2,3,4\\}\n\\end{align}\\]\nThe results of the optimization problem are shown below.\n\\[\n\\text{Estimated } A =\n\\begin{bmatrix}\n-1.10 & 0.39 & 1.33 & -3.84 \\\\\n19.83 & -99.37 & -38.58 & 48.25 \\\\\n3.33 & -1.37 & -5.36 & 8.72 \\\\\n-0.54 & 0.54 & 0.93 & -2.85\n\\end{bmatrix}\n\\]\n\\[\n\\text{Estimated } B =\n\\begin{bmatrix}\n0.2319 \\\\\n-1.1449 \\\\\n0.4511 \\\\\n4.6471\n\\end{bmatrix}\n\\]\n\\[\n\\text{Cost: } 0.2011\\%\n\\]\n\\[\n\\text{Solver status: Solve\\_Succeeded}\n\\]\n\\[\n\\text{Iteration count: } 89\n\\]\n\\[\n\\text{Time: } 0.5 \\ \\text{sec}\n\\]\nThe open loop response for a similar pertubation of -0.14 rad is shown below. As expected, the linear state space system does not show the free swining motion because the model is only valid at the unstable equilibrium."
+  },
+  {
     "objectID": "data_driven_ctrl/data_driven_control.html#a-brief-synopsis",
     "href": "data_driven_ctrl/data_driven_control.html#a-brief-synopsis",
     "title": "Controlling Data Driven Systems Using System Identification and Model Reduction​",
@@ -119,6 +147,13 @@
     "text": "5. Supporting files\nTo access the code, check out the github"
   },
   {
+    "objectID": "dynamics_control.html",
+    "href": "dynamics_control.html",
+    "title": "Dynamics And Control Projects",
+    "section": "",
+    "text": "Applying Reduced-Order Modelling Techniques to a Tuning Fork\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nControlling Data Driven Systems Using System Identification and Model Reduction​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImplementing a PID controller on Irobot Create for wall following while mapping the space​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinear System Identification for Inverted Pendulum Using Convex Optimization​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModal Testing of an FSAE Chassis for Mode Shape and Rigid Body Mode Identification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelling fish’s oscillatory motion through dynamics of triple pendulum\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMulti Modal Robotic Traversal of Remote and Rugged Terrain​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Gazebo and Ros2 to Simulate And Control an Inverted Pendulum​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Robotic Operating System to Develop Control Architectures.​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "experimentation/experimentation.html#a-brief-synopsis",
     "href": "experimentation/experimentation.html#a-brief-synopsis",
     "title": "Base Excitation Rig - Demonstration of Vibration Isolation",
@@ -158,14 +193,21 @@
     "href": "gnc.html",
     "title": "Guidance, Navigation, and Control Projects",
     "section": "",
-    "text": "Missile GNC To Intercept Trajectories\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReal-time Trajectory Optimization for Obstacle Avoidance​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Constrained SINDY and Model Predictive Controller for Trajectory Tracking​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Missile GNC To Intercept Trajectories\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReal-time Trajectory Optimization for Obstacle Avoidance​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSimulating Dynamics and Controllers for Unmanned Aerial Vehicle\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Constrained SINDY and Model Predictive Controller for Trajectory Tracking​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "inv_pendulum/inv_pend.html",
-    "href": "inv_pendulum/inv_pend.html",
+    "objectID": "inv_pendulum/inv_pend.html#pi-proportional--integral",
+    "href": "inv_pendulum/inv_pend.html#pi-proportional--integral",
     "title": "Using Gazebo and Ros2 to Simulate And Control an Inverted Pendulum​",
-    "section": "",
-    "text": "Brief Overview\nAs an introduction to using Gazebo for simulating physics and controllers, I implemented a PI controller for inverted pendulum. I designed the Gazebo model using .sdf format which consisted of base frame, a slider with prismatic joint, and the pendulum with revolute joint constrained to the slider. To get the orientation of the pendulum, I used an IMU. On the Ros2 side, I created a node that imported the IMU data from Gazebo and actuated the prismatic joint velocity using a PI controller. The briding between Ros2 and Gazebo is done using a .yaml file. A launch file is also created to launch the controller, bridge, and gazebo model. The rqt_graph of the Ros2 is provided below.\n\nA working example of the Pendulum is given below as well.\nVideo\n\n\nSupporting Files\nThe corresponding code can be found here"
+    "section": "1. PI (Proportional- Integral)",
+    "text": "1. PI (Proportional- Integral)\nK_p = 0.27, K_I = 0.26\nVideo"
+  },
+  {
+    "objectID": "inv_pendulum/inv_pend.html#lqr-linear-quadratic-regulator",
+    "href": "inv_pendulum/inv_pend.html#lqr-linear-quadratic-regulator",
+    "title": "Using Gazebo and Ros2 to Simulate And Control an Inverted Pendulum​",
+    "section": "2. LQR (Linear Quadratic Regulator)",
+    "text": "2. LQR (Linear Quadratic Regulator)\nK = [0, 1.5, 0, 0.4] for state vector = [cart_position, roll angle, cart_velocity, roll_velocity]\nVideo"
   },
   {
     "objectID": "irobot/irobot.html#a-brief-synopsis",
@@ -455,6 +497,34 @@
     "text": "Link To Github\nTo access the corresponding repository, click here"
   },
   {
+    "objectID": "tuning_fork/fork.html#a-brief-synopsis",
+    "href": "tuning_fork/fork.html#a-brief-synopsis",
+    "title": "Applying Reduced-Order Modelling Techniques to a Tuning Fork",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nIn this project, reduced order modelling is performed to determine best fit state space matrices for a tuning fork. Impulse responses are generated using roving accelerometer on the points marked in the diagram while impact hammer is struck on point 4. Accordingly, 7 impulse responses are generated. Firstly, a proof of the existence of lower order POD modes is shown using singular value decomposition. As expected the POD modes mimic the vibrational mode shapes of the tuning fork. Following this, the state space matrices are generated using Eigensystem Realization Algorithm and the results are analyzed."
+  },
+  {
+    "objectID": "tuning_fork/fork.html#examle-of-impulse-response-x1_f4",
+    "href": "tuning_fork/fork.html#examle-of-impulse-response-x1_f4",
+    "title": "Applying Reduced-Order Modelling Techniques to a Tuning Fork",
+    "section": "1. Examle of impulse response X1_F4",
+    "text": "1. Examle of impulse response X1_F4\nAn example of one of the impulse response is shown below."
+  },
+  {
+    "objectID": "tuning_fork/fork.html#principle-component-analysis-using-singular-value-decomposition",
+    "href": "tuning_fork/fork.html#principle-component-analysis-using-singular-value-decomposition",
+    "title": "Applying Reduced-Order Modelling Techniques to a Tuning Fork",
+    "section": "2. Principle Component Analysis Using Singular Value Decomposition",
+    "text": "2. Principle Component Analysis Using Singular Value Decomposition\nTo obtain the lower order POD modes, the impulse responses are structured as a matrix shown below. Each row represents the accelerometer location and each column represents snapshot in time.\n\nSVD is performed on the data matrix and the first 10 modes are kept for the purposes of truncation. The POD modes with decreasing importance are shown below."
+  },
+  {
+    "objectID": "tuning_fork/fork.html#deriving-state-space-using-eigensystem-realization-algorithm",
+    "href": "tuning_fork/fork.html#deriving-state-space-using-eigensystem-realization-algorithm",
+    "title": "Applying Reduced-Order Modelling Techniques to a Tuning Fork",
+    "section": "3. Deriving State Space Using Eigensystem Realization Algorithm",
+    "text": "3. Deriving State Space Using Eigensystem Realization Algorithm\nNext, the state space matrices are generated to best fit the impulse response. Henkel matrices are generated and then SVD is performed. A graphic representation of the POD modes and the cumulative energy by adding each POD mode is shown below.\n \nAs shown, first 15 POD modes encapsulate 95 % of the total energy. Using this info, ERA procedures are performed to get the state space matrices and the results with different truncation are shown below. As expected, adding more POD modes to the ERA procedures allows for a better fit to the data. It is to be noted that the magnitude of the reconstructed impulse response is twice that of the original. This is because the actual impulse response is not generated with a perfect unit impulse. On the other hand, reconstructed impulse response is due to a perfect unit impulse.\n\nFirst 10 POD modes are used for the ERA and the state space matrices are determined. Now, we can get to analyzing the system. The poles of the system are shown below. The pzmap shows the poles are in left half plane with large real and imaginary parts, corresponding to fast decay and large oscillations.\n\nBased on the poles, the damping ratios and natural frequencies are shown below. VOILA! We see the natural frequency of 1025 Hz corresponding the resonance peak in the original response. Moreover, the damping ratio corresponding to that peak is the lowest showing that it is the resonance peak."
+  },
+  {
     "objectID": "UAV/UAV.html#a-brief-synopsis",
     "href": "UAV/UAV.html#a-brief-synopsis",
     "title": "Simulating Dynamics and Controllers for Unmanned Aerial Vehicle",
@@ -474,26 +544,5 @@
     "title": "Simulating Dynamics and Controllers for Unmanned Aerial Vehicle",
     "section": "Link to Github",
     "text": "Link to Github\nClick here to visit the corresponding repository here"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Khushant Khurana",
-    "section": "",
-    "text": "Github\n  \n  \n    \n     Linkedin\n  \n  \n    \n     Email\n  \n\n  \n  \n\n\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering;\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering Minor: Computer Science\n\n\n\n\n\n\n\nGarmin International\n\n\n\nOshkosh Corporation"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Khushant Khurana",
-    "section": "",
-    "text": "The Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering;\n\n\n\nThe Cooper Union for the Advancement of Science and Art\nMajor: Mechanical engineering Minor: Computer Science"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Khushant Khurana",
-    "section": "",
-    "text": "Garmin International\n\n\n\nOshkosh Corporation"
   }
 ]
