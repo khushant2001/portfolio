@@ -148,15 +148,18 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">• Defense Science and Technology Graduate Intern @ Lawrence National Lab</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../LLNL_summer_slides.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• DSTI Graduate Scholar @ Lawrence Livermore National Lab</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">• Aviation Systems Engineer Intern @ Garmin</span>
+ <span class="menu-text">• Aviation Systems Engineer @ Garmin</span>
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../oshkosh_poster.pdf" class="sidebar-item-text sidebar-link">
- <span class="menu-text">• Controls Intern @ Oshkosh Corporation</span></a>
+ <span class="menu-text">• Controls Engineer @ Oshkosh Corporation</span></a>
   </div>
 </li>
       </ul>
@@ -203,6 +206,12 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
   <div class="sidebar-item-container"> 
   <a href="../simulation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">• Simulation &amp; Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ml.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• Machine Learning</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -257,63 +266,63 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 <section id="thin-airfoil-theory" class="level2">
 <h2 data-anchor-id="thin-airfoil-theory">1. Thin Airfoil Theory</h2>
 <p>Thin airfoil theory assumes that the airfoil has a small thickness compared to its chord length (&lt;12%). This allows the airflow over the airfoil to be treated as two-dimensional, simplifying the analysis. Since the theory utilizes potential flow theory, it assumes the flow to be irrotational and inviscid. Moreover, the theory assumes a vortex sheet on the camber line which creates circulation and consequently lift, as explained by the Kutta Joukowski theorem.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     L' = \rho V_\text{inf} \Gamma
     \label{eq:kutta}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>According to thin airfoil theory, the lift force and moments applied to a 2D airfoil can be determined using the change in camber line where <span class="math inline">\(\sigma\)</span> is the vorticity strength over the camber line. In order to determine the camber line function of the BACXXX airfoil, 4 digit NACA convention is used where ‘m’ = maximum camber and ‘p’ = location of maximum camber.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \frac{1}{2\pi}\int_{0}^{c} \frac{\sigma(x_0)}{(x-x_0)} \, dx_0 = V_\text{inf} (\sin(\alpha) -\frac{dz}{dx} \cos(\alpha)
     \label{eq:thin airfoil}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{align}
+\end{equation}\]</span>
+<span class="math display">\[\begin{align}
     \label{eq:camberline}
     yc = \frac{m}{p^2}(2px-x^2), 0 \leq x \leq p.\\
     yc = \frac{m}{(1-p)^2}((1+2p)+2px-x^2), p \leq x \leq 1
-\end{align}\]</span></p>
+\end{align}\]</span>
 <p>In order to integrate the vorticity strength function around the chord, Fourier coefficients are used to express the vorticity strength function as a <span class="math inline">\(f(\theta)\)</span> as . The fourier coefficients are labelled as <span class="math inline">\(A_n\)</span> and are determined using equations.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \sigma(\theta) = 2V_\text{inf}(A_0 \frac{1+\cos(\theta)}{\sin(\theta)} + \sum_{i=1}^{n}A_n \sin(n\theta))
     \label{eq:fourier thin}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{align}
+\end{equation}\]</span>
+<span class="math display">\[\begin{align}
     \label{eq:fourier}
     A_0 = \alpha - \int_{0}^{\pi} \frac{dz}{dx}d\phi\\
     A_n = \frac{2}{\pi}\int_{0}^{\pi}\frac{dz}{dx}(cos(n\phi)d\phi)
-\end{align}\]</span></p>
+\end{align}\]</span>
 <p>The coefficients are solved for cruise speed and the coefficient of lift and moment at the tip are determined as shown in . The slope of the lift coefficient vs angle of attack is determined to be 6.28 which is approximately <span class="math inline">\(2\pi\)</span> and the angle of attack at <span class="math inline">\(C_L\)</span> = 0 is -1.31 . At cruise speed, the angel of attack is determined to be 0.5 degrees to generate lift force equaling the maximum payload of the aircraft.</p>
 <p><img src="thin_cl.png" class="img-fluid" width="450"> <img src="thin_steady_flight.png" class="img-fluid" width="450"></p>
 </section>
 <section id="finite-wing-theory" class="level2">
 <h2 data-anchor-id="finite-wing-theory">2. Finite Wing Theory</h2>
 <p>Since thin airfoil theory assumes a 2D profile and an infinite wing, it neglects effect of downwash. Downwash is the movement of the air from high pressure region underneath the wing to low pressure region top. Accordingly, there is no lift produced at the edges which results in a non-uniform vorticity distribution unlike the thin airfoil theory. To solve this problem, a parabolic distribution of vortex strength is considered which is 0 at the ends and peaks in the middle. The effect of downwash reduces the angle of attack.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \label{eq:aoa effective}
     \alpha_\text{effective} = \alpha - \alpha_\text{induced}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>It was determined that the lift coefficient varies with angle of attack using the factor <span class="math inline">\(2\pi\)</span>. The magnitude of downwash. Putting this in context with the vorticity distrubtion function like before, the fundamental equation of finite wing theory is derived.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \label{Eq:downwash}
     w(y_0) = \int_{-winspan/2}^{wingspan/2}\frac{\frac{d\Gamma}{dy}}{4\pi(y-y_0)} dy
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}
     \label{eq:finite main}
     \frac{\Gamma(y_0)}{\pi V_\text{inf} c(y_0} = \alpha(y_0) - \alpha_\text{L-0}(y_0) + \frac{1}{4\pi V_\text{inf}}\int_{-wingspan/2}^{wingspan/2}\frac{\frac{d\Gamma}{dy}}{4\pi(y-y_0)} dy
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>To solve the equation, the vorticity strength across the wing is assumed to be Fourier sum. The Fourier coefficients <span class="math inline">\(A_n\)</span> are solved using linear system of equations: Ax = B. Using these coefficients, the lift and induced drag are determined.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \label{eq:finite fourier}
     \Gamma(\theta) = 2bV_\text{inf}\sum_{i=1}^{n} A_n sin(n\theta)
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}
     \label{eq:finite fourier main}
     \frac{2b}{\pi c(\theta)}\sum_{i=1}^{n} A_n sin(n\theta) + \sum_{i=1}^{n} nA_n \frac{sin(n\theta)}{sin(\theta)} = \alpha(\theta) - \alpha_\text{L-0}(\theta).
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{align}
+\end{equation}\]</span>
+<span class="math display">\[\begin{align}
     \label{eq:finite lift}
     C_L = A_1 \pi (Aspect Ratio)\\
     C_D = \frac{C_L^2}{\pi(Aspect Ratio)}(1+\sigma)
-\end{align}\]</span></p>
+\end{align}\]</span>
 <p>The linear system of equations is solved in Python using 100 coefficients to generate precise values. The corresponding Reynolds number for this analysis is 2.4e8. The lift coefficient, induced drag coefficient, and the relations of the two. The modified lift coefficient, accounting for induced drag, has less slope than the 2D model which makes sense because the lift force is not uniform anymore. In other words, the downwash results in loss of lift force at the edges which introduces an induced angle of attack.</p>
 <p><img src="finite_cl.png" class="img-fluid" width="450"> <img src="finite_cd.png" class="img-fluid" width="450"> <img src="finite_cl_cd.png" class="img-fluid" width="450"> <img src="finite_cl_cd_alpha.png" class="img-fluid" width="450"></p>
 </section>
@@ -326,10 +335,10 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
     Drag_\text{Laminar} = 0.664 \rho V_\text{inf}^2 L (Re_L)^.5\\
     Drag_\text{Turbulent} = \frac{0.036 \rho V_\text{inf}^2 L}{Re^.2}
 \end{align}\]</span> Since the incoming flow transitions from laminar to turbulent, the total drag on the section is determined using Prandtl Relation. The Reynolds number used for the transition is 3e5</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \label{eq:prandtl}
     Drag_\text{Total} = Drag_\text{100\% Turbulent} - Drag_\text{Turbulent Where Laminar} + Drag_\text{Laminar}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>To calculate the total skin drag, 200000 sections are used and the final drag force is determined to be 605 kN and the coefficient of drag is 0.03 at steady state flight. The viscous drag is lies close to the induced drag for smaller angle of attacks (range of -10 to 10 degrees). However, with higher angle of attack, the induced drag coefficient increases.</p>
 <p>To analyze the viscous drag on the body itself, coefficient of drag over fundamental shapes is taken from standard aero textbook. Accordingly, the fuselage is considered as a long cylinder and the nose is considered as a hollow hemisphere. The corresponding coefficients are shown in . The dimensions used for both shapes. Like the wing analysis, steady level flight is assumed with conditions . <span class="math display">\[\begin{align}
     \label{eq:cd}

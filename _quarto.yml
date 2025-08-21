@@ -38,9 +38,10 @@ website:
       - section: "**Past internships**"
         class: "section-heading"
         contents:
-            - text: "\u2022 Defense Science and Technology Graduate Intern @ Lawrence National Lab"
-            - text: "\u2022 Aviation Systems Engineer Intern @ Garmin"
-            - text: "\u2022 Controls Intern @ Oshkosh Corporation"
+            - text: "\u2022 DSTI Graduate Scholar @ Lawrence Livermore National Lab"
+              href: LLNL_summer_slides.pdf
+            - text: "\u2022 Aviation Systems Engineer @ Garmin"
+            - text: "\u2022 Controls Engineer @ Oshkosh Corporation"
               href: oshkosh_poster.pdf 
       - section: "**Past research**"
         class: "section-heading"
@@ -56,6 +57,8 @@ website:
             href: dynamics_control.qmd
           - text: "\u2022 Simulation & Analysis"
             href: simulation.qmd
+          - text: "\u2022 Machine Learning"
+            href: ml.qmd          
           - text: "\u2022 Mechanical Design & Fabrication"
             href: fabrication.qmd
       

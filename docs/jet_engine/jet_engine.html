@@ -148,15 +148,18 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">• Defense Science and Technology Graduate Intern @ Lawrence National Lab</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../LLNL_summer_slides.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• DSTI Graduate Scholar @ Lawrence Livermore National Lab</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">• Aviation Systems Engineer Intern @ Garmin</span>
+ <span class="menu-text">• Aviation Systems Engineer @ Garmin</span>
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../oshkosh_poster.pdf" class="sidebar-item-text sidebar-link">
- <span class="menu-text">• Controls Intern @ Oshkosh Corporation</span></a>
+ <span class="menu-text">• Controls Engineer @ Oshkosh Corporation</span></a>
   </div>
 </li>
       </ul>
@@ -203,6 +206,12 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
   <div class="sidebar-item-container"> 
   <a href="../simulation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">• Simulation &amp; Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ml.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• Machine Learning</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -261,27 +270,27 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 <section id="inlet-design" class="level2">
 <h2 data-anchor-id="inlet-design">1. Inlet Design</h2>
 <p>A 2 step inlet is designed to turn the flow from outside of the engine to the diffuser. At every angle, an oblique shock is formed and finally there is a normal shock at the end of the inlet to turn the supersonic flow into subsonic before it enters the diffuser. Otherwise, the diffuser will increase the speed if the flow is supersonic. Normal shocks occur when they get detached from the body due to a very large turning angle. As the name suggests, the inlet and outlet flow velocities are normal to the shock wave. Across a normal shock, the supersonic flow changes to subsonic flow. Accordingly, <span class="math inline">\(P_2 &gt; P_1\)</span>, <span class="math inline">\(T_2 &gt; T_1\)</span>, and <span class="math inline">\(\rho_2 &gt; \rho_1\)</span>.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \frac{P_2}{P_1} = 1 + \frac{2 \gamma}{\gamma - 1} (M_1^2 - 1)
     \label{eq:normal_p}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}
     \frac{\rho_2}{\rho_1} = \frac{(\gamma + 1) M_1^2}{2 + (\gamma -1) M_1^2}
     \label{eq:normal_rho}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}
     \frac{T_2}{T_1} = \frac{P_2}{P_1} \frac{\rho_1}{\rho_2}
     \label{eq:normal_t}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}
     M_2 = \frac{1 + \frac{(\gamma - 1)}{2} M_1^2}{\gamma M_1^2  - \frac{(\gamma - 1)}{2}}
     \label{eq:normal_M}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>Oblique shocks, on the other hand, occur when the supersonic flow is turned into itself. In other words, the flow experiences a re-direction by a giving turning angle <span class="math inline">\(\theta\)</span>. An illustration of oblique shock is shown in , taken from . As <span class="math inline">\(\theta\)</span> increases from 0 to 90 <span class="math inline">\(\degree\)</span>, the oblique shock becomes stronger and accordingly, adds more pressure drag into the system. The relation between <span class="math inline">\(\beta\)</span> (shock wave angle), <span class="math inline">\(\theta\)</span> (turning angle) and mach number of incoming flow is related using the <span class="math inline">\(\theta-\beta-M\)</span> relation.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     tan(\theta) = 2 cot(\beta) [\frac{M_1^2 (sin(\beta))^2 - 1}{M_1^2 (\gamma + cos(2 \beta)) + 2}]
     \label{eq:oblique_prandel}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 </section>
 <section id="cowl-design" class="level2">
 <h2 data-anchor-id="cowl-design">2. Cowl Design</h2>
@@ -299,18 +308,18 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 \label{eq:cowl_h}
     tan(\beta_1) = \frac{h\tan(\beta_2)}{\alpha tan(\beta_2) + h}
 \end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
 \label{eq:cowl_l}
     x + y = (\frac{L sin(\beta_2 - \theta_1)}{sin(180-\beta_2)}) + \frac{h}{tan(\beta_2)}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 </section>
 <section id="diffuser-design" class="level2">
 <h2 data-anchor-id="diffuser-design">3. Diffuser Design</h2>
 <p>The flow in the diffuser is considered to be isentropic while satisfying the conservation of mass and momentum. To determine the properties across the diffuser, small perturbation theory is used to get the differential conservation of mass, momentum (with no body forces) and energy.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \label{eq:mass}
     \frac{d\rho}{\rho} + \frac{dA}{A} + \frac{du}{u} = 0
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p><span class="math display">\[\begin{equation}
     \label{eq:momentum}
     \frac{d\rho}{\rho} + udu = 0
@@ -322,39 +331,39 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 <section id="flemholder-design" class="level2">
 <h2 data-anchor-id="flemholder-design">4. Flemholder Design</h2>
 <p>The flameholder is modelled to provide an adiabatic pressure drop in the flow stream. The change in pressure is governed by the relation given in . It is also assumed that the area profile does not change across the flameholder. In order to determine the temperature and the mach number of the flow after flameholder, conservation of mass flow rate is used. The mass flow rate can be simplified to the basic characteristics of the flow.. Furthermore, the energy is also conserved.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \label{eq:flameholder}
     \frac{\Delta P}{P}=0.81\gamma M^2
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}
     \label{eq:mass flow}
     \dot{m} = \frac{P}{RT}AM\sqrt{T\gamma R}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}
     \label{eq:h}
     C_p T_1 + \frac{M_1^2 \gamma R T_1}{2} = C_p T_2 + \frac{M_2^2 \gamma R T_2}{2}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>Unknown variables are <span class="math inline">\(T_2\)</span> and <span class="math inline">\(M_2\)</span>. Accordingly, the linear system of equations and are solved using method of substitution to determine expressions for both variables.<br>
 <span class="math display">\[\begin{equation}
     \label{eq:flame_t}
     T_2 = (2 C_P T_1 + M_1^2 \gamma R T_1) (\frac{1}{2C_P + M_2^2 \gamma R})
 \end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \label{eq:flame_p}
     \frac{P_1 M_1}{\sqrt{T_1}} = \frac{P_2 M_2 \sqrt{2C_P + M_2^2 \gamma R}}{\sqrt{2C_P T_1 + M_1^2 \gamma R T_1}}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 </section>
 <section id="combustor-design" class="level2">
 <h2 data-anchor-id="combustor-design">5. Combustor Design</h2>
 <p>To model the combustor, 1D quasi flow with heat addition is used. While the conservation of mass and momentum are same as to regular 1D quasi flow, the conservation of energy now involves and additional term ‘q’ which refers to the heat addition as shown in . The term q refers to the rate of heat added to the incoming flow. It is described as the ratio of the rate of heat provided by the fuel to the mass flow rate of the incoming flow, shown in </p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \label{eq:rayleigh}
     h_1 + \frac{u_1^2}{2} + q = h_2 + \frac{u_2^2}{q_2}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}
     \label{eq:q}
     q = \frac{\dot{q}}{\dot{m}}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>The flow properties across the combustor are determined iteratively by first calculating the the stagnation temperature by using and then finding the stagnation temperature at the M = 1 state. Once all these states are known the relative ratios of the pressure and temperature are determined using equations given in and </p>
 <p><span class="math display">\[\begin{equation}
     \label{eq:t_02}
@@ -363,28 +372,28 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
     \label{eq:r_t}
     \frac{T}{T*} = M^2 (\frac{1+\gamma}{1+\gamma M^2})^2
 \end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \label{eq:r_p}
     \frac{P}{P*} = \frac{1+\gamma}{1+\gamma M^2}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>For the base design, the combustor section only intakes the specified equivalence ratio. This is changed later when the engine’s performance is analyzed for various mach numbers. Accordingly, the equivalence ratio is made variable to provide a constant exit mach number for the combustor. The mass flow rate of the fuel is determined, <span class="math inline">\(\dot{q}\)</span> of fuel, and finally ‘q’. For the purposes of the fuel, hydrogen is used and has lower heating value (LHV) of 120 <span class="math inline">\(\frac{MJ}{kg}\)</span>. Moreover, the psychometric ratio for hydrogen is 0.0291 which is used to determine the mass flow rate.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \label{eq:phi}
     \dot{m}_\text{fuel} =   0.0291 \phi \dot{m}_\text{air}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}
     \label{eq:q_dot}
     \dot{q} = LHV \dot{m}_\text{fuel}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}
     \label{eq:q_final}
     q = \frac{\dot{q}}{\dot{m}_\text{air}}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>Although it is assumed that the flow burns instantaneously in the combustor, it is still important to determine the length of the combustor which is done by determining the time taken for the fuel to burn. The inlet conditions are used to determine the time constant. To get the length of the combustor, average of the inlet and exit velocities in the combustor is taken and multiplied with <span class="math inline">\(\tau\)</span>.</p>
-<p><span class="math display">\[\begin{equation}
+<span class="math display">\[\begin{equation}
     \label{eq:tao}
     \tau = 325 p^{-1.6} exp(-0.8 \frac{T_0}{1000})
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 </section>
 <section id="converging-nozzle-design" class="level2">
 <h2 data-anchor-id="converging-nozzle-design">6. Converging Nozzle Design</h2>
@@ -392,7 +401,7 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 </section>
 <section id="diverging-nozzle-design" class="level2">
 <h2 data-anchor-id="diverging-nozzle-design">7. Diverging Nozzle Design</h2>
-The diverging nozzle for the ramjet engine is a 2D minimum length nozzle designed using method of characteristics (MOC). To determine the properties of a 2D flow, the flow is considered to be inviscid, compressible, and irrotational. Using the third property velocity potential functions are generated and solved to determine solutions for characteristic lines. These are special lines which can be used to calculate properties along the flow because they have a specific pattern in terms of how their properties evolve. The two lines are called left and right turning characteristic. A variable ‘K’ is a dummy parameter for both the characteristics.
+<p>The diverging nozzle for the ramjet engine is a 2D minimum length nozzle designed using method of characteristics (MOC). To determine the properties of a 2D flow, the flow is considered to be inviscid, compressible, and irrotational. Using the third property velocity potential functions are generated and solved to determine solutions for characteristic lines. These are special lines which can be used to calculate properties along the flow because they have a specific pattern in terms of how their properties evolve. The two lines are called left and right turning characteristic. A variable ‘K’ is a dummy parameter for both the characteristics.</p>
 <p>The magnitude of the constant ‘K’ for both left and right turning characteristic. As seen, the properties of point 3 depends upon the properties of 1 and 2. The corresponding location of the third point in the global axes is given the linear system of equations. Once the properties of the third point are known, the process can be rolled further to generate more points and design the entire nozzle. <span class="math display">\[\begin{equation}
     \label{eq:k2_plus}
     \theta_3 - \nu_3 = \theta_2 - \nu_2 = K_\text{2,plus}

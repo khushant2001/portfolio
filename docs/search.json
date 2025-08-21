@@ -21,6 +21,13 @@
     "text": "Lawrence Livermore National Laboratory\n\n\n\nGarmin International\n\n\n\nOshkosh Corporation"
   },
   {
+    "objectID": "amazon_reviews/amazon_reviews.html#a-brief-synopsis",
+    "href": "amazon_reviews/amazon_reviews.html#a-brief-synopsis",
+    "title": "Mapping Amazon Food Reviews to Stars​",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nDeveloped an embedding-based neural network in PyTorch to classify Amazon food reviews into star ratings from 1 to 5. The dataset is derived from Kaggle. Tuned hyperparameters including embedding size, learning rate, and network depth, achieving 66% accuracy on the testing set. A detailed presentation on the work done can be found here"
+  },
+  {
     "objectID": "base_plate/tower_fea.html#a-brief-synopsis",
     "href": "base_plate/tower_fea.html#a-brief-synopsis",
     "title": "Modelling Base Plate of a Windmill and Performing Finite Element Analysis",
@@ -182,6 +189,13 @@
     "text": "Base Excitation Rig - Demonstration of Vibration Isolation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCASPER: Cooper Automated Subterranean Probing & Excavating Robot​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJARVIS - Four Wheeled SumoBot\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nManufacturing parts for FSAE Team\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRIFSK - Refugee in Flight Shelter Kit Frame\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "flasdi/flasdi.html#a-brief-synopsis",
+    "href": "flasdi/flasdi.html#a-brief-synopsis",
+    "title": "Using Fourier Neural Operator (FNO) for Spatial Compression​",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nSimilar to my GPLaSDI project at Lawrence Livermore National Laboratory, I explored the application of Fourier Neural Operator (FNO) for spatial compression. Instead of performing operator learning, the FNO used compresses the data by taking fourier transform and then learns the evolution of the dominant modes through system id methods. Pre-eliminary results on the standard 1D Burgers equations showed a speed up of about 4x on the training process while achieving a similar accuracy. The results to this combination of FNO + LaSDI work can be found here. The corresponding implementation of this work can be found here."
+  },
+  {
     "objectID": "flight/mpc.html",
     "href": "flight/mpc.html",
     "title": "Using Constrained SINDY and Model Predictive Controller for Trajectory Tracking​",
@@ -194,6 +208,13 @@
     "title": "Guidance, Navigation, and Control Projects",
     "section": "",
     "text": "Missile GNC To Intercept Trajectories\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReal-time Trajectory Optimization for Obstacle Avoidance​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSimulating Dynamics and Controllers for Unmanned Aerial Vehicle\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Constrained SINDY and Model Predictive Controller for Trajectory Tracking​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "gplasdi/gplasdi.html#a-brief-synopsis",
+    "href": "gplasdi/gplasdi.html#a-brief-synopsis",
+    "title": "Developing Latent Space System Identification Techniques for Autoencoders",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nNumerically solving time-dependent partial differential equations (PDEs) can be challenging and computationally expensive. This has prompted the development of reduced order models (ROMs) for providing fast and accurate approximate solutions. During my time at Lawrence Livermore National Lab, I worked on GPLaSDI: a noval ROM architecture that uses machine learning for compression and system identification methods for modelling the dynamics. In this project, I explored different system identification methods - non-linear basis functions for SINDy (Sparse Identification of NonLinear Dynamics) and Dynamic Mode Decomposition (DMD). The tests for these methods are conducted on standardized PDEs like Burgers1D and Two stream plasma instability problem. The corresponding results can be found here.\n\nDocumentation\nThe github repository to GPLaSDI and my work can be found here"
   },
   {
     "objectID": "inv_pendulum/inv_pend.html#pi-proportional--integral",
@@ -322,6 +343,13 @@
     "text": "9. Supporting Files\nThe analysis and code used to design/simulate these components can be found here"
   },
   {
+    "objectID": "land_cover/land_cover.html#a-brief-synopsis",
+    "href": "land_cover/land_cover.html#a-brief-synopsis",
+    "title": "Building a Classifier to Predict Crop Types Using Remote Sensing Indices",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nAnalyzed Landsat satellite imagery and USDA Cropland Data Layer (CDL) to identify the top five crop types in Illinois and Iowa. Engineered features from remote sensing indices (e.g., NDVI, NDWI, RECI, MNDWI) to build an informative input set for classification. Developed a Random Forest classifier to predict crop types using the feature sets and got 56 % accuracy on the testing set. The corresponding jupyter notebook can be found here."
+  },
+  {
     "objectID": "missile/missile.html#a-brief-synopsis",
     "href": "missile/missile.html#a-brief-synopsis",
     "title": "Missile GNC To Intercept Trajectories",
@@ -350,6 +378,13 @@
     "text": "Link To Github\nTo access the simulink model and python code for controller determination, click here"
   },
   {
+    "objectID": "ml.html",
+    "href": "ml.html",
+    "title": "Machine Learning Projects",
+    "section": "",
+    "text": "Building a Classifier to Predict Crop Types Using Remote Sensing Indices\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeveloping Latent Space System Identification Techniques for Autoencoders\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapping Amazon Food Reviews to Stars​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSatellite Based Detection of Rocket Emission​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Fourier Neural Operator (FNO) for Spatial Compression​\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "motorsports/manufacturing.html#a-brief-synopsis",
     "href": "motorsports/manufacturing.html#a-brief-synopsis",
     "title": "Manufacturing parts for FSAE Team",
@@ -369,6 +404,13 @@
     "title": "RIFSK - Refugee in Flight Shelter Kit Frame",
     "section": "Detailed Journal of the Proposed Designs and Their Fabrication",
     "text": "Detailed Journal of the Proposed Designs and Their Fabrication\nClick here to access the document."
+  },
+  {
+    "objectID": "rocket_fumes/rocket_fumes.html#a-brief-synopsis",
+    "href": "rocket_fumes/rocket_fumes.html#a-brief-synopsis",
+    "title": "Satellite Based Detection of Rocket Emission​",
+    "section": "A Brief Synopsis",
+    "text": "A Brief Synopsis\nAnalyzed Sentinel-5P satellite data to track atmospheric gas concentrations over Cape Canaveral Island during a launch period. Engineered features from atmospheric indicators—including trace gases, aerosols, and water vapor—to construct an informative classification set. Developed a Random Forest classifier to predict the occurrence of a rocket launch based on temporal trends in atmospheric features and got 56 % accuracy on the testing set. The corresponding jupyter notebooks can be found here."
   },
   {
     "objectID": "ros/ros.html#a-brief-synopsis",

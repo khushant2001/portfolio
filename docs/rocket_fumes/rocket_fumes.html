@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Khushant Khurana - Multi Modal Robotic Traversal of Remote and Rugged Terrain​</title>
+<title>Khushant Khurana - Satellite Based Detection of Rocket Emission​</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,8 +67,6 @@ gtag('js', new Date());
 gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -109,7 +107,7 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Multi Modal Robotic Traversal of Remote and Rugged Terrain​</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Satellite Based Detection of Rocket Emission​</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -232,10 +230,7 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#brief-overview" id="toc-brief-overview" class="nav-link active" data-scroll-target="#brief-overview">Brief Overview</a></li>
-  <li><a href="#mechanical-assembly" id="toc-mechanical-assembly" class="nav-link" data-scroll-target="#mechanical-assembly">1. Mechanical Assembly</a></li>
-  <li><a href="#firmware-implementation-and-integration" id="toc-firmware-implementation-and-integration" class="nav-link" data-scroll-target="#firmware-implementation-and-integration">2. Firmware Implementation and Integration</a></li>
-  <li><a href="#ramp-test" id="toc-ramp-test" class="nav-link" data-scroll-target="#ramp-test">3. Ramp Test</a></li>
+  <li><a href="#a-brief-synopsis" id="toc-a-brief-synopsis" class="nav-link active" data-scroll-target="#a-brief-synopsis">A Brief Synopsis</a></li>
   </ul>
 </nav>
     </div>
@@ -245,11 +240,11 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 
 
 <div class="quarto-about-jolla column-body">
-  <img src="Multi-modal-robot.png" class="about-image
+  <img src="rocket_fumes.webp" class="about-image
   rectangle " style="width: 40em;">
  <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Multi Modal Robotic Traversal of Remote and Rugged Terrain​</h1>
+<h1 class="title">Satellite Based Detection of Rocket Emission​</h1>
 </div>
 <div class="quarto-title-meta">
   </div>
@@ -257,56 +252,9 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 </div>  
 </div>
 
-<section id="brief-overview" class="level1">
-<h1>Brief Overview</h1>
-<p>An Interdisciplinary team of 2 ME’s and 1 EE developed a multi-modal, remote-controlled surveillance drone named Tipsy to traverse chaotic and rugged environments. While being capable of both flying and driving, Tipsy can also combine the two by using its reversible propellers to provide downward force and increase stability while driving on steep inclines . Since driving is more cost and energy efficient than a sustained flight, a multimodal traversal allows the robot to extend its battery life while being robust.</p>
-<p><video src="tipsy_in_action.mp4" class="img-fluid" controls=""><a href="tipsy_in_action.mp4">Video</a></video></p>
-</section>
-<section id="mechanical-assembly" class="level1">
-<h1>1. Mechanical Assembly</h1>
-<p>Tipsy’s final design is an RC crawler with FPV quadcopter components mounted on top. These sub-assemblies are operated independently with an RC car transmitter and an FPV joystick controller respectively. The driving control scheme (Turtle mode) automatically spins the propellers to create traction against the floor such that only the crawler is operated. This is discussed in later sections.</p>
-<p>The suspensions on each wheel provide stability as Tipsy drives over rubble as the main body is isolated from the wheels. The stiffness of the suspensions is important to consider as the generated downforce can cause the suspensions to bottom out if it exceeds the maximum spring force of the suspensions at full compression. Stiffer springs were added to the RC crawler such that this didn’t occur during the ramp climbing test.</p>
-<center>
-<video src="stabilize_mode.mp4" class="img-fluid" width="800" controls=""><a href="stabilize_mode.mp4">Video</a></video>
-</center>
-</section>
-<section id="firmware-implementation-and-integration" class="level1">
-<h1>2. Firmware Implementation and Integration</h1>
-<p>ArduPilot is a trusted, versatile, and open source autopilot system supporting many vehicle types: multi-copters, traditional helicopters, fixed wing aircraft, boats, submarines, rovers and more. For Tipsy, ArduCopter, quad subbranch of ArduPilot is used, Written in C++, the flight software provides a base architecture to control regular drones and also allows integration of custom firmware such as: custom controllers, custom sensors, and custom flight mode operations.</p>
-<p>ince Tipsy is not designed to be a conventional drone, custom firmware is written and integrated to allow it to fly and drive. The two flight modes developed are “Stabilize” and “Turtle” for flying and driving respectively. The control architecture of both modes is shown below. When in Stabilize mode, Tipsy works like a regular quadcopter by having the motors spin in the conventional orientation to provide upwards thrust. In this flight mode, Tipsy’s altitude is manually controlled while the attitude control is done by the Autopilot. The attitude is first transformed into target angles or angular velocity. More specifically, the pitch and roll sticks on the transmitter sets the target angles respectively, so that if those sticks are set to center the vehicle automatically levels itself. The yaw stick sets the target angular velocity instead, such that if the stick is set to center, target angular velocity becomes zero and the vehicle maintains its heading. Then, these target measures are fed into the PID rate controller, which calculates the angular rates for attitude control. Accordingly, the thrust requested by the user is added with that from the Autopilot and the motor mixer sends the corresponding commands to individual motors.</p>
-<p>Turtle mode, on the other hand, allows the propellers to be controlled autonomously and the user controls the car as shown in . Opposite to stabilize, this mode reverses the direction of every motor to provide downwards thrust. DShot communication protocol is used for the Electronic Speed Controller because of its ability to reverse the direction of motors. Moreover, the autopilot from stabilize mode is replaced by a custom controller which determines the motor output based on the given pitch angle using a proportional controller.</p>
-<p><img src="modes.png" class="img-fluid" width="800"></p>
-<center>
-<video src="tipsy_controller.mp4" height="500" controls=""><a href="tipsy_controller.mp4">Video</a></video>
-</center>
-</section>
-<section id="ramp-test" class="level1">
-<h1>3. Ramp Test</h1>
-<p>After the integration of the drive and fly assemblies, Tipsy’s attitude control done by the autopilot is tested in the gimbal. Since the goal of the test is not lifting the robot off the gimbal, minimal throttle is given to allow the robot to perform roll and pitch as per the command. The test is conducted for about 3 minutes and the power draw and attitude data is collected. Tipsy consumed about 100 Watts, as shown below just to provide enough thrust for tracking the roll and input commands. Accordingly, enough throttle is given for the robot to lift off if not connected to the gimbal. Towards the end of the test, more throttle is given to see the effects of throttle provided to the tracking of roll and pitch commands.</p>
-<center>
-<img src="Hover_power.jpg" class="img-fluid" width="400">
-</center>
-<p>The final tracking results of the robot for input roll and pitch commands are shown below. From first glance, the results show a lot of error between the input-output mapping. This is determined to be the result of the self-stabilizing nature of the gimbal’s roll axis. Since the robot’s center of mass is lower than the rod - axis of rotation- it is connected to, the robot has a tendency to bring the roll angle to 0. Accordingly, as the attitude controller tries to increase the roll, it is met with a restraining force of the gimbal. This can be seen in the graph where the robot tries to match the peak of the input command but is not able to maintain the commanded roll angle. This also makes the tracking slower as seen in the last couple of seconds where the robot is tested for its agility by giving quick roll and pitch commands.</p>
-<center>
-<img src="gimbal_pitch.png" class="img-fluid" width="400">
-</center>
-<p>Another reason for the error in the input-output mapping is the added inertia of the gimbal. The bearings, 3D printed pieces and doubly stacked woods add a lot more resistance to the rotation than the assembly by itself. Accordingly, the gains are not that aggressive in providing the required thrust as they should be for the assembly by itself. Since the effect of these effects is not quantifiable, the tuned gains are not changed.</p>
-<center>
-<img src="gimbal_roll.png" class="img-fluid" width="400">
-</center>
-<p>As said, the custom controller used for providing downwards force increases the motor output as the pitch angle increases to ensure traction control. To determine the actual downwards force generated by Tipsy, the ramp test is conducted and the results are shown below. The required downwards force is determined using the point particle dynamics and imposing the condition of 0 acceleration down the ramp. The friction of coefficient is chosen to be 0.7 which is for hard rubber on dry wood and the mass of the vehicle is 1.045 kg. Since the normal force provided by the perpendicular (to the plank) component of the weight is enough for smaller angles, the theoretical downwards force requirement for the same angles is 0. As seen, the downwards force provided by the robot is enough for slopes up to 40 <span class="math inline">\(/deg\)</span>.</p>
-<center>
-<img src="climbingRamp.png" class="img-fluid" width="400">
-</center>
-<p>To conclude testing, the final ramp test is conducted where the robot is driven up the ramp with and without propellers. Due to the limited torque capability of the drive motors, tests up to 10 degree incline angles are conducted. Regardless, the wheels often spin when propellers are turned off. However, after turning on turtle mode, the robot is able to drive up the incline while only consuming a total of 14 W (from both systems: drive and fly). The actual data collected is shown below. This proves the power efficiency of the multi-modality.</p>
-<center>
-<p><img src="ramp_power_Draw.jpg" class="img-fluid" width="400"></p>
-</center>
-<p>Later test are conducted where high torque motors are used and Tipsy is able to replicate similar results for an incline of 30 degrees as shown below. At the first peak (t = 10 sec), propellers are turned off and the robot’s front wheels keep slipping and it fail to maintain the 30-degree incline. However with propellers turned on, at later peaks, the robot has no difficulty in climbing the incline.</p>
-<center>
-<img src="new.png" class="img-fluid" width="400">
-</center>
-<p>Tipsy demonstrates many benefits over prior literature on UGAV’s as it is more versatile, cost-effective, and power-efficient. The simple ramp climbing test demonstrates the benefits of re-purposing flight actuators for additional stability during terrestrial locomotion. Further explorations may use the propellers to perform more sophisticated maneuvers such as a controlled wheelie (inverted pendulum type control), climbing up vertical structures by adding wall-climbing like Vertigo, or ensuring Tipsy doesn’t tip over as it drives over rubbly terrain. Tipsy currently relies on a pre-computed P-controller to map pitch angle to downforce. In future, adding linear potentiometers to the suspensions to measure the spring force could allow Tipsy to detect the reaction force against each wheel, giving Tipsy a sense of touch. The acceleration and reaction force data could be used in conjunction to design a traction control scheme that increases the downforce against the wheels if Tipsy detects it is slipping. Additional sensors for life-detection such as temperature sensors, microphones, and carbon dioxide monitors, etc can be added to the I2C channels of the FCU to make it more useful in search-and-rescue scenarios. Another developmental route can be to allow full operator control over Tipsys roll, pitch, and yaw using Ardupilots acro-mode and foot pedals for driving thrust, and steering. Highly trained operators could take advantage of Tipsy’s multi-modal capabilities to traverse extremely challenging environments. Overall, Tipsy shows great promise for a multitude of applications and only further research will unearth its full potential.</p>
+<section id="a-brief-synopsis" class="level2">
+<h2 data-anchor-id="a-brief-synopsis">A Brief Synopsis</h2>
+<p>Analyzed Sentinel-5P satellite data to track atmospheric gas concentrations over Cape Canaveral Island during a launch period. Engineered features from atmospheric indicators—including trace gases, aerosols, and water vapor—to construct an informative classification set. Developed a Random Forest classifier to predict the occurrence of a rocket launch based on temporal trends in atmospheric features and got 56 % accuracy on the testing set. The corresponding jupyter notebooks can be found <a href="https://github.com/khushant2001/Cooper_code/tree/main/Remote%20Sensing">here</a>.</p>
 
 
 

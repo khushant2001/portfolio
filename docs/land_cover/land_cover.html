@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Khushant Khurana - Analyzing Dispersion of Rocket Fumes Using Satellite Imagery​</title>
+<title>Khushant Khurana - Building a Classifier to Predict Crop Types Using Remote Sensing Indices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,7 +107,7 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Analyzing Dispersion of Rocket Fumes Using Satellite Imagery​</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Building a Classifier to Predict Crop Types Using Remote Sensing Indices</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -146,15 +146,18 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">• Defense Science and Technology Graduate Intern @ Lawrence National Lab</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../LLNL_summer_slides.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• DSTI Graduate Scholar @ Lawrence Livermore National Lab</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">• Aviation Systems Engineer Intern @ Garmin</span>
+ <span class="menu-text">• Aviation Systems Engineer @ Garmin</span>
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../oshkosh_poster.pdf" class="sidebar-item-text sidebar-link">
- <span class="menu-text">• Controls Intern @ Oshkosh Corporation</span></a>
+ <span class="menu-text">• Controls Engineer @ Oshkosh Corporation</span></a>
   </div>
 </li>
       </ul>
@@ -205,6 +208,12 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../ml.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">• Machine Learning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../fabrication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">• Mechanical Design &amp; Fabrication</span></a>
   </div>
@@ -216,23 +225,42 @@ gtag('config', 'G-R5DWCF4Z6W', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-brief-synopsis" id="toc-a-brief-synopsis" class="nav-link active" data-scroll-target="#a-brief-synopsis">A Brief Synopsis</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-jolla column-page-right">
-  <img src="bacxxx.png" class="about-image
-  rectangle " style="width: 30em;">
+<main class="content column-body" id="quarto-document-content">
+
+
+
+<div class="quarto-about-jolla column-body">
+  <img src="land_cover.png" class="about-image
+  rectangle " style="width: 40em;">
  <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Analyzing Dispersion of Rocket Fumes Using Satellite Imagery​</h1>
+<h1 class="title">Building a Classifier to Predict Crop Types Using Remote Sensing Indices</h1>
 </div>
 <div class="quarto-title-meta">
   </div>
-</header><main class="content column-page-right" id="quarto-document-content">
-
-
-</main>  
+</header><div id="heading">
+</div>  
 </div>
- <!-- /main -->
+
+<section id="a-brief-synopsis" class="level2">
+<h2 data-anchor-id="a-brief-synopsis">A Brief Synopsis</h2>
+<p>Analyzed Landsat satellite imagery and USDA Cropland Data Layer (CDL) to identify the top five crop types in Illinois and Iowa. Engineered features from remote sensing indices (e.g., NDVI, NDWI, RECI, MNDWI) to build an informative input set for classification. Developed a Random Forest classifier to predict crop types using the feature sets and got 56 % accuracy on the testing set. The corresponding jupyter notebook can be found <a href="https://github.com/khushant2001/Cooper_code/blob/main/Remote%20Sensing/Khushant%20ECE471%20Assignment%202.ipynb">here</a>.</p>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
